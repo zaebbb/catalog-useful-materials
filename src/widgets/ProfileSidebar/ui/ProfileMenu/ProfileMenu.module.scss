@@ -1,0 +1,9 @@
+.ProfileMenu {
+  position: relative;
+}
+
+.ProfileMenuItemActive {
+  p {
+    @include gradient-text;
+  }
+}

@@ -1,21 +1,13 @@
-import { type IconBaseProps } from '@react-icons/all-files'
-import React, { type LazyExoticComponent } from 'react'
+import React from 'react'
+import { IconLib } from './lib/IconLib'
+import { type IconElementProps } from './types/IconElement'
 
-type IconLibName = 'IconFaBeer'
+/** @module IconElement */
 
-type IconLibOptions = Record<
-IconLibName,
-LazyExoticComponent<(props: IconBaseProps) => React.JSX.Element>
->
-
-export const IconLib: IconLibOptions = {
-  IconFaBeer: React.lazy(async () => await import('./lib/icons/IconFaBeer')),
-}
-
-interface IconElementProps extends IconBaseProps {
-  icon: IconLibName
-}
-
+/**
+ * @description Компонентлениво лениво подгружающий иконки из пакета react-icons
+ * @param {IconElementProps} props - Пропсы типа IconElementProps
+ * */
 export const IconElement = (props: IconElementProps) => {
   const {
     icon,

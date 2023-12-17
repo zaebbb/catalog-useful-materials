@@ -1,0 +1,12 @@
+{
+  "title-1": "Enter",
+  "title-2": "Account",
+
+  "input-label-email": "Email Address",
+  "input-label-password": "Password",
+
+  "button-login": "Log in",
+  "button-register": "Create an Account",
+
+  "alternate-auth": "Or log in using"
+}

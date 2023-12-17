@@ -1,0 +1,39 @@
+{
+  "title": "Заметка:",
+
+  "article": "Статья",
+  "code": "Код",
+  "issue": "Задача",
+  "layout": "Верстка",
+  "service": "Полезный сервис",
+  "technology": "Технология",
+  "course": "Курс",
+  "book": "Книга",
+
+  "button-create": "Создать",
+
+  "input-title-label": "Заголовок заметки",
+  "input-title-placeholder": "Введите заголовок вашей заметки",
+
+  "input-description-label": "Краткое описание заметки",
+
+  "input-draft-label": "Черновик",
+  "input-draft-description": "Не будет отображаться в общих заметках",
+
+  "input-pattern-article-link-note-label": "Ссылка на статью",
+  "input-pattern-article-link-note-placeholder": "Введите ссылку на статью",
+  "input-pattern-article-parse-image": "Распарсить изображение из ссылки",
+  "input-pattern-article-link-video-label": "Ссылка на видео",
+  "input-pattern-article-link-video-placeholder": "Введите ссылку на видео",
+  "input-pattern-article-image-label": "Выберите или вставьте изображение",
+
+  "input-pattern-code-field-code-label": "Фрагмент (-ы) кода",
+  "input-pattern-code-field-code-description": "Возможно размещение более 1 фрагмента кода",
+
+  "input-pattern-issue-field-view-label": "Выберите тип загружаемого ресурса",
+  "input-pattern-issue-field-link-label": "Ссылка на задачу",
+  "input-pattern-issue-field-link-placeholder": "Введите ссылку на задачу",
+  "input-pattern-issue-field-image-label": "Фотография задачи",
+  "input-pattern-issue-field-view-option-link": "Изображение",
+  "input-pattern-issue-field-view-option-image": "Ссылка"
+}

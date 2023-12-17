@@ -1,0 +1,50 @@
+{
+  "compilerOptions": {
+    "outDir": "./dist/",
+    "noImplicitAny": true,
+    "module": "ESNext",
+    "target": "es6",
+    "jsx": "react-jsx",
+    "allowJs": true,
+    "moduleResolution": "node",
+    "baseUrl": ".",
+    "paths": {
+      "@ui-kit/*": ["./src/shared/ui/*"],
+      "@lib/*": ["./src/shared/lib/*"],
+      "@assets/*": ["./src/shared/assets/*"],
+      "@layout/*": ["./src/shared/layout/*"],
+      "@entities/*": ["./src/entities/*"],
+      "@features/*": ["./src/features/*"],
+      "@widgets/*": ["./src/widgets/*"],
+      "@pages/*": ["./src/pages/*"],
+      "@app/*": ["./src/app/*"],
+      "@config/*": ["./src/shared/config/*"],
+      "@api/*": ["./src/shared/api/*"],
+      "@integrations/*": ["./src/shared/integrations/*"],
+    },
+    "strict": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "isolatedModules": true,
+  },
+  "ts-node": {
+    "compilerOptions": {
+      "module": "CommonJS"
+    }
+  },
+  "include": [
+    ".eslintrc.js",
+    "./src/**/*.ts",
+    "./src/**/*.tsx",
+    "./config/**/*.ts",
+    "./config/**/*.tsx",
+    "./webpack.config.ts",
+  ],
+  "typedocOptions": {
+    "entryPoints": ["src/index.tsx"],
+    "out": "docs"
+  },
+  "exclude": [
+    "node_modules"
+  ]
+}

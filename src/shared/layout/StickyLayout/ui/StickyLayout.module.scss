@@ -1,0 +1,82 @@
+.StickyLayout {
+  @include adaptive-max($breakpoint-laptop) {
+    grid-gap: 40px;
+  }
+
+  display: grid;
+  grid-gap: 60px;
+}
+
+.RightSidebarExist {
+  grid-template-areas: 'center right';
+  grid-template-columns: 1fr min-content;
+}
+
+.AllSidebarExist {
+  grid-template-areas: 'left center right';
+  grid-template-columns: min-content 1fr min-content;
+}
+
+.Content {
+  @include adaptive-max($breakpoint-tablet) {
+    grid-column: span 1;
+  }
+
+  grid-area: center;
+}
+
+.LeftSidebar {
+  grid-area: left;
+}
+
+.RightSidebar {
+  grid-area: right;
+}
+
+.LeftSidebar,
+.RightSidebar {
+  @include adaptive-max($breakpoint-laptop) {
+    width: 300px;
+    max-width: 300px;
+  }
+
+  @include adaptive-max($breakpoint-tablet) {
+    grid-column: span 1;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  position: sticky;
+
+  width: 340px;
+  max-width: 340px;
+  height: fit-content;
+  padding: 24px;
+
+  border: 1px solid var(--disabled-border-color);
+  border-radius: 24px;
+}
+
+.LeftSidebarExist {
+  @include adaptive-max($breakpoint-tablet) {
+    grid-template-areas:
+      "left"
+      "content";
+    grid-template-columns: 1fr;
+  }
+
+  grid-template-areas: 'left center';
+  grid-template-columns: min-content 1fr;
+
+  .LeftSidebar {
+    @include adaptive-max($breakpoint-tablet) {
+      grid-row: 1;
+    }
+  }
+
+  .Content {
+    @include adaptive-max($breakpoint-tablet) {
+      grid-row: 2;
+    }
+  }
+}

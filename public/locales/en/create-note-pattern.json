@@ -1,0 +1,39 @@
+{
+  "title": "Note:",
+
+  "article": "Article",
+  "code": "Code",
+  "issue": "Issue",
+  "layout": "Layout",
+  "service": "Useful service",
+  "technology": "Technology",
+  "course": "Course",
+  "book": "Book",
+
+  "button-create": "Create",
+
+  "input-title-label": "The title of the note",
+  "input-title-placeholder": "Enter the title of your note",
+
+  "input-description-label": "Brief description of the note",
+
+  "input-draft-label": "Draft",
+  "input-draft-description": "Will not be displayed in general notes",
+
+  "input-pattern-article-link-note-label": "Link to the article",
+  "input-pattern-article-link-note-placeholder": "Enter the link to the article",
+  "input-pattern-article-parse-image": "Parse the image from the link",
+  "input-pattern-article-link-video-label": "Link to the video",
+  "input-pattern-article-link-video-placeholder": "Enter the link to the video",
+  "input-pattern-article-image-label": "Select or paste an image",
+
+  "input-pattern-code-field-code-label": "Code fragment(s)",
+  "input-pattern-code-field-code-description": "It is possible to place more than 1 code fragment",
+
+  "input-pattern-issue-field-view-label": "Select the type of resource to download",
+  "input-pattern-issue-field-link-label": "Link to the task",
+  "input-pattern-issue-field-link-placeholder": "Enter the link to the task",
+  "input-pattern-issue-field-image-label": "Photo of the task",
+  "input-pattern-issue-field-view-option-link": "Image",
+  "input-pattern-issue-field-view-option-image": "Link"
+}

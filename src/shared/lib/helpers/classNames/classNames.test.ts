@@ -1,16 +1,7 @@
-export type Mods = Record<string, boolean | string | undefined>
-export type Additional = Array<string | undefined>
+import { classNames } from './classNames'
 
-export const classNames = (
-  cls: string = '',
-  mods: Mods = {},
-  additional: Additional = []
-): string => (
-  [
-    cls,
-    ...additional,
-    Object.entries(mods)
-      .filter(([_, value]) => Boolean(value))
-      .map(([className]) => className),
-  ].join(' ')
-)
+describe('Утилита classNames', () => {
+  test('Тестирование с 1 параметром', () => {
+    expect(classNames('className')).toBe('className')
+  })
+})

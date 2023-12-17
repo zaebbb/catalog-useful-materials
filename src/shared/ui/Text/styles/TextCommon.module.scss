@@ -1,0 +1,18 @@
+.text {
+  &-size {
+    &-small { font: var(--font-body-1); }
+    &-medium { font: var(--font-body-2); }
+    &-large { font: var(--font-body-3); }
+  }
+
+  &-color {
+    &-default { color: var(--neutral-color-70); }
+    &-white { color: var(--neutral-color-00); }
+  }
+
+  &-align {
+    &-left { text-align: left; }
+    &-center { text-align: center; }
+    &-right { text-align: right; }
+  }
+}

@@ -1,11 +1,13 @@
 import React from 'react'
+import { useTranslation } from 'react-i18next'
 
-const MainPage: React.FC = React.memo(() => {
+const NotFoundPage: React.FC = React.memo(() => {
+  const { t } = useTranslation()
   return (
     <div>
-      <h1>Главная страница</h1>
+      <h1>{t('page-not-found')}</h1>
     </div>
   )
 })
 
-export default MainPage
+export default NotFoundPage

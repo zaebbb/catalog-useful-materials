@@ -1,6 +1,12 @@
+import { useAuth } from '@entities/User'
+import { classNames, type Mods } from '@lib/helpers/classNames'
+import { AppPadding } from '@ui-kit/AppPadding'
+import { Logo } from '@ui-kit/Logo/ui/Logo'
+import { HStack } from '@ui-kit/Stack'
 import React, { memo } from 'react'
-import {classNames} from '@/shared/lib/classNames/classNames'
-import { useTranslation } from 'react-i18next'
+import { NavbarIcons } from '../NavbarIcons/NavbarIcons'
+import { NavbarMenu } from '../NavbarMenu/NavbarMenu'
+import { NavbarUserInfo } from '../NavbarUserInfo/NavbarUserInfo'
 import cls from './Navbar.module.scss'
 
 interface NavbarProps {
@@ -8,12 +14,27 @@ interface NavbarProps {
 }
 
 export const Navbar: React.FC<NavbarProps> = memo((props: NavbarProps) => {
-  const {className} = props
-  const { t } = useTranslation()
+  const { className } = props
+  const {
+    isMounted,
+  } = useAuth()
+
+  const mods: Mods = {
+    [cls.Navbar]: true,
+  }
 
   return (
-    <div className={classNames(cls.Navbar, {}, [className])}>
-      
-    </div>
+    <AppPadding className={classNames(cls.Navbar, mods, [className])}>
+      <HStack align={'center'} justify={'space-between'}>
+        <HStack gap={24} align={'center'}>
+          <Logo />
+          <NavbarMenu />
+        </HStack>
+        <HStack gap={12} align={'center'}>
+          <NavbarIcons />
+          {isMounted && <NavbarUserInfo />}
+        </HStack>
+      </HStack>
+    </AppPadding>
   )
 })

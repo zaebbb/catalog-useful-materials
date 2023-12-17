@@ -1,0 +1,15 @@
+{
+  "title-profile-1": "Профиль",
+  "title-profile-2": "Пользователя",
+
+  "profile-input-name-label": "Ваше имя",
+  "profile-input-name-placeholder": "Введите имя",
+
+  "profile-input-surname-label": "Ваша фамилия",
+  "profile-input-surname-placeholder": "Введите фамилию",
+
+  "profile-input-patronymic-label": "Ваше отчество",
+  "profile-input-patronymic-placeholder": "Введите ваше отчество",
+
+  "profile-button-save": "Сохранить"
+}

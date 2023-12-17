@@ -1,0 +1,31 @@
+.ModalBase {
+  position: fixed;
+  z-index: -1;
+  inset: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  opacity: 0;
+}
+
+.OpenModal {
+  pointer-events: auto;
+  z-index: 100;
+  opacity: 1;
+}
+
+.ModalContent {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 100%;
+  max-width: 500px;
+  padding: 20px 25px;
+
+  background: var(--neutral-color-00);
+  border-radius: var(--border-radius);
+}

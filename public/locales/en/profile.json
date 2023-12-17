@@ -1,0 +1,15 @@
+{
+  "title-profile-1": "User",
+  "title-profile-2": "Profile",
+
+  "profile-input-name-label": "Your Name",
+  "profile-input-name-placeholder": "Enter Name",
+
+  "profile-input-surname-label": "Your Surname",
+  "profile-input-surname-placeholder": "Enter Surname",
+
+  "profile-input-patronymic-label": "Your Patronymic",
+  "profile-input-patronymic-placeholder": "Enter Patronymic",
+
+  "profile-button-save": "Save"
+}

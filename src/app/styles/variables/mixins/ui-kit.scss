@@ -1,0 +1,30 @@
+@mixin gradient-text {
+  color: transparent;
+  background-image: var(--gradient-variant-tree-color);
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+$breakpoint-smartphone: 868px;
+$breakpoint-tablet: 960px;
+$breakpoint-laptop: 1599px;
+$breakpoint-desktop: 868px;
+
+// special breakpoint
+$breakpoint-smartphone-max-width: 480px;
+$breakpoint-laptop-min: 1200px;
+
+@mixin adaptive-max($breakpoint) {
+  @media screen and (max-width: $breakpoint) {
+    @content
+  }
+}
+
+@mixin adaptive-min-max($min-width, $max-width) {
+  @media screen and (min-width: $min-width) and (max-width: $max-width) {
+    @content
+  }
+}
+
+// social width variables
+$width-google-auth-button: 261px;

@@ -1,0 +1,38 @@
+@import "reset";
+@import "variables/color";
+@import "variables/font";
+@import "variables/global";
+@import "variables/mixins/ui-kit";
+@import "variables/mixins/inputs";
+
+body {
+  overflow-x: hidden;
+}
+
+*::-webkit-scrollbar-track
+{
+  background-color: var(--neutral-color-20);
+  border-radius: 10px;
+  -webkit-box-shadow: none;
+}
+
+*::-webkit-scrollbar
+{
+  width: 4px;
+  height: 4px;
+  background-color: var(--purple-color-80);
+}
+
+*::-webkit-scrollbar-thumb
+{
+  background-color: var(--purple-color-80);
+  border-radius: 10px;
+  -webkit-box-shadow: none;
+}
+
+*::-webkit-scrollbar-button:decrement,
+*::-webkit-scrollbar-button:increment {
+  display: none;
+  width: 0;
+  height: 0;
+}

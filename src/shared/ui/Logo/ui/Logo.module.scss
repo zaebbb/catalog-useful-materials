@@ -1,0 +1,18 @@
+.LogoIcon {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.LogoText {
+  font: var(--font-logo);
+  text-transform: uppercase;
+}
+
+.color-default {
+  color: var(--neutral-color-70);
+}
+
+.color-white {
+  color: var(--neutral-color-00);
+}

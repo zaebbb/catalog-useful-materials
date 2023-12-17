@@ -1,0 +1,38 @@
+.Tab {
+  cursor: pointer;
+
+  position: relative;
+
+  width: fit-content;
+  padding: 10px 15px;
+
+  color: var(--neutral-color-00);
+
+  background: transparent;
+  border: 1px solid var(--purple-color-80);
+  border-radius: var(--border-radius-small);
+
+  &.hovered {
+    transition: background 0.2s;
+
+    .ContentLeft,
+    .ContentRight,
+    .ContentLeft svg,
+    .ContentRight svg,
+    .TabContent {
+      transition: color 0.2s;
+    }
+
+    &:hover {
+      background: var(--purple-color-80);
+
+      .ContentLeft,
+      .ContentRight,
+      .ContentLeft svg,
+      .ContentRight svg,
+      .TabContent {
+        color: var(--neutral-color-00) !important;
+      }
+    }
+  }
+}

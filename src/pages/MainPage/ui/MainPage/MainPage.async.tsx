@@ -1,9 +1,4 @@
 import React from 'react'
 
-export const MainPage: React.FC = React.memo(() => {
-  return (
-    <div>
-      <h1>Главная страница</h1>
-    </div>
-  )
-})
+export const MainPageAsync =
+  React.lazy(async () => await import('./MainPage'))

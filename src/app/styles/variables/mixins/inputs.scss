@@ -1,0 +1,98 @@
+@mixin input-wrapper {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+  max-width: 400px;
+}
+
+@mixin input-field {
+  width: 100%;
+  padding: 15px 25px;
+
+  font: var(--font-body-1);
+  color: var(--neutral-color-70);
+
+  background: var(--neutral-color-00);
+  border-style: solid;
+  border-radius: 1500px;
+  outline: none;
+
+  transition: 0.2s color, 0.2s border-color, 0.2s background;
+}
+
+@mixin input-icon {
+  position: absolute;
+  top: 50%;
+  right: 16px;
+  transform: translateY(-50%);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin input-label {
+  margin-bottom: 10px;
+  font: var(--font-body-2);
+  color: var(--neutral-color-70);
+}
+
+@mixin option-max {
+  width: 100%;
+  max-width: 100%;
+}
+
+@mixin option-description {
+  margin-top: 10px;
+  font: var(--font-error-messenger);
+  color: var(--neutral-color-60);
+}
+
+@mixin option-validation {
+  font: var(--font-error-messenger);
+  color: var(--danger-color-80);
+}
+
+@mixin option-error($classname, $isFocus: false) {
+  #{$classname} {
+    border-color: var(--danger-color-80) !important;
+
+    @if $isFocus == true {
+      &:focus {
+        border-color: var(--danger-color-80);
+      }
+    }
+  }
+}
+
+@mixin option-success($classname, $isFocus: false) {
+  #{$classname} {
+    border-color: var(--success-color-80);
+
+    @if $isFocus == true {
+      &:focus {
+        border-color: var(--success-color-80);
+      }
+    }
+  }
+}
+
+@mixin option-loading {
+  pointer-events: none;
+  cursor: not-allowed;
+  user-select: none;
+
+  background: var(--skeleton-gradient);
+  background-size: 200% 100%;
+
+  animation: 1.5s shine linear infinite;
+
+  @keyframes shine {
+    to {
+      background-position-x: -200%;
+    }
+  }
+}

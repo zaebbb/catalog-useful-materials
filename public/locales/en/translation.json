@@ -1,0 +1,9 @@
+{
+  "lang-ru": "Русский",
+  "lang-en": "English",
+  "current-lang": "en_US",
+  "app-name": "Dev-notes",
+  "error-boundary": "Internal App Error",
+  "error-page-reload": "Reload Page",
+  "page-not-found": "Page Not Found"
+}

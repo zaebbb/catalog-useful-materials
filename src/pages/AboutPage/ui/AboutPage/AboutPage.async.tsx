@@ -1,4 +1,4 @@
 import React from 'react'
 
-export const MainPageAsync =
-  React.lazy(async () => await import('./MainPage'))
+export const AboutPageAsync =
+  React.lazy(async () => await import('./AboutPage'))

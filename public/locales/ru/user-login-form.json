@@ -1,0 +1,12 @@
+{
+  "title-1": "Войти",
+  "title-2": "в аккаунт",
+
+  "input-label-email": "Электронная почта",
+  "input-label-password": "Пароль",
+
+  "button-login": "Войти",
+  "button-register": "Зарегистрироваться",
+
+  "alternate-auth": "Или авторизуйтесь с помощью"
+}

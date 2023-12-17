@@ -1,0 +1,62 @@
+.Menu {
+  position: relative;
+}
+
+.DropdownClickable {
+  position: relative;
+}
+
+.triggerElement {
+  display: inline-block;
+}
+
+.MenuWrapper {
+  position: absolute;
+  z-index: 2;
+  top: 100%;
+  left: 0;
+
+  display: inline-flex;
+  flex-direction: column;
+  gap: 12px;
+
+  min-width: 0;
+  margin-top: 10px;
+  padding: 15px 25px;
+
+  white-space: nowrap;
+
+  background: var(--neutral-color-00);
+  border-radius: var(--border-radius);
+  box-shadow: 0 0 10px rgb(0 0 0 / 20%);
+}
+
+.AnimationEnter {
+  opacity: 0;
+  transition: 0.2s;
+}
+
+.AnimationEnterFrom {
+  transform: translateY(-15px) scale(0.90);
+  opacity: 0;
+}
+
+.AnimationEnterTo {
+  transform: translateY(0) scale(1);
+  opacity: 100;
+}
+
+.AnimationLeave {
+  opacity: 100;
+  transition: 0.2s;
+}
+
+.AnimationLeaveFrom{
+  transform: translateY(0) scale(1);
+  opacity: 100;
+}
+
+.AnimationLeaveTo{
+  transform: translateY(-15px) scale(0.90);
+  opacity: 0;
+}

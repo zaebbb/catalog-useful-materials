@@ -1,0 +1,79 @@
+.Span {
+  vertical-align: baseline;
+}
+
+.white {
+  color: var(--neutral-color-00);
+}
+
+.gradient {
+  @include gradient-text;
+}
+
+.color-type {
+  &-purple {
+    &-80 { color: var(--purple-color-80); }
+    &-70 { color: var(--purple-color-70); }
+    &-60 { color: var(--purple-color-60); }
+    &-50 { color: var(--purple-color-50); }
+    &-40 { color: var(--purple-color-40); }
+    &-30 { color: var(--purple-color-30); }
+    &-20 { color: var(--purple-color-20); }
+    &-10 { color: var(--purple-color-10); }
+  }
+
+  &-neutral {
+    &-80 { color: var(--neutral-color-80); }
+    &-70 { color: var(--neutral-color-70); }
+    &-60 { color: var(--neutral-color-60); }
+    &-50 { color: var(--neutral-color-50); }
+    &-40 { color: var(--neutral-color-40); }
+    &-30 { color: var(--neutral-color-30); }
+    &-20 { color: var(--neutral-color-20); }
+    &-10 { color: var(--neutral-color-10); }
+  }
+
+  &-success {
+    &-80 { color: var(--success-color-80); }
+    &-70 { color: var(--success-color-70); }
+    &-60 { color: var(--success-color-60); }
+    &-50 { color: var(--success-color-50); }
+    &-40 { color: var(--success-color-40); }
+    &-30 { color: var(--success-color-30); }
+    &-20 { color: var(--success-color-20); }
+    &-10 { color: var(--success-color-10); }
+  }
+
+  &-info {
+    &-80 { color: var(--info-color-80); }
+    &-70 { color: var(--info-color-70); }
+    &-60 { color: var(--info-color-60); }
+    &-50 { color: var(--info-color-50); }
+    &-40 { color: var(--info-color-40); }
+    &-30 { color: var(--info-color-30); }
+    &-20 { color: var(--info-color-20); }
+    &-10 { color: var(--info-color-10); }
+  }
+
+  &-warning {
+    &-80 { color: var(--warning-color-80); }
+    &-70 { color: var(--warning-color-70); }
+    &-60 { color: var(--warning-color-60); }
+    &-50 { color: var(--warning-color-50); }
+    &-40 { color: var(--warning-color-40); }
+    &-30 { color: var(--warning-color-30); }
+    &-20 { color: var(--warning-color-20); }
+    &-10 { color: var(--warning-color-10); }
+  }
+
+  &-danger {
+    &-80 { color: var(--danger-color-80); }
+    &-70 { color: var(--danger-color-70); }
+    &-60 { color: var(--danger-color-60); }
+    &-50 { color: var(--danger-color-50); }
+    &-40 { color: var(--danger-color-40); }
+    &-30 { color: var(--danger-color-30); }
+    &-20 { color: var(--danger-color-20); }
+    &-10 { color: var(--danger-color-10); }
+  }
+}

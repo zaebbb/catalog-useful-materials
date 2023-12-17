@@ -1,0 +1,6 @@
+{
+  "select-search-not-found": "No values were found for the specified search",
+
+  "element-edit-modal-delete-cancel": "Cancel",
+  "element-edit-modal-delete-complete": "Remove"
+}

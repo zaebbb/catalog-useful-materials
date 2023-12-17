@@ -1,0 +1,13 @@
+.Code {
+  position: relative;
+
+  overflow: hidden;
+  overflow-x: auto;
+  display: grid;
+
+  border-radius: var(--border-radius-small);
+
+  pre {
+    margin: 0 !important;
+  }
+}

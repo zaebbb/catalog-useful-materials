@@ -1,9 +1,12 @@
-import React from 'react'
+.extra { font: var(--font-extra-title); }
+.large { font: var(--font-title-1); }
+.medium { font: var(--font-title-2); }
+.regular { font: var(--font-title-3); }
+.small { font: var(--font-title-4); }
+.mini { font: var(--font-title-5); }
 
-export const TitleBase: React.FC = React.memo(() => {
-
-
-  return (
-
-  )
-})
+.align {
+  &-left { text-align: left; }
+  &-right { text-align: right; }
+  &-center { text-align: center; }
+}

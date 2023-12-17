@@ -1,0 +1,12 @@
+.ProfileCard {
+  position: relative;
+
+  .Fields {
+    @include adaptive-max($breakpoint-laptop-min) {
+      grid-template-columns: 1fr;
+    }
+
+    display: grid;
+    grid-template-columns: repeat(2, minmax(220px, 1fr));
+  }
+}

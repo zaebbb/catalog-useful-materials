@@ -18,6 +18,7 @@
   --neutral-color-30: #D3D4D6;
   --neutral-color-20: #EAEAEB;
   --neutral-color-10: #F4F4F4;
+  --neutral-color-00: #FFF;
 
   // success-color
   --success-color-80: #0CC857;
@@ -28,4 +29,46 @@
   --success-color-30: #88EEB1;
   --success-color-20: #A0F1C0;
   --success-color-10: #B8F5D0;
+
+  // info-color
+  --info-color-80: #2196F3;
+  --info-color-70: #40A9F4;
+  --info-color-60: #58B3F5;
+  --info-color-50: #70BEF7;
+  --info-color-40: #88C9F8;
+  --info-color-30: #9FD4F9;
+  --info-color-20: #CFE9FC;
+  --info-color-10: #E7F4FE;
+
+  // warning-color
+  --warning-color-80: #FCA119;
+  --warning-color-70: #FDB447;
+  --warning-color-60: #FDC775;
+  --warning-color-50: #FED08C;
+  --warning-color-40: #FED9A3;
+  --warning-color-30: #FEE3BA;
+  --warning-color-20: #FEECD1;
+  --warning-color-10: #FFF6E8;
+
+  // danger-color
+  --danger-color-80: #E01E1E;
+  --danger-color-70: #E64B4B;
+  --danger-color-60: #EC7878;
+  --danger-color-50: #F08F8F;
+  --danger-color-40: #F3A5A5;
+  --danger-color-30: #F6BCBC;
+  --danger-color-20: #F6BCBC;
+  --danger-color-10: #FCE9E9;
+
+  // gradient-color
+  --gradient-first-color: #6345ED;
+  --gradient-last-color: #DC39FC;
+  --gradient-variant-tree-color: linear-gradient(90deg, #6345ED 0%, #7F42F0 52.6%, #DC39FC 100%);
+  --gradient-variant-two-color: linear-gradient(90deg, #6345ED 0%, #E15CFC 89.58%);
+
+  // special-color
+  --footer-line-color: #21242A;
+  --disabled-border-color: #ECECEC;
+  --skeleton-color: #eee;
+  --skeleton-gradient: linear-gradient(110deg, #ececec 8%, #f5f5f5 18%, #ececec 33%);
 }

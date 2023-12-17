@@ -1,0 +1,31 @@
+@mixin transition-animation {
+  .AnimationEnter {
+    opacity: 0;
+    transition: 0.2s;
+  }
+
+  .AnimationEnterFrom {
+    transform: translateY(-15px) scale(0.90);
+    opacity: 0;
+  }
+
+  .AnimationEnterTo {
+    transform: translateY(0) scale(1);
+    opacity: 100;
+  }
+
+  .AnimationLeave {
+    opacity: 100;
+    transition: 0.2s;
+  }
+
+  .AnimationLeaveFrom{
+    transform: translateY(0) scale(1);
+    opacity: 100;
+  }
+
+  .AnimationLeaveTo{
+    transform: translateY(-15px) scale(0.90);
+    opacity: 0;
+  }
+}

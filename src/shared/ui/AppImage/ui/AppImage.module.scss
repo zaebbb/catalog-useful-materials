@@ -1,0 +1,19 @@
+.AppImage {
+  position: relative;
+}
+
+.Image {
+  cursor: pointer;
+  border-radius: var(--border-radius-medium);
+  transition: transform 0.3s;
+
+  &:hover {
+    transform: translateY(-4px);
+  }
+}
+
+.max {
+  .Image {
+    width: 100%;
+  }
+}

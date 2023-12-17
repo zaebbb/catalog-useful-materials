@@ -1,0 +1,90 @@
+.InputFieldFile {
+  display: inline-block;
+}
+
+.InputFileLabel {
+  cursor: pointer;
+}
+
+.max {
+  @include option-max;
+}
+
+.Wrapper {
+  padding: 32px;
+
+  background: var(--neutral-color-nc-0, #FFF);
+  border: 1px dashed var(--neutral-color-30);
+  border-radius: 24px;
+
+  transition: 0.2s color, 0.2s border-color, 0.2s background;
+}
+
+.LoadFile {
+  object-fit: cover;
+}
+
+.LoadFile,
+.ExtensionName {
+  width: 80px;
+  height: 80px;
+  border: 1px solid var(--disabled-border-color);
+  border-radius: 8px;
+}
+
+.ExtensionName {
+  background: var(--neutral-color-20);
+}
+
+.validation {
+  @include option-validation;
+}
+
+.successInfo {
+  font: var(--font-error-messenger);
+  color: var(--success-color-80);
+}
+
+.error {
+  border-color: var(--danger-color-80);
+}
+
+.success {
+  border-color: var(--success-color-80);
+}
+
+.FileWrapper {
+  position: relative;
+}
+
+.RemoveFile {
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  svg {
+    color: var(--danger-color-80);
+  }
+}
+
+.loadingCommon *,
+.readonly *,
+.readonly {
+  cursor: not-allowed;
+  user-select: none;
+  color: var(--neutral-color-30);
+}
+
+.drag {
+  cursor: move;
+  border-color: var(--neutral-color-60);
+
+  * {
+    color: var(--neutral-color-60);
+  }
+}
+
+.loading {
+  @include option-loading;
+}

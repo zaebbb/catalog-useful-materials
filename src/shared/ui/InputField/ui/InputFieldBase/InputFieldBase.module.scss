@@ -1,0 +1,113 @@
+.InputField {
+  @include input-wrapper;
+}
+
+.max {
+  @include option-max;
+}
+
+.title {
+  @include input-label;
+}
+
+.InputWrapper {
+  position: relative;
+}
+
+.input {
+  @include input-field;
+
+  &::placeholder {
+    color: var(--neutral-color-40);
+  }
+}
+
+.border-size-small {
+  border-width: 1px;
+}
+
+.border-size-medium {
+  border-width: 2px;
+}
+
+.border-color-default {
+  border-color: var(--neutral-color-30);
+
+  &:focus {
+    border-color: var(--neutral-color-40);
+  }
+}
+
+.border-color-empty {
+  border-color: var(--neutral-color-00);
+
+  &:focus {
+    border-color: var(--neutral-color-40);
+  }
+}
+
+.error {
+  @include option-error(".input", true);
+}
+
+.validation {
+  @include option-validation;
+
+  margin-top: 10px;
+}
+
+.success {
+  @include option-success(".input", true);
+}
+
+.successInfo {
+  margin-top: 10px;
+  font: var(--font-error-messenger);
+  color: var(--success-color-80);
+}
+
+.icon {
+  @include input-icon;
+}
+
+.errorIcon {
+  color: var(--danger-color-80);
+}
+
+.successIcon {
+  color: var(--success-color-80);
+}
+
+.readonly {
+  cursor: not-allowed;
+  user-select: none;
+
+  .title {
+    color: var(--neutral-color-30);
+  }
+
+  .input {
+    cursor: not-allowed;
+    color: var(--neutral-color-30);
+    background: var(--neutral-color-10);
+    border-color: var(--disabled-border-color);
+
+    &::placeholder {
+      color: var(--neutral-color-30);
+    }
+  }
+
+  .icon svg {
+    color: var(--neutral-color-30);
+  }
+}
+
+.description {
+  @include option-description;
+}
+
+.loading {
+  .input {
+    @include option-loading;
+  }
+}

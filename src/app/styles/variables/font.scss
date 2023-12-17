@@ -1,0 +1,48 @@
+@import 'https://fonts.googleapis.com/css2?family=Bangers&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Manrope:wght@200;300;400;500;600;700;800&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200;0,6..12,300;0,6..12,400;0,6..12,500;0,6..12,600;0,6..12,700;0,6..12,800;0,6..12,900;0,6..12,1000;1,6..12,200;1,6..12,300;1,6..12,400;1,6..12,500;1,6..12,600;1,6..12,700;1,6..12,800;1,6..12,900;1,6..12,1000&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300;400;500;600;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap';
+
+:root {
+  // base-font
+  --font-name-title: 'Manrope', sans-serif;
+  --font-name-text: 'Nunito Sans', sans-serif;
+  --line-height: 1.5;
+
+  // font-weight
+  --font-bold: 700;
+  --font-medium: 500;
+  --font-regular: 400;
+
+  // title
+  --font-extra-title: var(--font-bold) 60px / var(--line-height) var(--font-name-title); // extra
+  --font-title-1: var(--font-bold) 42px / var(--line-height) var(--font-name-title); // large
+  --font-title-2: var(--font-bold) 32px / var(--line-height) var(--font-name-title); // medium
+  --font-title-3: var(--font-bold) 24px / var(--line-height) var(--font-name-title); // regular
+  --font-title-4: var(--font-bold) 22px / var(--line-height) var(--font-name-title); // small
+  --font-title-5: var(--font-bold) 16px / var(--line-height) var(--font-name-title); // mini
+
+  // subtitle
+  --font-subtitle: var(--font-bold) 14px / var(--line-height) var(--font-name-title);
+
+  // body
+  --font-body-3: var(--font-regular) 16px / var(--line-height) var(--font-name-text);
+  --font-body-2: var(--font-bold) 14px / var(--line-height) var(--font-name-text);
+  --font-body-1: var(--font-medium) 14px / var(--line-height) var(--font-name-text);
+
+  // caption
+  --font-caption: var(--font-medium) 10px / var(--line-height) var(--font-name-text);
+
+  // chip
+  --font-chip: var(--font-medium) 14px / var(--line-height) var(--font-name-text);
+
+  // button-large
+  --font-button-large: var(--font-bold) 16px / 16px var(--font-name-text);
+  --font-button-medium: var(--font-medium) 14px / 14px var(--font-name-text);
+
+  // error-messenger
+  --font-error-messenger: var(--font-regular) 12px / var(--line-height) var(--font-name-text);
+
+  // quote
+  --font-quote: var(--font-medium) 20px / var(--line-height) var(--font-name-text);
+
+  // logo
+  --font-logo: var(--font-bold) 18px / var(--line-height) var(--font-name-title);
+}

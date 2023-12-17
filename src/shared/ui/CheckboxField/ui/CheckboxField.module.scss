@@ -1,0 +1,75 @@
+.CheckboxField {
+  cursor: pointer;
+  position: relative;
+}
+
+.CheckboxLabel {
+  font: var(--font-body-1);
+  color: var(--neutral-color-70);
+}
+
+.CheckboxSquare {
+  width: 25px;
+  height: 25px;
+
+  background: transparent;
+  border-color: var(--neutral-color-30);
+  border-style: solid;
+  border-width: 1px;
+  border-radius: var(--border-radius-small);
+
+  transition: 0.35s background;
+
+  svg {
+    color: var(--neutral-color-00);
+  }
+}
+
+.squareActive {
+  .CheckboxSquare {
+    background: var(--purple-color-80);
+  }
+}
+
+.readonly {
+  cursor: not-allowed;
+  user-select: none;
+
+  .CheckboxLabel {
+    color: var(--neutral-color-30);
+  }
+}
+
+.loading {
+  .CheckboxSquare {
+    @include option-loading;
+  }
+}
+
+.error {
+  .CheckboxSquare {
+    border-color: var(--danger-color-80);
+  }
+}
+
+.success {
+  .CheckboxSquare {
+    border-color: var(--success-color-80);
+  }
+}
+
+.validation {
+  @include option-validation;
+
+  margin-top: 10px;
+}
+
+.successInfo {
+  margin-top: 10px;
+  font: var(--font-error-messenger);
+  color: var(--success-color-80);
+}
+
+.description {
+  @include option-description;
+}

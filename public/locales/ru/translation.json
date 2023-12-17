@@ -1,0 +1,9 @@
+{
+  "lang-ru": "Русский",
+  "lang-en": "English",
+  "current-lang": "ru",
+  "app-name": "Dev-notes",
+  "error-boundary": "Произошла непредвиденная ошибка",
+  "error-page-reload": "Перезагрузить страницу",
+  "page-not-found": "Страница не найдена"
+}

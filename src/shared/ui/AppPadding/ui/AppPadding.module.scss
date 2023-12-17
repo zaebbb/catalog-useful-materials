@@ -1,0 +1,20 @@
+.AppPaddingDesktop {
+  padding-right: var(--layout-padding-desktop);
+  padding-left: var(--layout-padding-desktop);
+}
+
+.AppPaddingLaptop {
+  padding-right: var(--layout-padding-laptop);
+  padding-left: var(--layout-padding-laptop);
+}
+
+.AppPaddingTablet {
+  padding-right: var(--layout-padding-tablet);
+  padding-left: var(--layout-padding-tablet);
+}
+
+.AppPaddingMobile {
+  padding-right: var(--layout-padding-mobile);
+  padding-left: var(--layout-padding-mobile);
+}
+

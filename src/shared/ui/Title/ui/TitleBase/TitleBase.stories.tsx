@@ -1,26 +1,58 @@
-import React from 'react'
-import { mappingTitleTag } from '../../model/lib/mappingTitleTag'
-import { type TitleBaseProps } from '../../model/types/title'
-import cls from './TitleBase.module.scss'
-import { type Additional, classNames } from '@/shared/lib/helpers/classNames'
+import type { Meta, StoryObj } from '@storybook/react'
+import { TitleBase } from './TitleBase'
 
-export const TitleBase: React.FC<TitleBaseProps> = React.memo((props: TitleBaseProps) => {
-  const {
-    className,
-    variant = 'medium',
-    content,
-  } = props
+const meta = {
+  title: 'ui-kit/Title/TitleBase',
+  component: TitleBase,
+  parameters: {
+    layout: 'centered',
+  },
+  tags: ['autodocs'],
+} satisfies Meta<typeof TitleBase>
 
-  const TitleComponent = mappingTitleTag[variant]
+const children = 'Заголовок на проекте'
 
-  const additional: Additional = [
-    className,
-    cls[variant],
-  ]
+export default meta
+type Story = StoryObj<typeof meta>
 
-  return (
-    <TitleComponent className={classNames('', {}, additional)}>
-      {content}
-    </TitleComponent>
-  )
-})
+export const TitleExtra: Story = {
+  args: {
+    variant: 'extra',
+    children,
+  },
+}
+
+export const TitleLarge: Story = {
+  args: {
+    variant: 'large',
+    children,
+  },
+}
+
+export const TitleMedium: Story = {
+  args: {
+    variant: 'medium',
+    children,
+  },
+}
+
+export const TitleMini: Story = {
+  args: {
+    variant: 'mini',
+    children,
+  },
+}
+
+export const TitleSmall: Story = {
+  args: {
+    variant: 'small',
+    children,
+  },
+}
+
+export const TitleRegular: Story = {
+  args: {
+    variant: 'regular',
+    children,
+  },
+}
