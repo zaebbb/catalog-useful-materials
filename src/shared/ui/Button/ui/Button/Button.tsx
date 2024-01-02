@@ -37,24 +37,26 @@ export type ButtonFill = 'full' | 'border' | 'clear'
  * @description Наследует классические атрибуты для кнопки
  * @description Наследует children от React
  * */
-export type ButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> & React.PropsWithChildren<{
+export type ButtonProps =
+  Omit<React.ButtonHTMLAttributes<HTMLButtonElement>, 'disabled'> &
+  React.PropsWithChildren<{
   /** Передаваемый класс в компонент, необязательный */
-  className?: string
-  /** Размер кнопки, необязательный */
-  size?: ButtonSize
-  /** Тема кнопки, необязательный */
-  theme?: ButtonTheme
-  /** Наполнение кнопки, необязательный */
-  fill?: ButtonFill
-  /** Параметр указывающий неактивна ли кнопка, необязательный */
-  isDisabled?: boolean
-  /** Дополнительный контент (иконка) перед основным содержанием */
-  addonLeft?: React.ReactNode
-  /** Дополнительный контент (иконка) после основного содержания */
-  addonRight?: React.ReactNode
-  /** Расстояние gap между доп. контентом и основным содержанием */
-  addonGap?: FlexGap
-}>
+    className?: string
+    /** Размер кнопки, необязательный */
+    size?: ButtonSize
+    /** Тема кнопки, необязательный */
+    theme?: ButtonTheme
+    /** Наполнение кнопки, необязательный */
+    fill?: ButtonFill
+    /** Параметр указывающий неактивна ли кнопка, необязательный */
+    isDisabled?: boolean
+    /** Дополнительный контент (иконка) перед основным содержанием */
+    addonLeft?: React.ReactNode
+    /** Дополнительный контент (иконка) после основного содержания */
+    addonRight?: React.ReactNode
+    /** Расстояние gap между доп. контентом и основным содержанием */
+    addonGap?: FlexGap
+  }>
 
 /**
  * @description Кнопка приложения с дополнениями расширяющие функционал

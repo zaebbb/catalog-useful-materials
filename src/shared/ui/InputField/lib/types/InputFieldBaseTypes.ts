@@ -1,7 +1,10 @@
 import { type InputHTMLAttributes } from 'react'
 import type React from 'react'
 
-export type HTTMLInputFieldBaseProps = Omit<InputHTMLAttributes<HTMLInputElement>, 'onChange'>
+export type HTTMLInputFieldBaseProps = Omit<
+InputHTMLAttributes<HTMLInputElement>,
+'onChange'
+>
 export type InputType = 'text' | 'number' | 'hidden' | 'password'
 export type InputBorderColor = 'default' | 'gradient' | 'empty'
 export type InputBorderSize = 'small' | 'medium'

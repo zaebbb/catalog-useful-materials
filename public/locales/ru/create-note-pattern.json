@@ -9,6 +9,7 @@
   "technology": "Технология",
   "course": "Курс",
   "book": "Книга",
+  "remote-source": "Видео / Конференция",
 
   "button-create": "Создать",
 
@@ -35,5 +36,36 @@
   "input-pattern-issue-field-link-placeholder": "Введите ссылку на задачу",
   "input-pattern-issue-field-image-label": "Фотография задачи",
   "input-pattern-issue-field-view-option-link": "Изображение",
-  "input-pattern-issue-field-view-option-image": "Ссылка"
+  "input-pattern-issue-field-view-option-image": "Ссылка",
+
+  "input-pattern-layout-field-link-label": "Ссылка на макет или готовую верстку",
+  "input-pattern-layout-field-link-placeholder": "Введите ссылку на макет",
+  "input-pattern-layout-field-image-label": "Скриншот или изображение макета",
+
+  "input-pattern-service-field-link-label": "Ссылка на сервис",
+  "input-pattern-service-field-link-placeholder": "Введите ссылку на сервис",
+
+  "input-pattern-book-field-view-option-file": "Файл",
+  "input-pattern-book-field-view-option-link": "Ссылка",
+  "input-pattern-book-field-view-label": "Выберите тип загружаемого ресурса",
+  "input-pattern-book-field-link-label": "Ссылка на книгу",
+  "input-pattern-book-field-link-placeholder": "Введите ссылку на книгу",
+  "input-pattern-book-field-file-label": "Выберите или вставьте файл книги",
+
+  "input-pattern-video-field-link-label": "Ссылка на видео / конференцию",
+  "input-pattern-video-field-link-placeholder": "Введите ссылку на видео / конференцию",
+
+  "input-pattern-technology-field-link-tech-label": "Ссылка на технологию",
+  "input-pattern-technology-field-link-tech-placeholder": "Введите ссылку на технологию",
+  "input-pattern-technology-field-link-docs-label": "Ссылка на страницу документации",
+  "input-pattern-technology-field-link-docs-placeholder": "Введите ссылку на страницу документации",
+  "input-pattern-technology-field-link-install-label": "Ссылка на информацию о наличии пакетного менеджера",
+  "input-pattern-technology-field-link-install-placeholder": "Введите ссылку на информацию о наличии пакетного менеджера",
+  "input-pattern-technology-field-link-install-description": "Например на ссылку проекта на сервисе. Например npm или packagist (Composer)",
+  "input-pattern-technology-field-icon-label": "Выберите или вставьте иконку технологии",
+
+  "input-pattern-course-field-link-label": "Ссылка на курс",
+  "input-pattern-course-field-link-placeholder": "Введите ссылку на курс",
+  "input-pattern-course-field-author-label": "Автор курса",
+  "input-pattern-course-field-author-placeholder": "Введите автора курса"
 }

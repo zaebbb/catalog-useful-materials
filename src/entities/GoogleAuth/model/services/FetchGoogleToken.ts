@@ -16,7 +16,7 @@ export const FetchGoogleToken =
 
       try {
         const response = await extra.api.get<GoogleAuthGetTokenResponse>(
-          '/google-auth/google-auth-client-id'
+          '/social-auth/google-auth-client-id'
         )
 
         if (!response.data) {

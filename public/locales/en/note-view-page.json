@@ -4,5 +4,12 @@
   "details-view-badge": "Badge",
   "details-view-category": "Category:",
   "details-view-note-found-1": "Note",
-  "details-view-note-found-2": "not found"
+  "details-view-note-found-2": "not found",
+  "details-view-date-created": "Created on",
+
+  "details-link-view-pattern-technology-tech": "Go to the website",
+  "details-link-view-pattern-technology-docs": "Documentation",
+  "details-link-view-pattern-technology-install": "The PM project",
+
+  "details-link-view-pattern-course-author": "Author:"
 }

@@ -1,7 +1,12 @@
 import { type IconLibName } from '@lib/helpers/IconElement'
 import { classNames } from '@lib/helpers/classNames'
 import { generateKey } from '@lib/helpers/generateKey'
-import { getRouteCreateNote, getRouteLogout, getRouteProfile } from '@lib/router'
+import {
+  getRouteCreateNote,
+  getRouteLogout,
+  getRouteProfile,
+  getRouteUserViewNotes,
+} from '@lib/router'
 import { AppLink } from '@ui-kit/AppLink'
 import { IconLib } from '@ui-kit/Icon'
 import { HStack, VStack } from '@ui-kit/Stack'
@@ -34,6 +39,11 @@ export const ProfileMenu: React.FC<ProfileMenuProps> = memo((props: ProfileMenuP
       content: t('profile-sidebar-create-note'),
       link: getRouteCreateNote(),
       icon: 'IconPlusOutline',
+    },
+    {
+      content: t('profile-sidebar-user-notes'),
+      link: getRouteUserViewNotes(),
+      icon: 'IconDocumentOutline',
     },
     {
       content: t('profile-sidebar-logout'),

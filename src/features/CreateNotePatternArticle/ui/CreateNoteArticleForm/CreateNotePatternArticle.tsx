@@ -137,7 +137,7 @@ export const CreateNotePatternArticle: React.FC<CreateNotePatternArticleProps> =
           <Button
             onClick={onClickHandler}
             size={'large'}
-            disabled={isLoading}
+            isDisabled={isLoading}
             className={className}
           >
             {t('button-create')}

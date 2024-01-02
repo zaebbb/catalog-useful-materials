@@ -1,12 +1,6 @@
-import {
-  getGoogleAuthTokenSelector,
-  GoogleAuthActions,
-  GoogleAuthReducer,
-  SaveGoogleData,
-  useGoogleAuth,
-  FetchGoogleToken,
-} from '@entities/GoogleAuth'
+import { GoogleAuthButton } from '@entities/GoogleAuth'
 import { useAuth } from '@entities/User'
+import { AuthButton as VkAuthButton } from '@entities/VKAuth'
 import { DynamicReducerLoader, type ReducerList } from '@lib/components/DynamicReducerLoader'
 import { useAppDispatch } from '@lib/hooks/useAppDispatch'
 import { getRouteProfile } from '@lib/router'
@@ -19,8 +13,6 @@ import React, { memo } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useSelector } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
-import { type AuthData, GoogleAuth } from '../../../../shared/integrations/google-auth'
-import { VkAuthButton } from '../../../../shared/integrations/vk-auth'
 import {
   getEmailSelector, getIsLoadingSelector,
   getPasswordSelector,
@@ -36,7 +28,6 @@ interface UserLoginFormProps {
 
 const initialReducers: ReducerList = {
   userLoginForm: UserLoginReducer,
-  googleAuth: GoogleAuthReducer,
 }
 
 export const UserLoginForm: React.FC<UserLoginFormProps> = memo((props: UserLoginFormProps) => {
@@ -44,20 +35,13 @@ export const UserLoginForm: React.FC<UserLoginFormProps> = memo((props: UserLogi
   const { t } = useTranslation('user-login-form')
   const dispatch = useAppDispatch()
   const isLoading = useSelector(getIsLoadingSelector)
-  const clientId = useSelector(getGoogleAuthTokenSelector)
   const navigate = useNavigate()
   const {
     isMounted,
   } = useAuth()
-
   const email = useSelector(getEmailSelector)
   const password = useSelector(getPasswordSelector)
   const validation = useSelector(getValidationSelector)
-
-  const {
-    mode,
-    isAuth,
-  } = useGoogleAuth()
 
   const onChangeEmail = React.useCallback((value: string) => {
     dispatch(UserLoginActions.setEmail(value))
@@ -78,19 +62,7 @@ export const UserLoginForm: React.FC<UserLoginFormProps> = memo((props: UserLogi
     if (isMounted) {
       navigate(getRouteProfile())
     }
-
-    if (!isMounted) {
-      dispatch(FetchGoogleToken())
-      GoogleAuthActions.setMode('login')
-    }
-  }, [dispatch, isAuth, isMounted, navigate])
-
-  const onChangeAuhGoogle = React.useCallback((userData: AuthData) => {
-    dispatch(SaveGoogleData({
-      mode,
-      user: userData,
-    }))
-  }, [dispatch, mode])
+  }, [isMounted, navigate])
 
   return (
     <DynamicReducerLoader reducers={initialReducers}>
@@ -123,10 +95,19 @@ export const UserLoginForm: React.FC<UserLoginFormProps> = memo((props: UserLogi
             />
 
             <VStack gap={24} isMax>
-              <Button size={'large'} onClick={onSubmit}>
+              <Button
+                size={'large'}
+                onClick={onSubmit}
+                isDisabled={isLoading}
+              >
                 {t('button-login')}
               </Button>
-              <Button fill={'border'} size={'large'}>
+
+              <Button
+                fill={'border'}
+                size={'large'}
+                isDisabled={isLoading}
+              >
                 {t('button-register')}
               </Button>
 
@@ -135,7 +116,7 @@ export const UserLoginForm: React.FC<UserLoginFormProps> = memo((props: UserLogi
               </Text>
 
               <div className={cls.AuthorizeSocial}>
-                <GoogleAuth client_id={clientId} onChange={onChangeAuhGoogle} />
+                <GoogleAuthButton />
                 <VkAuthButton />
               </div>
             </VStack>

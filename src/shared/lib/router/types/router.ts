@@ -9,6 +9,7 @@ export enum AppRoutes {
   PROFILE = 'profile',
   CREATE_NOTE = 'create_note',
   NOTE_DETAILS = 'note_details',
+  USER_NOTES = 'user_notes',
   PRIVACY = 'privacy',
   LOGOUT = 'logout',
   FORBIDDEN = 'forbidden',

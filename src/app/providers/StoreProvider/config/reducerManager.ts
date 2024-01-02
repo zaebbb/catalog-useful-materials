@@ -41,6 +41,8 @@ export const createReducerManager = (
         return
       }
 
+      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+      // @ts-expect-error
       reducers[key] = reducer
       mountedReducers[key] = true
       combinedReducer = combineReducers(reducers)

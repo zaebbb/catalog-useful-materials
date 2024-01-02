@@ -48,7 +48,7 @@ export const Avatar: React.FC<AvatarProps> = memo((props: AvatarProps) => {
 
   return (
     <img
-      src={src ?? Profile}
+      src={src || Profile}
       alt={alt}
       className={classNames(cls.Avatar, {}, additional)}
     />

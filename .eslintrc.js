@@ -123,6 +123,7 @@ module.exports = {
         'theme',
         'as',
         'mode',
+        'radius',
       ],
     }],
   },

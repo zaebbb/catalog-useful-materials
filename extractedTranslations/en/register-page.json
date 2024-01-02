@@ -1,0 +1,22 @@
+{
+  "alternate-auth": "",
+  "button-login": "",
+  "button-register": "",
+  "input-label-email": "input-label-email",
+  "input-label-password": "input-label-password",
+  "input-label-repeat-password": "input-label-repeat-password",
+  "input-label-user-consent": "input-label-user-consent",
+  "input-label-user-consent-1": "",
+  "input-label-user-consent-2": "",
+  "input-label-username": "input-label-username",
+  "input-placeholder-email": "input-placeholder-email",
+  "input-placeholder-password": "input-placeholder-password",
+  "input-placeholder-repeat-password": "input-placeholder-repeat-password",
+  "input-placeholder-username": "input-placeholder-username",
+  "login-1": "login-1",
+  "login-2": "login-2",
+  "login-login": "",
+  "page-title": "",
+  "title-1": "",
+  "title-2": ""
+}

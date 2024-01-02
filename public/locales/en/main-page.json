@@ -1,3 +1,9 @@
 {
-  "page-title": "DEV-NOTES"
+  "page-title": "DEV-NOTES",
+  "title": "A note-taking app",
+  "text": "The note-taking platform will allow you to save and organize all important thoughts, ideas, and links in one place.",
+  "text-2": "The visibility level will allow you to save both private and public notes if you want to share a note with friends.",
+  "text-3": "Thanks to smart search and careful filtering, you will never get lost in the list of your notes and you will know exactly how to find the note you need.",
+  "register-button": "Register",
+  "auth-button": "Log In"
 }

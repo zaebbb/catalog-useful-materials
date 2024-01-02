@@ -19,6 +19,9 @@ export const getRouteCreateNote = (): string => '/user/note/create'
 /** Ссылка на страницу просмотра заметки */
 export const getRouteViewNote = (viewCode: string): string => `/notes/${viewCode}`
 
+/** Ссылка на страницу просмотра заметки */
+export const getRouteUserViewNotes = (): string => '/user/notes/'
+
 /** Ссылка на страницу об использовании конфедициальных данных */
 export const getRoutePrivacyPolicy = (): string => '/privacy'
 

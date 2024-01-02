@@ -1,3 +1,10 @@
 {
-  "copyright": "Dev Notes - All Rights Reserved"
+  "copyright": "Dev Notes - All Rights Reserved",
+  "site-title": "About the site",
+  "user-title": "Links",
+  "site-content-1": "About the app",
+  "site-content-2": "The policy of confidentiality",
+  "user-content-1": "Profile",
+  "user-content-2": "Log In",
+  "user-content-3": "Register"
 }

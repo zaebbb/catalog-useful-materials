@@ -9,6 +9,7 @@
   "technology": "Technology",
   "course": "Course",
   "book": "Book",
+  "remote-source": "Video / Conference",
 
   "button-create": "Create",
 
@@ -35,5 +36,36 @@
   "input-pattern-issue-field-link-placeholder": "Enter the link to the task",
   "input-pattern-issue-field-image-label": "Photo of the task",
   "input-pattern-issue-field-view-option-link": "Image",
-  "input-pattern-issue-field-view-option-image": "Link"
+  "input-pattern-issue-field-view-option-image": "Link",
+
+  "input-pattern-layout-field-link-label": "Link to the layout or the finished layout",
+  "input-pattern-layout-field-link-placeholder": "Enter the link to the layout",
+  "input-pattern-layout-field-image-label": "Screenshot or image of the layout",
+
+  "input-pattern-service-field-link-label": "Link to the service",
+  "input-pattern-service-field-link-placeholder": "Enter the link to the service",
+
+  "input-pattern-book-field-view-option-file": "File",
+  "input-pattern-book-field-view-option-link": "Link",
+  "input-pattern-book-field-view-label": "Select the type of resource to download",
+  "input-pattern-book-field-link-label": "Link to the book",
+  "input-pattern-book-field-link-placeholder": "Enter the link to the book",
+  "input-pattern-book-field-file-label": "Select or paste the book file",
+
+  "input-pattern-video-field-link-label": "Link to the video / conference",
+  "input-pattern-video-field-link-placeholder": "Enter the link to the video / conference",
+
+  "input-pattern-technology-field-link-tech-label": "Link to the technology",
+  "input-pattern-technology-field-link-tech-placeholder": "Enter a link to the technology",
+  "input-pattern-technology-field-link-docs-label": "Link to the documentation page",
+  "input-pattern-technology-field-link-docs-placeholder": "Enter the link to the documentation page",
+  "input-pattern-technology-field-link-install-label": "Link to information about the availability of a package manager",
+  "input-pattern-technology-field-link-install-placeholder": "Enter a link to information about the availability of a package manager",
+  "input-pattern-technology-field-link-install-description": "For example, a project link on the service. For example, npm or packagist (Composer)",
+  "input-pattern-technology-field-icon-label": "Select or paste the technology icon",
+
+  "input-pattern-course-field-link-label": "Link to the course",
+  "input-pattern-course-field-link-placeholder": "Enter the link to the course",
+  "input-pattern-course-field-author-label": "The author of the course",
+  "input-pattern-course-field-author-placeholder": "Enter the course author"
 }

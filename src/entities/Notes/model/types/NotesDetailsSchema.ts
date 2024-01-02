@@ -20,6 +20,41 @@ export interface PatternCode {
   code: FieldNoteOption
 }
 
+export interface PatternIssue {
+  linkIssue: FieldNoteOption
+  imageIssue: FieldNoteOption
+}
+
+export interface PatternLayout {
+  linkLayout: FieldNoteOption
+  imageLayout: FieldNoteOption
+}
+
+export interface PatternService {
+  linkService: FieldNoteOption
+}
+
+export interface PatternBook {
+  linkBook: FieldNoteOption
+  fileBook: FieldNoteOption
+}
+
+export interface PatternVideo {
+  linkVideo: FieldNoteOption
+}
+
+export interface PatternTechnology {
+  linkTechnology: FieldNoteOption
+  linkInstall: FieldNoteOption
+  linkDocs: FieldNoteOption
+  icon: FieldNoteOption
+}
+
+export interface PatternCourse {
+  linkCourse: FieldNoteOption
+  authorCourse: FieldNoteOption
+}
+
 export interface BaseFieldsDetails {
   type: NotesTypes
   view: NotesViews
@@ -29,10 +64,18 @@ export interface BaseFieldsDetails {
 
   title: string
   description: string
+  createdAt: string
   draft: boolean
 
   patternArticle?: PatternArticle
   patternCode?: PatternCode
+  patternIssue?: PatternIssue
+  patternLayout?: PatternLayout
+  patternService?: PatternService
+  patternBook?: PatternBook
+  patternVideo?: PatternVideo
+  patternTechnology?: PatternTechnology
+  patternCourse?: PatternCourse
 }
 
 export type NoteDetailsResponse = BaseResponse<BaseFieldsDetails, any>

@@ -10,19 +10,22 @@ export interface RenderMultipleTabsProps<T extends string> {
   /** Элементы (стандартные option) select */
   items: SelectItems<T>
   setSelected: React.Dispatch<React.SetStateAction<SelectItems<T>>>
+  setIsOnChange: React.Dispatch<React.SetStateAction<boolean>>
 }
 
 const RenderMultipleTabsComponent = <T extends string>(props: RenderMultipleTabsProps<T>) => {
   const {
     items,
     setSelected,
+    setIsOnChange,
   } = props
 
   const onRemoveSelectedItems = React.useCallback((code: string) => {
     setSelected(prev => {
       return prev.filter(item => item.code !== code)
     })
-  }, [setSelected])
+    setIsOnChange(true)
+  }, [setIsOnChange, setSelected])
 
   const IconClose = React.useCallback((code: string) => (
     <IconLib

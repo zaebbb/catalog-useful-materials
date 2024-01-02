@@ -22,17 +22,19 @@ export const SelectNotesTypes: React.FC<SelectNotesTypesProps> =
       className,
     } = props
     const { t } = useTranslation('notes-types')
-    const remotePath = useSelector(getRemotePathSelector)
     const dispatch = useAppDispatch()
+    const remotePath = useSelector(getRemotePathSelector)
     const isLoading = useSelector(getIsLoadingSelector)
     const validation = useSelector(getValidationSelector)
 
     const onChangeHandler = React.useCallback((
       items: SelectItems<NotesTypesCodeList>
     ) => {
-      dispatch(NotesTypesActions.setCurrentType(items[0]))
-      dispatch(NoteBaseFieldsActions.setIsLoading(false))
-      dispatch(NoteBaseFieldsActions.setValidation({}))
+      if (items[0]) {
+        dispatch(NotesTypesActions.setCurrentType(items[0]))
+        dispatch(NoteBaseFieldsActions.setIsLoading(false))
+        dispatch(NoteBaseFieldsActions.setValidation({}))
+      }
     }, [dispatch])
 
     return (
@@ -44,6 +46,8 @@ export const SelectNotesTypes: React.FC<SelectNotesTypesProps> =
         onChange={onChangeHandler}
         isLoading={isLoading}
         validation={validation}
+        isSearch
+        searchPlaceholder={t('search-placeholder')}
       />
     )
   })

@@ -1,0 +1,24 @@
+{
+  "title-1": "Create",
+  "title-2": "Account",
+
+  "input-label-username": "Your username",
+  "input-placeholder-username": "Enter your username",
+
+  "input-label-email": "Your mail",
+  "input-placeholder-email": "Enter your mail",
+
+  "input-label-repeat-password": "Your password",
+  "input-placeholder-repeat-password": "Enter your password",
+
+  "input-label-password": "Repeat the password",
+  "input-placeholder-password": "Enter your password again",
+
+  "input-label-user-consent-1": "I agree to the terms",
+  "input-label-user-consent-2": "Privacy Policy",
+
+  "login-1": "Already have an account?",
+  "login-2": "Log In",
+
+  "button-register": "Register"
+}

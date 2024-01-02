@@ -46,6 +46,7 @@ const options: BuildOptions = {
   paths,
   apiUrl: 'http://localhost:8000/',
   styles,
+  isBuildAnalyze: false,
 }
 
 export default ({ config }: { config: webpack.Configuration }) => {

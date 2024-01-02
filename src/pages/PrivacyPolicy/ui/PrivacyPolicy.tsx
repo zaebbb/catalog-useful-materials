@@ -16,6 +16,12 @@ const PrivacyPolicy: React.FC = memo(() => {
         <VStack gap={24} className={cls.PrivacyPolicy}>
           <Privacy.SubTitleContainer />
           <Privacy.GeneralContainer />
+          <Privacy.BasicConceptsContainer />
+          <Privacy.InfoOperatorContainer />
+          <Privacy.PersonalDataSubjects />
+          <Privacy.PrinciplesPersonalData />
+          <Privacy.PurposesPersonalData />
+          <Privacy.Terms />
         </VStack>
       </VStack>
     </Page>

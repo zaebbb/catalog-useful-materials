@@ -44,6 +44,11 @@ const SelectFieldBaseComponent = <T extends string>(props: SelectFieldBaseProps<
   const [selectedState, setSelected] = React.useState(selected)
   const [searchItems, setSearchItems] = React.useState<SelectItems<T>>([])
   const [searchInput, setSearchInput] = React.useState<string>('')
+  const [
+    isRenderMultipleTabs,
+    setIsRenderMultipleTabs,
+  ] = React.useState<boolean>(Boolean(isMultiple && selectedState.length))
+  const [isOnchange, setIsOnChange] = React.useState<boolean>(false)
 
   const mods: Mods = {
     [cls.readonly]: isReadonly,
@@ -78,6 +83,14 @@ const SelectFieldBaseComponent = <T extends string>(props: SelectFieldBaseProps<
     setSearchItems(items)
   }, [items])
 
+  React.useEffect(() => {
+    if (isMultiple && selectedState.length) {
+      setIsRenderMultipleTabs(true)
+    } else {
+      setIsRenderMultipleTabs(false)
+    }
+  }, [isMultiple, selectedState.length])
+
   const onChangeHandler = React.useCallback((
     options: SelectFieldOption<T> & Array<SelectFieldOption<T>>
   ) => {
@@ -91,6 +104,8 @@ const SelectFieldBaseComponent = <T extends string>(props: SelectFieldBaseProps<
       setValid('')
       setSuccess('')
     }
+
+    setIsOnChange(true)
   }, [isMultiple, success, validation])
 
   const onChangeInputHandler = React.useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
@@ -98,8 +113,11 @@ const SelectFieldBaseComponent = <T extends string>(props: SelectFieldBaseProps<
   }, [])
 
   React.useEffect(() => {
-    onChange?.(selectedState)
-  }, [onChange, selectedState])
+    if (isOnchange) {
+      onChange?.(selectedState)
+      setIsOnChange(false)
+    }
+  }, [isOnchange, onChange, selectedState])
 
   React.useEffect(() => {
     setSearchItems(items)
@@ -192,9 +210,13 @@ const SelectFieldBaseComponent = <T extends string>(props: SelectFieldBaseProps<
         {valid && <span className={cls.validation}>{valid}</span>}
         {successState && <span className={cls.successInfo}>{successState}</span>}
       </div>
-      {isMultiple && (
+      {isRenderMultipleTabs && (
         <HStack gap={16}>
-          <RenderMultipleTabs setSelected={setSelected} items={selectedState} />
+          <RenderMultipleTabs
+            setSelected={setSelected}
+            setIsOnChange={setIsOnChange}
+            items={selectedState}
+          />
         </HStack>
       )}
     </VStack>

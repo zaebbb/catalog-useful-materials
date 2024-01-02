@@ -1,4 +1,5 @@
 {
   "label": "Note Template",
-  "placeholder": "Select a note template"
+  "placeholder": "Select a note template",
+  "search-placeholder": "Enter the name of the template"
 }

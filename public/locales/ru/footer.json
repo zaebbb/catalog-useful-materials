@@ -1,3 +1,10 @@
 {
-  "copyright": "Dev Notes - Все права защищены"
+  "copyright": "Dev Notes - Все права защищены",
+  "site-title": "О сайте",
+  "user-title": "Ссылки",
+  "site-content-1": "О приложении",
+  "site-content-2": "Политика конфиденциальности",
+  "user-content-1": "Профиль",
+  "user-content-2": "Авторизоваться",
+  "user-content-3": "Зарегистрироваться"
 }

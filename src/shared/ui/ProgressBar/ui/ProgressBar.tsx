@@ -22,10 +22,11 @@ export const ProgressBar: React.FC<ProgressBarProps> = memo((props: ProgressBarP
   const onClickHandler = React.useCallback((e: React.MouseEvent<HTMLDivElement>) => {
     const target = e.currentTarget
     const fullWidth = target.offsetWidth
-    const clientWidth = e.clientX
+    const clientWidth = e.nativeEvent.offsetX
 
-    const percent = ((clientWidth - 50) * 100) / fullWidth
+    const percent = (clientWidth * 100) / fullWidth
     const percentFraction = percent * 0.01
+
     setWidthScrollbar(`${percent}%`)
     onChange?.(percentFraction)
   }, [onChange])

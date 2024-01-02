@@ -22,6 +22,7 @@ const InputFieldBaseComponent = <T extends string>(props: InputFieldBaseProps<T>
     isMax = false,
     isLoading = false,
     description = '',
+    ...other
   } = props
 
   const [valid, setValid] = React.useState('')
@@ -83,6 +84,7 @@ const InputFieldBaseComponent = <T extends string>(props: InputFieldBaseProps<T>
       {label && <span className={cls.title}>{label}</span>}
       <div className={cls.InputWrapper}>
         <input
+          {...other}
           className={classNames(cls.input, {}, additionalInput)}
           type={type}
           onChange={onChangeHandler}

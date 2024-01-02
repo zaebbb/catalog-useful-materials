@@ -149,9 +149,11 @@ const InputFieldFileComponent = (props: InputFieldFileProps) => {
             disabled={isReadonly || isLoading}
           />
         </label>
-        <HStack gap={16} isWrap className={cls.WrapperFiles}>
-          {renderFiles}
-        </HStack>
+        {Boolean(files.length) && (
+          <HStack gap={16} isWrap className={cls.WrapperFiles}>
+            {renderFiles}
+          </HStack>
+        )}
       </VStack>
     </div>
   )

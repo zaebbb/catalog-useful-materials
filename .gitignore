@@ -5,3 +5,4 @@
 .idea
 /storybook-static
 **/*.log
+/.nyc_output

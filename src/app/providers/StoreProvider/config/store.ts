@@ -1,3 +1,4 @@
+import { rtkApi } from '@api/rtkApi'
 import { counterReducer } from '@entities/Counter'
 import { UserReducer } from '@entities/User'
 import {
@@ -18,6 +19,7 @@ export const createReduxStore = (
     ...asyncReducers,
     counter: counterReducer,
     user: UserReducer,
+    [rtkApi.reducerPath]: rtkApi.reducer,
   }
 
   const reducerManager = createReducerManager(rootReducers)
@@ -32,7 +34,7 @@ export const createReduxStore = (
           api: $axiosApi,
         },
       },
-    }),
+    }).concat(rtkApi.middleware),
   })
 
   // eslint-disable-next-line @typescript-eslint/ban-ts-comment

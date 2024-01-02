@@ -10,5 +10,6 @@ export {
   getRouteLogout,
   getRouteCreateNote,
   getRouteViewNote,
+  getRouteUserViewNotes,
 } from './helpers/routes'
 export { AppRoutes } from './types/router'

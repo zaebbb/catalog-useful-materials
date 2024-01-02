@@ -22,7 +22,7 @@ export const SaveGoogleData =
 
       try {
         const response = await extra.api.post<SaveGoogleResponse>(
-          '/google-auth/google-auth-save',
+          '/social-auth/google-auth-save',
           makeFormData<GoogleAuthSave>({ data })
         )
 

@@ -17,7 +17,7 @@ import {
   getValidationSelector,
 } from '../../model/selectors/CreateNotePatternCodeSelectors'
 import {
-  CreateNotePatternCode as CreateNotePatternArticleService,
+  CreateNotePatternCode as CreateNotePatternCodeService,
 } from '../../model/services/CreateNotePatternCode'
 import {
   CreateNotePatternCodeActions,
@@ -51,7 +51,7 @@ export const CreateNotePatternCode: React.FC<CreateNotePatternCodeProps> =
     }, [dispatch])
 
     const onClickHandler = React.useCallback(() => {
-      dispatch(CreateNotePatternArticleService())
+      dispatch(CreateNotePatternCodeService())
       dispatch(NoteBaseFieldsActions.setIsLoading(true))
       dispatch(NotesTypesActions.setIsLoading(true))
     }, [dispatch])
@@ -83,7 +83,7 @@ export const CreateNotePatternCode: React.FC<CreateNotePatternCodeProps> =
           <Button
             onClick={onClickHandler}
             size={'large'}
-            disabled={isLoading}
+            isDisabled={isLoading}
             className={className}
           >
             {t('button-create')}

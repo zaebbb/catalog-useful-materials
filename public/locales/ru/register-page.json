@@ -1,0 +1,24 @@
+{
+  "title-1": "Создать",
+  "title-2": "Аккаунт",
+
+  "input-label-username": "Ваш ник",
+  "input-placeholder-username": "Введите ваш никнейм",
+
+  "input-label-email": "Ваша почта",
+  "input-placeholder-email": "Введите вашу почту",
+
+  "input-label-repeat-password": "Ваш пароль",
+  "input-placeholder-repeat-password": "Введите ваш пароль",
+
+  "input-label-password": "Повторите пароль",
+  "input-placeholder-password": "Введите ваш пароль",
+
+  "input-label-user-consent-1": "Я согласен с условиями",
+  "input-label-user-consent-2": "Политики конфиденциальности",
+
+  "login-1": "Уже есть аккаунт?",
+  "login-2": "Авторизуйтесь",
+
+  "button-register": "Зарегистрироваться"
+}

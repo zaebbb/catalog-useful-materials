@@ -12,8 +12,10 @@ import cls from './ElementEdit.module.scss'
 interface ElementEditProps {
   className?: string
   linkEdit?: string
-  onDelete?: () => void
+  isDelete?: boolean
+  onDelete?: (id: number) => void
   deleteContent?: string
+  id?: number
 }
 
 export const ElementEdit: React.FC<ElementEditProps> = memo((props: ElementEditProps) => {
@@ -21,7 +23,9 @@ export const ElementEdit: React.FC<ElementEditProps> = memo((props: ElementEditP
     className,
     linkEdit,
     onDelete,
+    isDelete,
     deleteContent,
+    id,
   } = props
 
   const { t } = useTranslation('ui-kit')
@@ -38,8 +42,14 @@ export const ElementEdit: React.FC<ElementEditProps> = memo((props: ElementEditP
 
   const onDeleteApply = React.useCallback(() => {
     setShowAccept(false)
-    onDelete?.()
-  }, [onDelete])
+    if (id) {
+      onDelete?.(id)
+    }
+  }, [id, onDelete])
+
+  if (!linkEdit && !isDelete) {
+    return null
+  }
 
   return (
     <HStack
@@ -59,7 +69,7 @@ export const ElementEdit: React.FC<ElementEditProps> = memo((props: ElementEditP
         </AppLink>
       )}
 
-      {onDelete && (
+      {isDelete && (
         <IconLib
           Icon={'IconDelete'}
           size={'24'}
@@ -74,9 +84,12 @@ export const ElementEdit: React.FC<ElementEditProps> = memo((props: ElementEditP
         onClose={onDeleteCancel}
       >
         <VStack gap={16}>
-          <Text type={'large'}>
-            {deleteContent}
-          </Text>
+          {deleteContent && (
+            <Text type={'large'}>
+              {deleteContent}
+            </Text>
+          )}
+
           <HStack gap={12}>
             <Button onClick={onDeleteCancel}>
               {t('element-edit-modal-delete-cancel')}

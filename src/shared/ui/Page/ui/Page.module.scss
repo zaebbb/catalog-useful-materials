@@ -1,4 +1,12 @@
 .Page {
+  @include adaptive-max($breakpoint-tablet) {
+    padding-top: 44px;
+  }
+
+  @include adaptive-max($breakpoint-smartphone) {
+    padding-top: 30px;
+  }
+
   position: relative;
   padding-top: 56px;
 }

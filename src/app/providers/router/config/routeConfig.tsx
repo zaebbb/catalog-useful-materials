@@ -2,18 +2,21 @@ import {
   AppRoutes,
   getRouteAbout, getRouteCreateNote, getRouteForbidden, getRouteLogin, getRouteLogout,
   getRouteMain,
-  getRouteNotFound, getRouteProfile, getRouteRegister, getRouteViewNote,
+  getRouteNotFound, getRouteProfile, getRouteRegister, getRouteUserViewNotes, getRouteViewNote,
 } from '@lib/router'
 import { getRoutePrivacyPolicy } from '@lib/router/helpers/routes'
 import { AboutPage } from '@pages/AboutPage'
 import { CreateNotePage } from '@pages/CreateNote'
+import { ForbiddenPage } from '@pages/ForbiddenPage'
 import { LogoutPage } from '@pages/LogoutPage'
 import { MainPage } from '@pages/MainPage'
 import { NotFoundPage } from '@pages/NotFoundPage'
 import { NoteViewPage } from '@pages/NoteViewPage'
 import { PrivacyPolicyPage } from '@pages/PrivacyPolicy'
 import { ProfilePage } from '@pages/ProfilePage'
+import { UserNotesPage } from '@pages/UserNotes'
 import { LoginPage } from '@pages/UserPages/LoginPage'
+import { RegisterPage } from '@pages/UserPages/RegisterPage'
 import { type RouteItem } from '../types/router'
 
 export const routeConfig: Record<AppRoutes, RouteItem> = {
@@ -31,7 +34,7 @@ export const routeConfig: Record<AppRoutes, RouteItem> = {
   },
   [AppRoutes.REGISTER]: {
     path: getRouteRegister(),
-    element: <LoginPage />,
+    element: <RegisterPage />,
   },
   [AppRoutes.PROFILE]: {
     path: getRouteProfile(),
@@ -48,6 +51,11 @@ export const routeConfig: Record<AppRoutes, RouteItem> = {
     element: <NoteViewPage />,
     isAuth: true,
   },
+  [AppRoutes.USER_NOTES]: {
+    path: getRouteUserViewNotes(),
+    element: <UserNotesPage />,
+    isAuth: true,
+  },
   [AppRoutes.PRIVACY]: {
     path: getRoutePrivacyPolicy(),
     element: <PrivacyPolicyPage />,
@@ -58,7 +66,7 @@ export const routeConfig: Record<AppRoutes, RouteItem> = {
   },
   [AppRoutes.FORBIDDEN]: {
     path: getRouteForbidden(),
-    element: <PrivacyPolicyPage />,
+    element: <ForbiddenPage />,
   },
   [AppRoutes.NOT_FOUND]: {
     path: getRouteNotFound(),

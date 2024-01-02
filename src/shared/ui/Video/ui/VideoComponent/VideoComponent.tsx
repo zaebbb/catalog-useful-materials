@@ -29,6 +29,7 @@ export const VideoComponent: React.FC<VideoComponentProps> = memo((props: VideoC
 
   const [playing, setPlaying] = React.useState<boolean>(false)
   const [progress, setProgress] = React.useState<number>(0)
+  const [loaded, setLoaded] = React.useState<number>(0)
   const [isChangeScrollbar, setIsChangeScrollbar] = React.useState<boolean>(false)
   const [isFullscreen, setIsFullscreen] = React.useState<boolean>(false)
   const [player, setPlayer] = React.useState<ReactPlayer>()
@@ -37,6 +38,10 @@ export const VideoComponent: React.FC<VideoComponentProps> = memo((props: VideoC
   const mods: Mods = {
     [cls.playing]: playing,
     [cls.notPlaying]: !playing,
+  }
+  const wrapperStyles: React.CSSProperties = {
+    width,
+    height,
   }
 
   const playVideoHandler = React.useCallback(() => {
@@ -85,8 +90,10 @@ export const VideoComponent: React.FC<VideoComponentProps> = memo((props: VideoC
   const onProgressHandler = React.useCallback((progressProps: OnProgressProps) => {
     const {
       played,
+      loaded,
     } = progressProps
 
+    setLoaded(loaded)
     setProgress(played)
   }, [])
 
@@ -111,6 +118,7 @@ export const VideoComponent: React.FC<VideoComponentProps> = memo((props: VideoC
     <div
       id={videoId}
       className={classNames(cls.VideoComponent, mods, [className])}
+      style={wrapperStyles}
     >
       <ReactPlayer
         url={src}
@@ -198,6 +206,7 @@ export const VideoComponent: React.FC<VideoComponentProps> = memo((props: VideoC
         <ProgressBar
           className={cls.Progressbar}
           value={progress}
+          loadProgress={loaded}
           onChange={onChangeProgressbar}
         />
 

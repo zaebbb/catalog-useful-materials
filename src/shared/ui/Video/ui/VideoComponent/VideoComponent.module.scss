@@ -36,8 +36,8 @@ $background-panels: rgb(0 0 0 / 80%);
     height: 50px;
     padding: 0 20px;
 
-    //visibility: hidden;
-    //opacity: 0;
+    visibility: hidden;
+    opacity: 0;
     background: $background-panels;
     border-radius: var(--border-radius-medium);
     border-bottom-right-radius: 0;

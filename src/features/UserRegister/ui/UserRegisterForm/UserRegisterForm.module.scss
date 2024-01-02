@@ -1,0 +1,30 @@
+.UserRegisterForm {
+  position: relative;
+  max-width: 460px;
+}
+
+.UserConsentLabel {
+  display: flex;
+  align-items: center;
+}
+
+.UserRegisterLogin {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.UserRegisterSeparator {
+  width: 4px;
+}
+
+.AuthorizeSocial {
+  @include adaptive-max($breakpoint-smartphone) {
+    grid-template-columns: 1fr;
+  }
+
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(2, 50%);
+  max-width: 100%;
+}

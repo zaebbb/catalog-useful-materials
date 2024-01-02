@@ -1,5 +1,5 @@
 import { useAuth } from '@entities/User'
-import { getRouteLogin, getRouteProfile } from '@lib/router'
+import { getRouteLogin, getRouteProfile, getRouteRegister } from '@lib/router'
 import { HStack } from '@ui-kit/Stack'
 import { NavItem } from '@widgets/Navbar/ui/NavItem/NavItem'
 import React, { memo } from 'react'
@@ -26,7 +26,7 @@ export const NavbarMenu: React.FC<NavbarIMenuProps> = memo((props: NavbarIMenuPr
           />
           <NavItem
             label={t('navbar-register')}
-            link={getRouteLogin()}
+            link={getRouteRegister()}
           />
         </>
       )}

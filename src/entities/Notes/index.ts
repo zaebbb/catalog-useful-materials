@@ -10,6 +10,9 @@ export {
   NoteBaseFieldsActions,
 } from './model/slice/NoteBaseFieldsSlice'
 export {
+  NoteDetailsReducer,
+} from './model/slice/NoteDetailsSlice'
+export {
   NoteBaseFields,
 } from './ui/NoteBaseFields/NoteBaseFields'
 export type {
@@ -19,3 +22,4 @@ export type {
   NoteDetailsSchema,
 } from './model/types/NotesDetailsSchema'
 export { NotesDetails } from './ui/NotesDetails/NotesDetails'
+export { UserNotesList } from './ui/UserNotesList/UserNotesList'

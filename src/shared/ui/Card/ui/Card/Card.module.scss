@@ -1,0 +1,25 @@
+.Card {
+  position: relative;
+
+  width: 100%;
+  max-width: 340px;
+
+  background: var(--neutral-color-10);
+  border: 1px solid var(--disabled-border-color);
+  border-radius: var(--border-radius);
+  box-shadow: 0 0 5px rgb(0 0 0 / 5%);
+}
+
+.MainContent {
+  flex: 1;
+
+  padding: 24px;
+
+  background: var(--neutral-color-00);
+  border: 1px solid var(--disabled-border-color);
+  border-radius: var(--border-radius);
+}
+
+.InfoContent {
+  padding: 24px 20px;
+}

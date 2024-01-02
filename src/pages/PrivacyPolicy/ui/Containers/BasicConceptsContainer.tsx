@@ -9,8 +9,7 @@ export const BasicConceptsContainer: React.FC = memo(() => {
   return (
     <>
       <TitleSmall>{t('part-2-title')}</TitleSmall>
-      <Text>{t('part-1-text-1')}</Text>
-      <Text>{t('part-1-text-2')}</Text>
+      <Text>{t('part-2-text-1')}</Text>
     </>
   )
 })

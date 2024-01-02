@@ -48,6 +48,8 @@
 }
 
 .LoadProgressBar {
+  pointer-events: none;
+  user-select: none;
   z-index: 1;
   background: var(--neutral-color-20);
 }

@@ -1,5 +1,8 @@
 {
+  "card-category": "card-category",
+  "card-link": "card-link",
   "element-edit-modal-delete-cancel": "",
   "element-edit-modal-delete-complete": "",
-  "select-search-not-found": ""
+  "select-search-not-found": "",
+  "vk-button-text": "vk-button-text"
 }

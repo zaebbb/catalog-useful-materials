@@ -1,0 +1,9 @@
+.AccessIcon {
+  img {
+    @include adaptive-max($breakpoint-laptop) {
+      width: 300px;
+    }
+
+    width: 400px;
+  }
+}

@@ -24,4 +24,6 @@ export type IconLibName =
   'IconScreenFull' |
   'IconScreenNormal' |
   'IconVolumeFill' |
-  'IconVolumeDisableFill'
+  'IconVolumeDisableFill' |
+  'IconDocumentOutline' |
+  'IconLogoVK'

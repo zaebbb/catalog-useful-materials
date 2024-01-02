@@ -3,6 +3,6 @@
   "profile-sidebar-settings": "Account Settings",
   "profile-sidebar-create-card": "Create Card",
   "profile-sidebar-logout": "Logout",
-  "profile-sidebar-exit": "profile-sidebar-exit",
-  "profile-sidebar-create-note": "Create Note"
+  "profile-sidebar-create-note": "Create Note",
+  "profile-sidebar-user-notes": "My Notes"
 }

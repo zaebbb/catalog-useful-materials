@@ -29,4 +29,6 @@ export const IconLib: IconLibOptions = {
   IconScreenNormal: React.lazy(async () => await import('./icons/IconScreenNormal')),
   IconVolumeFill: React.lazy(async () => await import('./icons/IconVolumeFill')),
   IconVolumeDisableFill: React.lazy(async () => await import('./icons/IconVolumeDisableFill')),
+  IconDocumentOutline: React.lazy(async () => await import('./icons/IconDocumentOutline')),
+  IconLogoVK: React.lazy(async () => await import('./icons/IconLogoVK')),
 }
