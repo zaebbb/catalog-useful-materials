@@ -6,3 +6,4 @@
 /storybook-static
 **/*.log
 /.nyc_output
+/.deploy/run.sh

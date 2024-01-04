@@ -1,0 +1,6 @@
+cd /var/www/html/example || exit
+git pull
+npm run build:prod "mode=production" "apiUrl=https://example:8443/api/v1/"
+
+rm -rf /var/www/example/html/
+mv /var/www/html/example/build /var/www/example/html

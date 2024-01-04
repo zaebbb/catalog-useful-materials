@@ -21,7 +21,7 @@
     "prepare": "husky install"
   },
   "lint-staged": {
-    "**/*.{ts,tsx}": "eslint",
+    "**/*.{ts,tsx}": "eslint --quiet",
     "**/*.{scss}": "stylelint"
   },
   "keywords": [],
