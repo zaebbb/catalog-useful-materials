@@ -3,8 +3,12 @@
 
   "element-edit-modal-delete-cancel": "Cancel",
   "element-edit-modal-delete-complete": "Remove",
-  "card-category": "card-category",
-  "card-link": "card-link",
-  
-  "vk-button-text": "Log in with VK ID"
+  "card-category": "Category:",
+  "card-link": "Details",
+
+  "vk-button-text": "Log in with VK ID",
+
+  "doc-view-download-file": "Download",
+  "doc-view-render-file": "Display here",
+  "doc-view-error": "An error occurred during file processing"
 }

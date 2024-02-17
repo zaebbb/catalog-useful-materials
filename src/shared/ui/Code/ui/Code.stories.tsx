@@ -41,6 +41,7 @@ const codeCss = `<pre class="language-css">
 const meta: Meta<typeof Code> = {
   title: 'ui-kit/Code',
   component: Code,
+  tags: ['autodocs'],
   args: {
     code: codeJs,
   },

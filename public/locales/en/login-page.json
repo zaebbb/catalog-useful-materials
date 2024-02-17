@@ -1,3 +1,5 @@
 {
-  "page-title": "Login"
+  "page-title": "Login",
+  "page-description": "User authorization in the system",
+  "page-keywords": "authorization,form,user"
 }

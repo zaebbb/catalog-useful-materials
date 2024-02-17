@@ -1,3 +1,9 @@
 .Image {
-  width: 400px;
+  img {
+    @include adaptive-max($breakpoint-image-width-full) {
+      width: 100% !important;
+    }
+
+    width: 400px !important;
+  }
 }

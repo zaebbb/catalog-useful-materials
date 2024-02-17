@@ -25,8 +25,8 @@ export const Navbar: React.FC<NavbarProps> = memo((props: NavbarProps) => {
 
   return (
     <AppPadding className={classNames(cls.Navbar, mods, [className])}>
-      <HStack align={'center'} justify={'space-between'}>
-        <HStack gap={24} align={'center'}>
+      <HStack align={'center'} justify={'space-between'} isWrap>
+        <HStack gap={24} align={'center'} isWrap>
           <Logo />
           <NavbarMenu />
         </HStack>

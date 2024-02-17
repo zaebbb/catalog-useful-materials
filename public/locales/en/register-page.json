@@ -20,5 +20,7 @@
   "login-1": "Already have an account?",
   "login-2": "Log In",
 
-  "button-register": "Register"
+  "page-title": "Registration",
+  "page-description": "New user registration page",
+  "page-keywords": "form,registration,user"
 }

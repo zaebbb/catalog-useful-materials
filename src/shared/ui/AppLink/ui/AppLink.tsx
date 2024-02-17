@@ -1,9 +1,12 @@
-import { classNames } from '@lib/helpers/classNames'
+import { classNames, type Mods } from '@lib/helpers/classNames'
+import { isLinkActive } from '@lib/helpers/isLinkActive'
 import React, { memo } from 'react'
 import { NavLink, type LinkProps } from 'react-router-dom'
 import cls from './AppLink.module.scss'
 
 /** @module AppLink */
+
+export type AppLinkMode = 'default' | 'tag'
 
 /**
  * @interface AppLinkProps
@@ -16,6 +19,8 @@ export interface AppLinkProps extends LinkProps {
   activeClassName?: string
   /** Открывать ссылку в новом окне или нет */
   isBlank?: boolean
+  /** Тип ссылки, использование Link или тега <a> */
+  mode?: AppLinkMode
 }
 
 /**
@@ -29,18 +34,32 @@ export const AppLink: React.FC<AppLinkProps> = memo((props: AppLinkProps) => {
     children,
     activeClassName = '',
     isBlank = false,
+    mode = 'default',
     ...other
   } = props
+
+  const mods: Mods = {
+    [activeClassName]: isLinkActive(String(to)),
+  }
+
+  if (mode === 'tag') {
+    return (
+      <a
+        href={String(to)}
+        target={isBlank ? '_blank' : ''}
+        rel="noreferrer"
+        className={className}
+      >
+        {children}
+      </a>
+    )
+  }
 
   return (
     <NavLink
       to={to}
       target={isBlank ? '_blank' : ''}
-      className={
-        ({ isActive }) => classNames(
-          cls.AppLink, { [activeClassName]: isActive }, [className]
-        )
-      }
+      className={classNames(cls.AppLink, mods, [className])}
       {...other}
     >
       {children}

@@ -1,5 +1,8 @@
 {
   "page-title": "My notes",
+  "page-description": "Notes created by the user from the personal account",
+  "page-keywords": "notes,user,profile",
+
   "page-header-1": "My",
   "page-header-2": "Notes",
   "notes-not-found": "Notes Not Found"

@@ -1,5 +1,6 @@
 import { StickyLayout } from '@layout/StickyLayout'
 import { DynamicReducerLoader, type ReducerList } from '@lib/components/DynamicReducerLoader'
+import { MetaInfo } from '@lib/components/MetaInfo'
 import { useAppDispatch } from '@lib/hooks/useAppDispatch'
 import { Span } from '@ui-kit/Text'
 import { TitleMedium } from '@ui-kit/Title'
@@ -13,7 +14,13 @@ import {
 import { FetchNoteData } from '../../model/services/FetchNoteData'
 import { NoteDetailsReducer } from '../../model/slice/NoteDetailsSlice'
 import { NoteDetailsContent } from '../NoteDetailsContent/NoteDetailsContent'
+import {
+  NoteDetailsContentSkeleton,
+} from '../NoteDetailsContent/NoteDetailsContent.skeleton'
 import { NoteDetailsSidebar } from '../NoteDetailsSidebar/NoteDetailsSidebar'
+import {
+  NoteDetailsSidebarSkeleton,
+} from '../NoteDetailsSidebar/NoteDetailsSidebar.skeleton'
 
 interface NotesDetailsProps {
   className?: string
@@ -43,8 +50,11 @@ export const NotesDetails: React.FC<NotesDetailsProps> = memo((props: NotesDetai
   return (
     <DynamicReducerLoader reducers={reducers}>
       {isLoading && (
-        <span />
-        //   TODO: СКЕЛЕТОН сделать
+        <StickyLayout
+          Content={<NoteDetailsContentSkeleton />}
+          ContentLeft={<NoteDetailsSidebarSkeleton />}
+          className={className}
+        />
       )}
 
       {!isLoading && !note && (
@@ -59,11 +69,20 @@ export const NotesDetails: React.FC<NotesDetailsProps> = memo((props: NotesDetai
       )}
 
       {!isLoading && note && (
-        <StickyLayout
-          Content={<NoteDetailsContent />}
-          ContentLeft={<NoteDetailsSidebar />}
-          className={className}
-        />
+        <>
+          <MetaInfo
+            title={note.title}
+            description={note.description}
+            keywords={note.tags.map((tag): string => tag.name).join(',')}
+            imageLink={note.user.avatar ?? ''}
+          />
+
+          <StickyLayout
+            Content={<NoteDetailsContent />}
+            ContentLeft={<NoteDetailsSidebar code={id} />}
+            className={className}
+          />
+        </>
       )}
     </DynamicReducerLoader>
   )

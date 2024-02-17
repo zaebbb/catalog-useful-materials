@@ -42,7 +42,7 @@ export const AvatarUserSkeleton: React.FC<AvatarUserProps> = memo((props: Avatar
     return (
       <Flex gap={8} direction={isLeft ? 'row-reverse' : 'row'} align={'center'}>
         {avatar}
-        <Skeleton width={'100px'} height={'20px'} />
+        <Skeleton isMaxWidth={false} width={'150px'} height={'20px'} />
       </Flex>
     )
   }
@@ -51,9 +51,9 @@ export const AvatarUserSkeleton: React.FC<AvatarUserProps> = memo((props: Avatar
     return (
       <Flex gap={12} direction={isLeft ? 'row-reverse' : 'row'} align={'center'}>
         {avatar}
-        <VStack gap={8}>
-          <Skeleton height={'25px'} width={'150px'} />
-          <Skeleton height={'15px'} width={'100px'} />
+        <VStack gap={8} align={isLeft ? 'flex-end' : 'flex-start'}>
+          <Skeleton isMaxWidth={false} height={'25px'} width={'200px'} />
+          <Skeleton isMaxWidth={false} height={'15px'} width={'150px'} />
         </VStack>
       </Flex>
     )
@@ -62,9 +62,9 @@ export const AvatarUserSkeleton: React.FC<AvatarUserProps> = memo((props: Avatar
   return (
     <Flex gap={12} direction={isLeft ? 'row-reverse' : 'row'} align={'center'}>
       {avatar}
-      <VStack gap={4}>
-        <Skeleton height={'25px'} width={'150px'} />
-        <Skeleton height={'15px'} width={'100px'} />
+      <VStack gap={4} align={isLeft ? 'flex-end' : 'flex-start'}>
+        <Skeleton isMaxWidth={false} height={'25px'} width={'200px'} />
+        <Skeleton isMaxWidth={false} height={'15px'} width={'150px'} />
       </VStack>
     </Flex>
   )

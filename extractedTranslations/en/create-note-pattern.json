@@ -40,5 +40,6 @@
   "input-pattern-technology-field-link-tech-label": "input-pattern-technology-field-link-tech-label",
   "input-pattern-technology-field-link-tech-placeholder": "",
   "input-pattern-video-field-link-label": "input-pattern-video-field-link-label",
-  "input-pattern-video-field-link-placeholder": "input-pattern-video-field-link-placeholder"
+  "input-pattern-video-field-link-placeholder": "input-pattern-video-field-link-placeholder",
+  "selectTypeCode": "selectTypeCode"
 }

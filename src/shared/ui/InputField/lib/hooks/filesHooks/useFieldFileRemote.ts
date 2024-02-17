@@ -1,5 +1,7 @@
 import { generateKey } from '@lib/helpers/generateKey'
+import { getFileDataApi } from '@lib/helpers/getFileDataApi'
 import { getFileDataFromUrl } from '@lib/helpers/getFileDataFromUrl'
+import { isLink } from '@lib/helpers/isLink'
 import React from 'react'
 import { type BaseHookOptions } from '../../types/InputFieldFileTypes'
 
@@ -18,11 +20,25 @@ export const useFieldFileRemote = (
     const files: Files = []
 
     for (const remoteFile of remoteFiles) {
-      const file = await getFileDataFromUrl(remoteFile)
-      files.push({
-        file,
-        key: generateKey(),
-      })
+      if (isLink(remoteFile)) {
+        const file = await getFileDataFromUrl(remoteFile)
+
+        files.push({
+          file,
+          key: generateKey(),
+        })
+
+        continue
+      }
+
+      const file = await getFileDataApi(remoteFile)
+
+      if (file) {
+        files.push({
+          file,
+          key: generateKey(),
+        })
+      }
     }
 
     setFiles(files)

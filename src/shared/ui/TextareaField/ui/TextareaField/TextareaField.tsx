@@ -1,11 +1,20 @@
+import { type DefaultOnChangeOptions } from '@ui-kit/InputField'
 import { Loader } from '@ui-kit/Loader'
-import React, { memo, Suspense } from 'react'
-import { type TextareaFieldBaseProps } from '../../lib/types/TextareaFieldBaseTypes'
+import React, { Suspense } from 'react'
+import {
+  type OnChangeTextarea,
+  type TextareaFieldBaseProps,
+} from '../../lib/types/TextareaFieldBaseTypes'
 import { TextareaFieldBaseAsync } from '../TextareaFieldBase/TextareaFieldBase.async'
 
-export const TextareaField: React.FC<TextareaFieldBaseProps> =
-  memo((props: TextareaFieldBaseProps) => (
+export const TextareaField =
+  <O extends DefaultOnChangeOptions>(
+    props: TextareaFieldBaseProps<O>
+  ) => (
     <Suspense fallback={<Loader />}>
-      <TextareaFieldBaseAsync {...props} />
+      <TextareaFieldBaseAsync
+        {...props}
+        onChange={props.onChange as OnChangeTextarea<DefaultOnChangeOptions>}
+      />
     </Suspense>
-  ))
+  )

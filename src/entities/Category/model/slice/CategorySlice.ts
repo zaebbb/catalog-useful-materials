@@ -14,6 +14,13 @@ export const CategorySlice = createSlice(({
     setCurrentCategory: (state, { payload }: PayloadAction<SelectFieldOption<string>>) => {
       state.select.currentCategory = payload
     },
+    setSelectedCategory: (state, { payload }: PayloadAction<SelectFieldOption<string>>) => {
+      state.select.selected = payload
+    },
+    clearCategory: (state) => {
+      state.select.currentCategory = undefined
+      state.select.selected = undefined
+    },
   },
 }))
 

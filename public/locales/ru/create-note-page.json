@@ -1,5 +1,8 @@
 {
+  "page-title": "Создание заметки",
+  "page-description": "Создавайте удобные заметки которые всегда сможете найти в будущем",
+  "page-keywords": "заметка,создание,форма",
+
   "title-create-note-1": "Создать",
-  "title-create-note-2": "заметку",
-  "page-title": "Создание заметки"
+  "title-create-note-2": "заметку"
 }

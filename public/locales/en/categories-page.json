@@ -1,0 +1,21 @@
+{
+  "page-title": "Categories",
+  "page-description": "Categories",
+  "page-keywords": "Categories",
+
+  "title": "Categories",
+  "button-create": "Create Category",
+  "categories-not-found": "Categories Not Found",
+
+  "input-category-name-label": "Category name",
+  "input-category-name-placeholder": "Enter the name of the category",
+  "input-category-draft-label": "Draft",
+  "input-category-code-label": "Category code",
+  "input-category-code-placeholder": "The code will be displayed automatically",
+  "input-category-code-description": "The code will be displayed when filling in the name",
+  "input-category-button": "Save",
+  "create-category-title": "Creating a category",
+  "accept-delete-content": "Do you really want to delete a category? When you delete a category, existing notes linked to the category will be deleted",
+  "edit-category-title": "Editing a category",
+  "category-not-found": "Category not found"
+}

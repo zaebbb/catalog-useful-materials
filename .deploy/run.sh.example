@@ -1,6 +1,30 @@
+# Замените в public/index.html сведения о метриках и трекерах
+# Или удалите данную информацию если она не требуется
+# Измените информацию в .robots.txt перед запуском скрипта
+
 cd /var/www/html/example || exit
-git pull
+
+while true; do
+    read -p "Выполнить git pull? " yn
+    case $yn in
+        [Yy]* ) git pull; break;;
+        [Nn]* ) break;;
+        * ) echo "Выберите пожалуйста yes или no.";;
+    esac
+done
+
 npm run build:prod "mode=production" "apiUrl=https://example:8443/api/v1/"
 
 rm -rf /var/www/example/html/
 mv /var/www/html/example/build /var/www/example/html
+
+while true; do
+    read -p "Изменить (добавить) файл robots.txt? " yn
+    case $yn in
+        [Yy]* ) mv /var/www/html/example/.robots.txt /var/www/example/html/robots.txt; break;;
+        [Nn]* ) break;;
+        * ) echo "Выберите пожалуйста yes или no.";;
+    esac
+done
+
+echo "Деплой выполнен успешно"

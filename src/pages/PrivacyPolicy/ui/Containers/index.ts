@@ -19,5 +19,3 @@ export const Privacy = {
   PurposesPersonalData,
   Terms,
 }
-
-// TODO: ПЕРЕВЕСТИ НА АНГЛИЙСКИЙ

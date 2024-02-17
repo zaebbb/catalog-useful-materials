@@ -3,7 +3,7 @@ import { noteListItem } from '../../lib/const/storybookDatas'
 import { NotesList } from './NotesList'
 
 const meta: Meta<typeof NotesList> = {
-  title: 'entities/NotesList',
+  title: 'entities/Notes/NotesList',
   component: NotesList,
   tags: ['autodocs'],
 }

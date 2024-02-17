@@ -34,6 +34,7 @@ const SelectFieldBaseComponent = <T extends string>(props: SelectFieldBaseProps<
     selected = [],
     isMultiple = false,
     isSearch = false,
+    isRequired = false,
     searchPlaceholder = '',
     description = '',
   } = props
@@ -41,7 +42,7 @@ const SelectFieldBaseComponent = <T extends string>(props: SelectFieldBaseProps<
 
   const [valid, setValid] = React.useState('')
   const [successState, setSuccess] = React.useState('')
-  const [selectedState, setSelected] = React.useState(selected)
+  const [selectedState, setSelected] = React.useState<SelectItems<T>>([])
   const [searchItems, setSearchItems] = React.useState<SelectItems<T>>([])
   const [searchInput, setSearchInput] = React.useState<string>('')
   const [
@@ -56,6 +57,7 @@ const SelectFieldBaseComponent = <T extends string>(props: SelectFieldBaseProps<
     [cls.error]: Boolean(valid),
     [cls.success]: Boolean(successState),
     [cls.max]: isMax,
+    [cls.Required]: isRequired,
   }
 
   const additionalWrapper: Additional = [
@@ -68,16 +70,16 @@ const SelectFieldBaseComponent = <T extends string>(props: SelectFieldBaseProps<
   ]
 
   React.useEffect(() => {
-    if (validation) {
+    if (!isLoading && validation) {
       setValid(validation)
     }
-  }, [validation])
+  }, [isLoading, validation])
 
   React.useEffect(() => {
-    if (success) {
+    if (!isLoading && success) {
       setSuccess(success)
     }
-  }, [success])
+  }, [isLoading, success])
 
   React.useEffect(() => {
     setSearchItems(items)
@@ -108,6 +110,17 @@ const SelectFieldBaseComponent = <T extends string>(props: SelectFieldBaseProps<
     setIsOnChange(true)
   }, [isMultiple, success, validation])
 
+  const onClearSelectedHandler = React.useCallback(() => {
+    setSelected([])
+
+    if (validation || success) {
+      setValid('')
+      setSuccess('')
+    }
+
+    setIsOnChange(true)
+  }, [success, validation])
+
   const onChangeInputHandler = React.useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
     setSearchInput(e.target.value)
   }, [])
@@ -131,8 +144,24 @@ const SelectFieldBaseComponent = <T extends string>(props: SelectFieldBaseProps<
     }
   }, [items, searchInput])
 
+  React.useEffect(() => {
+    if (selected.length && items.length) {
+      const selectedCodes: string[] = selected.map(item => item.code)
+
+      setSelected(items.filter((item) => selectedCodes.includes(item.code)))
+      setIsOnChange(true)
+    }
+  }, [items, selected])
+
+  React.useEffect(() => {
+    if (!selected.length) {
+      setSelected([])
+      setIsOnChange(true)
+    }
+  }, [selected.length])
+
   return (
-    <VStack gap={20}>
+    <VStack gap={20} isMax>
       <div className={classNames(cls.SelectWrapper, mods, additionalWrapper)}>
         {label && <span className={cls.SelectLabel}>{label}</span>}
         <Listbox value={selectedState} onChange={onChangeHandler} multiple={isMultiple}>
@@ -158,7 +187,12 @@ const SelectFieldBaseComponent = <T extends string>(props: SelectFieldBaseProps<
             {valid && (
               <IconLib
                 size={'20'}
-                className={cls.SelectIconError}
+                className={classNames(
+                  cls.SelectIconError,
+                  {
+                    [cls.SelectIconErrorLeft]: Boolean(selectedState.length),
+                  }
+                )}
                 Icon={'IconInfoCircleOutline'}
               />
             )}
@@ -166,8 +200,23 @@ const SelectFieldBaseComponent = <T extends string>(props: SelectFieldBaseProps<
             {successState && (
               <IconLib
                 size={'20'}
-                className={cls.SelectIconSuccess}
+                className={classNames(
+                  cls.SelectIconSuccess,
+                  {
+                    [cls.SelectIconSuccessLeft]: Boolean(selectedState.length),
+                  }
+                )}
                 Icon={'IconSuccessCircleOutline'}
+              />
+            )}
+
+            {Boolean(selectedState.length) && (
+              <IconLib
+                size={'32'}
+                className={cls.SelectIconClose}
+                clickable
+                onClick={onClearSelectedHandler}
+                Icon={'IconCloseOutline'}
               />
             )}
           </Listbox.Button>

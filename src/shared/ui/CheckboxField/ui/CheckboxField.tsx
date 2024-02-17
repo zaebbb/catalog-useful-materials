@@ -13,6 +13,7 @@ interface CheckboxFieldProps {
   success?: string
   isReadonly?: boolean
   isLoading?: boolean
+  isRequired?: boolean
   description?: React.ReactNode
 }
 
@@ -26,6 +27,7 @@ export const CheckboxField: React.FC<CheckboxFieldProps> = memo((props: Checkbox
     label = '',
     isLoading = false,
     isReadonly = false,
+    isRequired = false,
     description = '',
   } = props
 
@@ -39,6 +41,7 @@ export const CheckboxField: React.FC<CheckboxFieldProps> = memo((props: Checkbox
     [cls.error]: Boolean(valid),
     [cls.success]: Boolean(successState),
     [cls.squareActive]: isChecked,
+    [cls.Required]: isRequired,
   }
 
   const onClickHandler = React.useCallback(() => {
@@ -56,16 +59,20 @@ export const CheckboxField: React.FC<CheckboxFieldProps> = memo((props: Checkbox
   }, [isChecked, isLoading, isReadonly, onChange, success, validation])
 
   React.useEffect(() => {
-    if (validation) {
+    if (!isLoading && validation) {
       setValid(validation)
     }
-  }, [validation])
+  }, [isLoading, validation])
 
   React.useEffect(() => {
-    if (success) {
+    if (!isLoading && success) {
       setSuccess(success)
     }
-  }, [success])
+  }, [isLoading, success])
+
+  React.useEffect(() => {
+    setIsChecked(checked)
+  }, [checked])
 
   return (
     <VStack gap={0}>

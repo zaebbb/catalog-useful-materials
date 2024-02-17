@@ -13,4 +13,5 @@ export interface NotesViews {
 export interface NotesViewsSchema {
   allNotesViewsPath: string
   currentNoteView?: SelectFieldOption<NotesViewsCodeList>
+  selected?: SelectFieldOption<NotesViewsCodeList>
 }

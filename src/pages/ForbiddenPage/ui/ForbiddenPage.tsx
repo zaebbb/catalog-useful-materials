@@ -1,4 +1,5 @@
 import ForbiddenIcon from '@assets/icons/forbidden-icon.png'
+import MetaImage from '@assets/image/pages/forbidden-page.png'
 import { AppImage } from '@ui-kit/AppImage'
 import { Page } from '@ui-kit/Page'
 import { HStack, VStack } from '@ui-kit/Stack'
@@ -17,8 +18,14 @@ const ForbiddenPage: React.FC<ForbiddenPageProps> = memo((props: ForbiddenPagePr
   const { t } = useTranslation('forbidden-page')
 
   return (
-    <Page title={t('page-title')} className={className}>
-      <HStack gap={0} justify={'space-between'}>
+    <Page
+      title={t('page-title')}
+      description={t('page-description')}
+      keywords={t('page-keywords')}
+      imageLink={MetaImage}
+      className={className}
+    >
+      <HStack gap={0} justify={'space-between'} isWrap>
         <VStack gap={12}>
           <TitleMedium>
             {t('title')}

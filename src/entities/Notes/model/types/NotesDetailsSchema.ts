@@ -4,6 +4,7 @@ import { type NotesTypes } from '@entities/NotesTypes'
 import { type NotesViews } from '@entities/NotesViews'
 import { type Tag } from '@entities/Tag'
 import { type UserBaseData } from '@entities/User'
+import { type CustomFieldCodeList } from './CustomFieldCode'
 
 export interface FieldNoteOption {
   value: string
@@ -55,6 +56,10 @@ export interface PatternCourse {
   authorCourse: FieldNoteOption
 }
 
+export interface FieldNoteOptionCustom extends FieldNoteOption {
+  code: CustomFieldCodeList
+}
+
 export interface BaseFieldsDetails {
   type: NotesTypes
   view: NotesViews
@@ -76,6 +81,7 @@ export interface BaseFieldsDetails {
   patternVideo?: PatternVideo
   patternTechnology?: PatternTechnology
   patternCourse?: PatternCourse
+  patternCustom?: FieldNoteOptionCustom[]
 }
 
 export type NoteDetailsResponse = BaseResponse<BaseFieldsDetails, any>

@@ -21,15 +21,18 @@ import {
 } from '../../model/slice/NoteBaseFieldsSlice'
 
 interface NoteBaseFieldsProps {
-  selectTypeCode?: NotesTypesCodeList
+  selectType?: SelectFieldOption<NotesTypesCodeList>
+  isPattern?: boolean
 }
 
 export const NoteBaseFields: React.FC<NoteBaseFieldsProps> = memo((props: NoteBaseFieldsProps) => {
   const {
-    selectTypeCode = '',
+    selectType,
+    isPattern = false,
   } = props
   const { t } = useTranslation('create-note-pattern')
   const dispatch = useAppDispatch()
+
   const titleValue = useSelector(getTitleSelector)
   const draftValue = useSelector(getDraftSelector)
   const descriptionValue = useSelector(getDescriptionSelector)
@@ -54,11 +57,16 @@ export const NoteBaseFields: React.FC<NoteBaseFieldsProps> = memo((props: NoteBa
 
   return (
     <>
-      <TitleMedium>
-        {t('title')}
-        {' '}
-        <Span color={'gradient'} content={t(selectTypeCode)} />
-      </TitleMedium>
+      {selectType && (
+        <TitleMedium>
+          {t('title')}
+          {' '}
+          <Span
+            color={'gradient'}
+            content={isPattern ? t(selectType.code) : selectType.content}
+          />
+        </TitleMedium>
+      )}
 
       <InputField
         label={t('input-title-label')}
@@ -68,6 +76,7 @@ export const NoteBaseFields: React.FC<NoteBaseFieldsProps> = memo((props: NoteBa
         onChange={onChangeTitleHandler}
         isLoading={isLoading}
         validation={validation?.title}
+        isRequired
       />
 
       <TextareaField
@@ -76,6 +85,7 @@ export const NoteBaseFields: React.FC<NoteBaseFieldsProps> = memo((props: NoteBa
         onChange={onChangeDescriptionHandler}
         isLoading={isLoading}
         validation={validation?.description}
+        isRequired
       />
 
       <CheckboxField

@@ -8,6 +8,7 @@ interface AppImageProps {
   src: string
   alt?: string
   isMax?: boolean
+  isModal?: boolean
 }
 
 export const AppImage: React.FC<AppImageProps> = memo((props: AppImageProps) => {
@@ -16,12 +17,14 @@ export const AppImage: React.FC<AppImageProps> = memo((props: AppImageProps) => 
     alt,
     isMax,
     src,
+    isModal = false,
   } = props
 
   const [isOpenImage, setIsOpenImage] = React.useState<boolean>(false)
 
   const mods: Mods = {
     [cls.max]: isMax,
+    [cls.ImageModal]: isModal,
   }
 
   const onClickImageHandler = React.useCallback(() => {
@@ -41,11 +44,13 @@ export const AppImage: React.FC<AppImageProps> = memo((props: AppImageProps) => 
         className={cls.Image}
       />
 
-      <ModalImage
-        src={src}
-        isOpen={isOpenImage}
-        onClose={onClose}
-      />
+      {isModal && (
+        <ModalImage
+          src={src}
+          isOpen={isOpenImage}
+          onClose={onClose}
+        />
+      )}
     </div>
   )
 })

@@ -7,3 +7,7 @@ export const getRemotePathSelector =
 export const getCurrentElementSelector = (
   state: StateSchema
 ): CategorySchema['select']['currentCategory'] => state.category?.select.currentCategory
+
+export const getSelectedCategorySelector = (
+  state: StateSchema
+): CategorySchema['select']['selected'] => state.category?.select.selected

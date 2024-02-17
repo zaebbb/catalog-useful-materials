@@ -20,6 +20,9 @@ import {
   RenderCourseDetails,
 } from '../DetailsPatterns/RenderCourseDetails/RenderCourseDetails'
 import {
+  RenderCustomDetails,
+} from '../DetailsPatterns/RenderCustomDetails/RenderCustomDetails'
+import {
   RenderIssueDetails,
 } from '../DetailsPatterns/RenderIssueDetails/RenderIssueDetails'
 import {
@@ -42,7 +45,9 @@ interface NoteDetailsContentProps {
 
 export const NoteDetailsContent: React.FC<NoteDetailsContentProps> =
   memo((props: NoteDetailsContentProps) => {
-    const { className } = props
+    const {
+      className,
+    } = props
     const note = useSelector(getNoteDetailsSelector)
 
     return (
@@ -55,7 +60,7 @@ export const NoteDetailsContent: React.FC<NoteDetailsContentProps> =
             {note?.title}
           </TitleMedium>
 
-          <HStack gap={8}>
+          <HStack gap={8} isWrap>
             {note?.tags.map(tag => (
               <Tab tabKey={tag.code} key={tag.code}>
                 {tag.name}
@@ -76,6 +81,7 @@ export const NoteDetailsContent: React.FC<NoteDetailsContentProps> =
           {note?.patternVideo && <RenderVideoDetails pattern={note.patternVideo} />}
           {note?.patternTechnology && <RenderTechnologyDetails pattern={note.patternTechnology} />}
           {note?.patternCourse && <RenderCourseDetails pattern={note.patternCourse} />}
+          {note?.patternCustom && <RenderCustomDetails pattern={note.patternCustom} />}
         </VStack>
       </div>
     )

@@ -94,3 +94,10 @@ export const FieldDescription: Story = {
     description: 'Тестовая подсказка',
   },
 }
+
+export const FieldRequired: Story = {
+  args: {
+    ...defaultProps,
+    isRequired: true,
+  },
+}

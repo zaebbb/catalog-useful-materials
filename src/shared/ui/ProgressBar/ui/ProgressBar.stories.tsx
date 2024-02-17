@@ -4,6 +4,7 @@ import { ProgressBar } from './ProgressBar'
 const meta: Meta<typeof ProgressBar> = {
   title: 'ui-kit/ProgressBar',
   component: ProgressBar,
+  tags: ['autodocs'],
   decorators: [
     (Story) => (
       <div style={{ padding: '50px' }}>

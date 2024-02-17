@@ -8,14 +8,6 @@ export const cssLoader = (options: BuildOptions): webpack.RuleSetRule => ({
     options.isDev ? 'style-loader' : MiniCssExtractPlugin.loader,
     {
       loader: 'css-loader',
-      // TODO: делать укороченные именование для всех кроме prismjs (придумать - поиска как)
-      // options: {
-      //   modules: {
-      //     localIdentName: options.isDev
-      //       ? '[path][name]__[local]'
-      //       : '[hash:base64:8]',
-      //   },
-      // },
     },
   ],
 })

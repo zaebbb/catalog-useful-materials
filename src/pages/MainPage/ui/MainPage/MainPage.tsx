@@ -1,4 +1,5 @@
 import NotesImage from '@assets/image/notes-image.png'
+import MetaImage from '@assets/image/pages/main-page.jpg'
 import { useAuth } from '@entities/User'
 import { getRouteLogin, getRouteRegister } from '@lib/router'
 import { AppImage } from '@ui-kit/AppImage'
@@ -19,8 +20,13 @@ const MainPage: React.FC = React.memo(() => {
   } = useAuth()
 
   return (
-    <Page title={t('page-title')}>
-      <HStack justify={'space-between'} gap={0}>
+    <Page
+      title={t('page-title')}
+      description={t('page-description')}
+      keywords={t('page-keywords')}
+      imageLink={MetaImage}
+    >
+      <HStack justify={'space-between'} gap={0} isWrap>
         <VStack gap={20}>
           <TitleLarge>
             {t('title')}

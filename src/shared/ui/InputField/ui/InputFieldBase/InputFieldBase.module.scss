@@ -10,8 +10,15 @@
   @include input-label;
 }
 
+.Required {
+  .title {
+    @include input-required;
+  }
+}
+
 .InputWrapper {
   position: relative;
+  width: 100%;
 }
 
 .input {

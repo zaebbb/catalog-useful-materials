@@ -8,6 +8,7 @@ const meta: Meta<typeof AppImage> = {
   args: {
     src: TestImage,
   },
+  tags: ['autodocs'],
 }
 
 export default meta

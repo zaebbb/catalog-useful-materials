@@ -11,7 +11,7 @@ import {
 import { NotesDetails } from './NotesDetails'
 
 const meta: Meta<typeof NotesDetails> = {
-  title: 'entities/NotesDetails',
+  title: 'entities/Notes/NotesDetails',
   component: NotesDetails,
   tags: ['autodocs'],
 }

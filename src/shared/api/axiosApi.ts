@@ -8,6 +8,7 @@ export interface BaseResponse<S, V> {
 }
 
 export const STATUS_CODE_FORBIDDEN: number = 403
+export const STATUS_CODE_NOT_FOUND: number = 404
 export const STATUS_CODE_SUCCESS: number = 200
 
 /**

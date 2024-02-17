@@ -8,8 +8,8 @@ export const BasicConceptsContainer: React.FC = memo(() => {
 
   return (
     <>
-      <TitleSmall>{t('part-2-title')}</TitleSmall>
-      <Text>{t('part-2-text-1')}</Text>
+      <TitleSmall>{t('part-2-title', { SITE_URL: window.location.origin })}</TitleSmall>
+      <Text>{t('part-2-text-1', { SITE_URL: window.location.origin })}</Text>
     </>
   )
 })

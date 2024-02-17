@@ -14,12 +14,22 @@ import { type NotesTypesCodeList } from '../../model/types/NotesTypesSchema'
 
 export interface SelectNotesTypesProps {
   className?: string
+  isMax?: boolean
+  isRequired?: boolean
+  label?: string
+  placeholder?: string
+  onChange?: () => void
 }
 
 export const SelectNotesTypes: React.FC<SelectNotesTypesProps> =
   memo((props: SelectNotesTypesProps) => {
     const {
       className,
+      label,
+      placeholder,
+      isRequired = true,
+      isMax,
+      onChange,
     } = props
     const { t } = useTranslation('notes-types')
     const dispatch = useAppDispatch()
@@ -34,20 +44,26 @@ export const SelectNotesTypes: React.FC<SelectNotesTypesProps> =
         dispatch(NotesTypesActions.setCurrentType(items[0]))
         dispatch(NoteBaseFieldsActions.setIsLoading(false))
         dispatch(NoteBaseFieldsActions.setValidation({}))
+      } else {
+        dispatch(NotesTypesActions.setCurrentType(undefined))
       }
-    }, [dispatch])
+
+      onChange?.()
+    }, [dispatch, onChange])
 
     return (
       <SelectAsyncField
         className={className}
-        label={t('label')}
-        placeholder={t('placeholder')}
+        label={label ?? t('label')}
+        placeholder={placeholder ?? t('placeholder')}
         remotePath={remotePath}
         onChange={onChangeHandler}
         isLoading={isLoading}
         validation={validation}
         isSearch
+        isRequired={isRequired}
         searchPlaceholder={t('search-placeholder')}
+        isMax={isMax}
       />
     )
   })

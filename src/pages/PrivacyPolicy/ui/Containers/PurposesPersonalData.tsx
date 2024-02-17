@@ -7,7 +7,7 @@ export const PurposesPersonalData: React.FC = memo(() => {
 
   return (
     <>
-      <TitleSmall>{t('part-6-title')}</TitleSmall>
+      <TitleSmall>{t('part-6-title', { SITE_URL: window.location.origin })}</TitleSmall>
     </>
   )
 })

@@ -1,0 +1,13 @@
+{
+  "page-title": "Users",
+  "page-description": "Users",
+  "page-keywords": "Users",
+
+  "users-not-found": "Users Not Found",
+  "title": "Users",
+
+  "user-edit-title": "Edit User",
+  "user-edit-admin-checkbox-label": "Access level - Administrator",
+  "user-edit-user-checkbox-label": "Access level - User",
+  "user-edit-button-save": "Save"
+}

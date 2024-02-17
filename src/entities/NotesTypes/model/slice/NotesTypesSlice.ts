@@ -10,8 +10,14 @@ export const NotesTypesSlice = createSlice(({
   name: 'NotesTypesSlice',
   initialState,
   reducers: {
-    setCurrentType: (state, { payload }: PayloadAction<SelectFieldOption<NotesTypesCodeList>>) => {
+    setCurrentType: (
+      state,
+      { payload }: PayloadAction<SelectFieldOption<NotesTypesCodeList> | undefined>
+    ) => {
       state.currentNoteType = payload
+    },
+    clearType: (state) => {
+      state.currentNoteType = undefined
     },
     setIsLoading: (state, { payload }: PayloadAction<boolean>) => {
       state.isLoading = payload

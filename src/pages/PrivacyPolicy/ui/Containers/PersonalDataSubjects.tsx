@@ -8,8 +8,8 @@ export const PersonalDataSubjects: React.FC = memo(() => {
 
   return (
     <>
-      <TitleSmall>{t('part-4-title')}</TitleSmall>
-      <Text>{t('part-4-text-1')}</Text>
+      <TitleSmall>{t('part-4-title', { SITE_URL: window.location.origin })}</TitleSmall>
+      <Text>{t('part-4-text-1', { SITE_URL: window.location.origin })}</Text>
     </>
   )
 })

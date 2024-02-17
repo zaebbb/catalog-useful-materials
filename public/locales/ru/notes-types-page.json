@@ -1,0 +1,29 @@
+{
+  "page-title": "Шаблоны заметок",
+  "page-description": "Шаблоны заметок",
+  "page-keywords": "шаблоны",
+
+  "title": "Шаблоны заметок",
+  "button-create": "Создать шаблон заметки",
+
+  "input-note-type-button": "Сохранить",
+  "create-note-type-title": "Создание шаблона заметки",
+  "input-note-type-name-label": "Название шаблона заметки",
+  "input-note-type-name-placeholder": "Введите название шаблона заметки",
+  "input-note-type-draft-label": "Черновик",
+  "input-note-type-draft-description": "При установке параметра шаблон не будет отображаться при создании заметки",
+  "input-note-type-name-field-label": "Наименование поля",
+  "input-note-type-name-field-placeholder": "Введите наименование поля",
+  "input-note-type-draft-field-label": "Черновик поля",
+  "input-note-type-draft-field-description": "При установке параметра поле не будет отображаться в форме",
+  "input-note-type-required-field-label": "Обязательное поле",
+  "input-note-type-required-field-description": "При установке параметра поле будет обязательным для заполнения",
+  "input-note-type-button-add-field": "Добавить",
+  "input-note-type-field-type-label": "Тип поля",
+  "input-note-type-field-type-placeholder": "Выберите тип поля",
+
+  "card-draft": "Черновик",
+  "card-required": "Обязательное поле",
+  "accept-delete-content": "Вы действительно хотите удалить поле?",
+  "notes-types-list-not-found": "notes-types-list-not-found"
+}

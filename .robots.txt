@@ -1,0 +1,7 @@
+User-agent:
+Crawl-delay: 1
+Host: example.ru
+Sitemap: https://example.ru/sitemap/
+Disallow: /admin
+
+

@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "webpack serve --env port=80 apiUrl=http://localhost:8000/api/v1/",
-    "build:prod": "webpack --env mode=production",
+    "build:prod": "webpack --env mode=production apiUrl=http://localhost:8000/api/v1/",
     "build:prod:analyze": "webpack --env mode=production isBuildAnalyze=true",
     "build:dev": "webpack --env mode=development apiUrl=http://localhost:8000/api/v1/",
     "lint:ts": "eslint \"**/*.{tsx,ts}\" --quiet",
@@ -54,7 +54,6 @@
     "@types/dompurify": "^3.0.5",
     "@types/google.accounts": "^0.0.13",
     "@types/node": "^20.8.0",
-    "@types/prismjs": "^1.26.3",
     "@types/react": "^18.2.23",
     "@types/react-dom": "^18.2.8",
     "@types/react-router-dom": "^5.3.3",
@@ -95,6 +94,7 @@
     "sass-loader": "^13.3.2",
     "sass-resources-loader": "^2.2.5",
     "storybook": "^7.5.3",
+    "storybook-addon-mock": "^4.3.0",
     "style-loader": "^3.3.3",
     "stylelint": "^15.10.3",
     "stylelint-config-clean-order": "^5.2.0",
@@ -109,6 +109,7 @@
     "workbox-webpack-plugin": "^7.0.0"
   },
   "dependencies": {
+    "@cyntler/react-doc-viewer": "^1.14.1",
     "@headlessui/react": "^1.7.17",
     "@react-icons/all-files": "^4.1.0",
     "@reduxjs/toolkit": "^1.9.7",
@@ -120,6 +121,7 @@
     "axios": "^1.5.1",
     "date-fns": "^3.0.6",
     "dompurify": "^3.0.6",
+    "highlight.js": "^11.9.0",
     "html-react-parser": "^5.0.7",
     "i18next": "^23.5.1",
     "i18next-browser-languagedetector": "^7.1.0",
@@ -128,6 +130,7 @@
     "prismjs": "^1.29.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-helmet-async": "^2.0.4",
     "react-i18next": "^13.2.2",
     "react-icons": "^4.12.0",
     "react-player": "^2.14.0",

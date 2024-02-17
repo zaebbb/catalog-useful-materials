@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from '@storybook/react'
 import { SelectNotesTypes } from './SelectNotesTypes'
 
 const meta: Meta<typeof SelectNotesTypes> = {
-  title: 'entities/SelectNotesTypes',
+  title: 'entities/NotesTypes/SelectNotesTypes',
   component: SelectNotesTypes,
   tags: ['autodocs'],
 }

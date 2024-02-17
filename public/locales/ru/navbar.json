@@ -1,5 +1,7 @@
 {
   "navbar-login": "Авторизация",
   "navbar-register": "Регистрация",
-  "navbar-profile": "Профиль"
+  "navbar-profile": "Профиль",
+  "navbar-admin": "Администратор",
+  "navbar-notes": "Мои заметки"
 }

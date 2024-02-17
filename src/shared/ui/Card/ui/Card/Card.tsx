@@ -22,8 +22,13 @@ interface CardProps {
   createdAt?: string
   viewLink?: string
   isAccess?: boolean
+  isDelete?: boolean
   editLink?: string
-  onDelete?: (id: number) => void
+  onDelete?: (id: number | string) => void
+  linkText?: string
+  deleteContent?: string
+  id?: number | string
+  children?: React.ReactNode
 }
 
 export const Card: React.FC<CardProps> = memo((props: CardProps) => {
@@ -34,11 +39,16 @@ export const Card: React.FC<CardProps> = memo((props: CardProps) => {
     createdAt,
     userAvatar,
     viewLink,
+    linkText,
     description,
     username,
     onDelete,
     isAccess,
     editLink,
+    deleteContent,
+    id,
+    isDelete = true,
+    children,
   } = props
 
   const { t } = useTranslation('ui-kit')
@@ -70,6 +80,12 @@ export const Card: React.FC<CardProps> = memo((props: CardProps) => {
           </Text>
         )}
 
+        {children && (
+          <Text type={'small'}>
+            {children}
+          </Text>
+        )}
+
         {username && (
           <AvatarUser
             src={userAvatar}
@@ -83,28 +99,33 @@ export const Card: React.FC<CardProps> = memo((props: CardProps) => {
           <ElementEdit
             linkEdit={editLink}
             onDelete={onDelete}
+            deleteContent={deleteContent}
+            isDelete={isDelete}
+            id={id}
           />
         )}
       </VStack>
 
-      <HStack justify={'space-between'} align={'center'} className={cls.InfoContent}>
-        {createDate && (
-          <Text>
-            <Span
-              color={'gradient'}
-              content={createDate}
-            />
-          </Text>
-        )}
+      {Boolean(createDate || viewLink) && (
+        <HStack justify={'space-between'} align={'center'} className={cls.InfoContent}>
+          {createDate && (
+            <Text>
+              <Span
+                color={'gradient'}
+                content={createDate}
+              />
+            </Text>
+          )}
 
-        {viewLink && (
-          <AppLink to={viewLink}>
-            <Button>
-              {t('card-link')}
-            </Button>
-          </AppLink>
-        )}
-      </HStack>
+          {viewLink && (
+            <AppLink to={viewLink}>
+              <Button>
+                {linkText ?? t('card-link')}
+              </Button>
+            </AppLink>
+          )}
+        </HStack>
+      )}
     </VStack>
   )
 })

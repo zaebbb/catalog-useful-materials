@@ -7,3 +7,11 @@ export const getRemotePathSelector =
 export const getCurrentElementSelector = (
   state: StateSchema
 ): TagSchema['select']['currentTags'] => state.tag?.select.currentTags
+
+export const getCurrentTagsIdsSelector = (
+  state: StateSchema
+): TagSchema['select']['currentTagsIds'] => state.tag?.select.currentTagsIds
+
+export const getSelectedSelector = (
+  state: StateSchema
+): TagSchema['select']['selected'] => state.tag?.select.selected

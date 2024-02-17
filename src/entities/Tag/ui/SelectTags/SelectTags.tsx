@@ -6,13 +6,18 @@ import {
 import React, { memo } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useSelector } from 'react-redux'
-import { getRemotePathSelector } from '../../model/selectors/TagSelector'
+import { getRemotePathSelector, getSelectedSelector } from '../../model/selectors/TagSelector'
 import { TagActions } from '../../model/slice/TagSlice'
 
 export interface SelectTagsProps {
   className?: string
   isLoading?: boolean
+  isMax?: boolean
+  isRequired?: boolean
   validation?: string
+  label?: string
+  placeholder?: string
+  onChange?: () => void
 }
 
 export const SelectTags: React.FC<SelectTagsProps> =
@@ -21,9 +26,15 @@ export const SelectTags: React.FC<SelectTagsProps> =
       className,
       isLoading,
       validation,
+      isMax,
+      label,
+      placeholder,
+      isRequired = true,
+      onChange,
     } = props
     const { t } = useTranslation('tag')
     const remotePath = useSelector(getRemotePathSelector)
+    const selected = useSelector(getSelectedSelector)
     const dispatch = useAppDispatch()
 
     const onChangeHandler = React.useCallback((
@@ -31,18 +42,24 @@ export const SelectTags: React.FC<SelectTagsProps> =
     ) => {
       dispatch(TagActions.setTags(items))
       dispatch(TagActions.setTagsIds(getIdsMultipleSelect(items)))
-    }, [dispatch])
+      onChange?.()
+    }, [dispatch, onChange])
 
     return (
       <SelectAsyncField
         className={className}
-        label={t('label')}
-        placeholder={t('placeholder')}
+        label={label ?? t('label')}
+        placeholder={placeholder ?? t('placeholder')}
         remotePath={remotePath}
         onChange={onChangeHandler}
         isMultiple
+        isMax={isMax}
         isLoading={isLoading}
         validation={validation}
+        selected={selected}
+        isRequired={isRequired}
+        isSearch
+        searchPlaceholder={t('search-placeholder')}
       />
     )
   })

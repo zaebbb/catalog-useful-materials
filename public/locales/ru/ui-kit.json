@@ -6,5 +6,9 @@
   "card-category": "Категория:",
   "card-link": "Подробнее",
 
-  "vk-button-text": "Войти через VK ID"
+  "vk-button-text": "Войти через VK ID",
+
+  "doc-view-download-file": "Скачать",
+  "doc-view-render-file": "Отобразить",
+  "doc-view-error": "Произошла ошибка во время обработки файла"
 }

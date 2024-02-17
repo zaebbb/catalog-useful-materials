@@ -40,6 +40,26 @@ export const FieldIsMax: Story = { args: { isMax: true } }
 export const FieldLoading: Story = { args: { isLoading: true } }
 export const FieldIsMultiple: Story = { args: { isMultiple: true } }
 export const FieldNoSearch: Story = { args: { isSearch: false } }
+export const FieldRequired: Story = { args: { isRequired: true } }
+export const FieldSelected: Story = {
+  args: {
+    selected: [
+      items[0],
+      items[1],
+      items[3],
+    ],
+  },
+}
+export const FieldSelectedMultiple: Story = {
+  args: {
+    selected: [
+      items[0],
+      items[1],
+      items[3],
+    ],
+    isMultiple: true,
+  },
+}
 
 export const FieldDescription: Story = {
   args: {

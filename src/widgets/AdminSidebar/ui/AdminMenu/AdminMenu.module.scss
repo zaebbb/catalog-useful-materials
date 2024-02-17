@@ -1,0 +1,9 @@
+.AdminMenu {
+  position: relative;
+}
+
+.AdminMenuItemActive {
+  p {
+    @include gradient-text;
+  }
+}

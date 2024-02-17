@@ -5,11 +5,16 @@ import { HStack, VStack } from '@ui-kit/Stack'
 import { Text } from '@ui-kit/Text'
 import React from 'react'
 import { RenderFiles } from '../../lib/components/RenderFiles'
-import { type InputFieldFileProps } from '../../lib/types/InputFieldFileTypes'
+import {
+  type FileOnChangeOptions,
+  type InputFieldFileProps,
+} from '../../lib/types/InputFieldFileTypes'
 import { filesHooks } from './../../lib/hooks/filesHooks'
 import cls from './InputFieldFile.module.scss'
 
-const InputFieldFileComponent = (props: InputFieldFileProps) => {
+const InputFieldFileComponent = <O extends FileOnChangeOptions>(
+  props: InputFieldFileProps<O>
+) => {
   const {
     className,
     isMultiple = false,
@@ -23,6 +28,8 @@ const InputFieldFileComponent = (props: InputFieldFileProps) => {
     isMax = true,
     success = '',
     remoteFiles = [],
+    isRequired = false,
+    name,
   } = props
 
   const [files, setFiles] = React.useState<Files>(value ?? [])
@@ -86,24 +93,31 @@ const InputFieldFileComponent = (props: InputFieldFileProps) => {
     [cls.success]: Boolean(successState),
     [cls.loading]: isLoading,
     [cls.drag]: isDragActive,
+    [cls.Required]: isRequired,
   }
 
   React.useEffect(() => {
     setRenderFiles(<RenderFiles onDelete={onDeleteHandler} files={files} />)
-    onChange?.(files)
-  }, [files, onChange, onDeleteHandler])
+  }, [files, onDeleteHandler])
 
   React.useEffect(() => {
-    if (validation) {
+    onChange?.(files, {
+      name,
+      isMultiple,
+    } as O)
+  }, [files, isMultiple, name, onChange])
+
+  React.useEffect(() => {
+    if (!isLoading && validation) {
       setValid(validation)
     }
-  }, [validation])
+  }, [isLoading, validation])
 
   React.useEffect(() => {
-    if (success) {
+    if (!isLoading && success) {
       setSuccess(success)
     }
-  }, [success])
+  }, [isLoading, success])
 
   React.useEffect(() => {
     if (remoteFiles.length > 0 && !mountedRemoteFiles) {
@@ -134,6 +148,7 @@ const InputFieldFileComponent = (props: InputFieldFileProps) => {
               <Text
                 align={'center'}
                 type={'small'}
+                className={cls.title}
               >
                 {label}
               </Text>

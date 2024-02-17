@@ -3,7 +3,8 @@ import { useAuth } from '@entities/User'
 import { AuthButton as VkAuthButton } from '@entities/VKAuth'
 import { DynamicReducerLoader, type ReducerList } from '@lib/components/DynamicReducerLoader'
 import { useAppDispatch } from '@lib/hooks/useAppDispatch'
-import { getRouteProfile } from '@lib/router'
+import { getRouteProfile, getRouteRegister } from '@lib/router'
+import { AppLink } from '@ui-kit/AppLink'
 import { Button } from '@ui-kit/Button'
 import { InputField, InputFieldPassword } from '@ui-kit/InputField'
 import { HStack, VStack } from '@ui-kit/Stack'
@@ -82,16 +83,18 @@ export const UserLoginForm: React.FC<UserLoginFormProps> = memo((props: UserLogi
               label={t('input-label-email')}
               value={email}
               onChange={onChangeEmail}
-              validation={validation.email}
+              validation={validation.email ?? validation.auth}
               isLoading={isLoading}
+              isRequired
             />
             <InputFieldPassword
               isMax
               label={t('input-label-password')}
               value={password}
               onChange={onChangePassword}
-              validation={validation.password}
+              validation={validation.password ?? validation.auth}
               isLoading={isLoading}
+              isRequired
             />
 
             <VStack gap={24} isMax>
@@ -103,13 +106,16 @@ export const UserLoginForm: React.FC<UserLoginFormProps> = memo((props: UserLogi
                 {t('button-login')}
               </Button>
 
-              <Button
-                fill={'border'}
-                size={'large'}
-                isDisabled={isLoading}
-              >
-                {t('button-register')}
-              </Button>
+              <AppLink to={getRouteRegister()}>
+                <Button
+                  fill={'border'}
+                  size={'large'}
+                  isDisabled={isLoading}
+                  className={cls.RegisterButton}
+                >
+                  {t('button-register')}
+                </Button>
+              </AppLink>
 
               <Text align={'center'}>
                 {t('alternate-auth')}

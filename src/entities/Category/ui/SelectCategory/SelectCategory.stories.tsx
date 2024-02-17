@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from '@storybook/react'
 import { SelectCategory } from './SelectCategory'
 
 const meta: Meta<typeof SelectCategory> = {
-  title: 'entities/SelectCategory',
+  title: 'entities/Category/SelectCategory',
   component: SelectCategory,
   tags: ['autodocs'],
   decorators: [StoreDecorator({

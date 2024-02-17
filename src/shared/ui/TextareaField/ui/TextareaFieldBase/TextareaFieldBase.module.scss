@@ -26,6 +26,8 @@
 }
 
 .InputWrapper {
+  width: 100%;
+
   font: var(--font-body-1);
   color: var(--neutral-color-70);
 
@@ -39,6 +41,12 @@
 
 .title {
   @include input-label;
+}
+
+.Required {
+  .title {
+    @include input-required;
+  }
 }
 
 .readonly {

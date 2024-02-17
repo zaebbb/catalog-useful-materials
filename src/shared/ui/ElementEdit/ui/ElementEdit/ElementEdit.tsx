@@ -13,9 +13,9 @@ interface ElementEditProps {
   className?: string
   linkEdit?: string
   isDelete?: boolean
-  onDelete?: (id: number) => void
+  onDelete?: (id: number | string) => void
   deleteContent?: string
-  id?: number
+  id?: number | string
 }
 
 export const ElementEdit: React.FC<ElementEditProps> = memo((props: ElementEditProps) => {
@@ -31,6 +31,7 @@ export const ElementEdit: React.FC<ElementEditProps> = memo((props: ElementEditP
   const { t } = useTranslation('ui-kit')
 
   const [showAccept, setShowAccept] = React.useState(false)
+  const [isDeleteState, setIsDelete] = React.useState(false)
 
   const onDeleteHandler = React.useCallback(() => {
     setShowAccept(true)
@@ -41,11 +42,19 @@ export const ElementEdit: React.FC<ElementEditProps> = memo((props: ElementEditP
   }, [])
 
   const onDeleteApply = React.useCallback(() => {
+    setIsDelete(true)
     setShowAccept(false)
-    if (id) {
-      onDelete?.(id)
+  }, [])
+
+  React.useEffect(() => {
+    if (isDeleteState) {
+      setIsDelete(false)
+
+      if (id) {
+        onDelete?.(id)
+      }
     }
-  }, [id, onDelete])
+  }, [id, isDeleteState, onDelete, showAccept])
 
   if (!linkEdit && !isDelete) {
     return null

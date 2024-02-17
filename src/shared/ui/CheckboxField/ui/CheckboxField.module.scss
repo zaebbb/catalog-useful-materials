@@ -31,6 +31,12 @@
   }
 }
 
+.Required {
+  .CheckboxLabel {
+    @include input-required;
+  }
+}
+
 .readonly {
   cursor: not-allowed;
   user-select: none;

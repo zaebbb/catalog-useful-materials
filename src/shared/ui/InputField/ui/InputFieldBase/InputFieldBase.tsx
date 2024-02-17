@@ -2,10 +2,15 @@ import { TypedMemo } from '@lib/components/TypedMemo'
 import { type Additional, classNames, type Mods } from '@lib/helpers/classNames'
 import { IconLib } from '@ui-kit/Icon'
 import React from 'react'
-import { type InputFieldBaseProps } from '../../lib/types/InputFieldBaseTypes'
+import {
+  type DefaultOnChangeOptions,
+  type InputFieldBaseProps,
+} from '../../lib/types/InputFieldBaseTypes'
 import cls from './InputFieldBase.module.scss'
 
-const InputFieldBaseComponent = <T extends string>(props: InputFieldBaseProps<T>) => {
+const InputFieldBaseComponent = <T extends string, O extends DefaultOnChangeOptions>(
+  props: InputFieldBaseProps<T, O>
+) => {
   const {
     className,
     isReadonly = false,
@@ -19,8 +24,10 @@ const InputFieldBaseComponent = <T extends string>(props: InputFieldBaseProps<T>
     icon,
     value = '',
     type = 'text',
+    name = '',
     isMax = false,
     isLoading = false,
+    isRequired = false,
     description = '',
     ...other
   } = props
@@ -36,6 +43,7 @@ const InputFieldBaseComponent = <T extends string>(props: InputFieldBaseProps<T>
     [cls.success]: Boolean(successState),
     [cls.inputIcon]: Boolean(icon),
     [cls.max]: isMax,
+    [cls.Required]: isRequired,
   }
 
   const additionalWrapper: Additional = [
@@ -48,7 +56,9 @@ const InputFieldBaseComponent = <T extends string>(props: InputFieldBaseProps<T>
   ]
 
   const onChangeHandler = React.useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
-    onChange?.(e.target.value as T)
+    onChange?.(e.target.value as T, {
+      name,
+    } as O)
 
     if (validation || success) {
       setValid('')
@@ -57,21 +67,31 @@ const InputFieldBaseComponent = <T extends string>(props: InputFieldBaseProps<T>
 
     setIcon(icon)
     e.currentTarget.focus()
-  }, [icon, onChange, success, validation])
+  }, [icon, name, onChange, success, validation])
 
   React.useEffect(() => {
-    if (validation) {
+    if (!isLoading && validation) {
       setValid(validation)
       setIcon(<IconLib size={'20'} Icon={'IconInfoCircleOutline'} className={cls.errorIcon} />)
     }
-  }, [validation])
+
+    if (!isLoading && !validation) {
+      setValid('')
+      setIcon(icon)
+    }
+  }, [icon, isLoading, validation])
 
   React.useEffect(() => {
     if (success) {
       setSuccess(success)
       setIcon(<IconLib size={'20'} Icon={'IconSuccessCircleOutline'} className={cls.successIcon} />)
     }
-  }, [success])
+
+    if (!success) {
+      setSuccess('')
+      setIcon(icon)
+    }
+  }, [icon, success])
 
   React.useEffect(() => {
     if (icon) {

@@ -1,0 +1,13 @@
+{
+  "page-title": "Пользователи",
+  "page-description": "Пользователи",
+  "page-keywords": "Пользователи",
+
+  "users-not-found": "Пользователя не найдены",
+  "title": "Пользователи",
+
+  "user-edit-title": "Редактирование пользователя",
+  "user-edit-admin-checkbox-label": "Уровень доступа - Администратор",
+  "user-edit-user-checkbox-label": "Уровень доступа - Пользователь",
+  "user-edit-button-save": "Сохранить"
+}

@@ -4,7 +4,11 @@ export type {
   BaseFieldsValidation,
   IsLoadingNoteParams,
   SetIsLoadingNoteParams,
+  NoteMode,
 } from './model/types/NotesSchema'
+export {
+  getFieldNotePattern,
+} from './lib/helpers/getFieldNotePattern'
 export {
   NoteBaseFieldsReducer,
   NoteBaseFieldsActions,
@@ -17,9 +21,12 @@ export {
 } from './ui/NoteBaseFields/NoteBaseFields'
 export type {
   NoteBaseFieldsSchema,
+  FieldNoteItem,
 } from './model/types/NoteBaseFieldsSchema'
 export type {
   NoteDetailsSchema,
 } from './model/types/NotesDetailsSchema'
 export { NotesDetails } from './ui/NotesDetails/NotesDetails'
-export { UserNotesList } from './ui/UserNotesList/UserNotesList'
+export { NotesList } from './ui/NotesList/NotesList'
+export type { EditNoteResponse } from './model/types/EditNoteSchema'
+export { CustomFieldCodeList } from './model/types/CustomFieldCode'

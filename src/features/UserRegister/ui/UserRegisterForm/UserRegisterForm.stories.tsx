@@ -1,9 +1,14 @@
+import { StoreDecorator } from '@config/storybook'
 import type { Meta, StoryObj } from '@storybook/react'
 import { UserRegisterForm } from './UserRegisterForm'
 
 const meta: Meta<typeof UserRegisterForm> = {
-  title: 'CHANGE/UserRegisterForm',
+  title: 'features/UserRegisterForm',
   component: UserRegisterForm,
+  tags: ['autodocs'],
+  decorators: [
+    StoreDecorator({}),
+  ],
 }
 
 export default meta

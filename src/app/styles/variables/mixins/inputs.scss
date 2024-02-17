@@ -3,6 +3,7 @@
 
   display: flex;
   flex-direction: column;
+  align-items: start;
 
   width: 100%;
   max-width: 400px;
@@ -23,6 +24,22 @@
   transition: 0.2s color, 0.2s border-color, 0.2s background;
 }
 
+@mixin input-required {
+  position: relative;
+  display: inline-block;
+
+  &::before {
+    content: '*';
+
+    position: absolute;
+    top: -3px;
+    right: -12px;
+
+    font-size: 14px;
+    color: var(--danger-color-80);
+  }
+}
+
 @mixin input-icon {
   position: absolute;
   top: 50%;
@@ -35,6 +52,7 @@
 }
 
 @mixin input-label {
+  position: relative;
   margin-bottom: 10px;
   font: var(--font-body-2);
   color: var(--neutral-color-70);

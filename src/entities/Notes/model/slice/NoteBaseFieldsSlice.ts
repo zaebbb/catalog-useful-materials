@@ -1,5 +1,6 @@
 import { createSlice, type PayloadAction } from '@reduxjs/toolkit'
 import {
+  type FieldNoteItem,
   type NoteBaseFieldsSchema,
 } from '../types/NoteBaseFieldsSchema'
 import { type BaseFieldsValidation } from '../types/NotesSchema'
@@ -9,6 +10,7 @@ const initialState: NoteBaseFieldsSchema = {
     title: '',
     description: '',
     draft: false,
+    fields: [],
   },
   isLoading: false,
 }
@@ -31,6 +33,12 @@ export const NoteBaseFieldsSlice = createSlice({
     },
     setValidation: (state, { payload }: PayloadAction<BaseFieldsValidation>) => {
       state.validation = payload
+    },
+    setFields: (state, { payload }: PayloadAction<FieldNoteItem[]>) => {
+      state.values.fields = payload
+    },
+    setId: (state, { payload }: PayloadAction<number>) => {
+      state.values.id = payload
     },
   },
 })

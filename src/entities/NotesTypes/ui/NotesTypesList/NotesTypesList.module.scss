@@ -1,0 +1,22 @@
+.NotesTypesList {
+  position: relative;
+}
+
+.Cards {
+
+  @include adaptive-max($breakpoint-laptop) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include adaptive-max($breakpoint-laptop-min) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.Card {
+  max-width: 100%;
+}

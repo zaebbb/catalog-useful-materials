@@ -4,6 +4,7 @@ import { Portal } from './Portal'
 const meta: Meta<typeof Portal> = {
   title: 'ui-kit/Portal',
   component: Portal,
+  tags: ['autodocs'],
 }
 
 export default meta

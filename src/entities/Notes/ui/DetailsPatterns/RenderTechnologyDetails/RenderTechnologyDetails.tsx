@@ -24,7 +24,7 @@ export const RenderTechnologyDetails: React.FC<RenderTechnologyDetailsProps> =
     return (
       <>
         {pattern.icon.value && (
-          <AppImage src={pattern.icon.value} />
+          <AppImage src={pattern.icon.value} isModal />
         )}
 
         <HStack justify={'flex-start'} gap={16}>

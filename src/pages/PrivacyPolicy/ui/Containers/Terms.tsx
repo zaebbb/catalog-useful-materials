@@ -8,24 +8,24 @@ export const Terms: React.FC = memo(() => {
 
   return (
     <>
-      <TitleSmall>{t('part-7-title')}</TitleSmall>
-      <Text>{t('part-7-text-1')}</Text>
+      <TitleSmall>{t('part-7-title', { SITE_URL: window.location.origin })}</TitleSmall>
+      <Text>{t('part-7-text-1', { SITE_URL: window.location.origin })}</Text>
 
-      <TitleSmall>{t('part-8-title')}</TitleSmall>
-      <Text>{t('part-8-text-1')}</Text>
-      <Text>{t('part-8-text-2')}</Text>
+      <TitleSmall>{t('part-8-title', { SITE_URL: window.location.origin })}</TitleSmall>
+      <Text>{t('part-8-text-1', { SITE_URL: window.location.origin })}</Text>
+      <Text>{t('part-8-text-2', { SITE_URL: window.location.origin })}</Text>
 
-      <TitleSmall>{t('part-9-title')}</TitleSmall>
-      <Text>{t('part-9-text-1')}</Text>
+      <TitleSmall>{t('part-9-title', { SITE_URL: window.location.origin })}</TitleSmall>
+      <Text>{t('part-9-text-1', { SITE_URL: window.location.origin })}</Text>
 
-      <TitleSmall>{t('part-10-title')}</TitleSmall>
-      <Text>{t('part-10-text-1')}</Text>
+      <TitleSmall>{t('part-10-title', { SITE_URL: window.location.origin })}</TitleSmall>
+      <Text>{t('part-10-text-1', { SITE_URL: window.location.origin })}</Text>
 
-      <TitleSmall>{t('part-11-title')}</TitleSmall>
-      <Text>{t('part-11-text-1')}</Text>
+      <TitleSmall>{t('part-11-title', { SITE_URL: window.location.origin })}</TitleSmall>
+      <Text>{t('part-11-text-1', { SITE_URL: window.location.origin })}</Text>
 
-      <TitleSmall>{t('part-12-title')}</TitleSmall>
-      <Text>{t('part-12-text-1')}</Text>
+      <TitleSmall>{t('part-12-title', { SITE_URL: window.location.origin })}</TitleSmall>
+      <Text>{t('part-12-text-1', { SITE_URL: window.location.origin })}</Text>
     </>
   )
 })

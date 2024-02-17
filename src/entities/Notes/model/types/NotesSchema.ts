@@ -1,5 +1,7 @@
 import type React from 'react'
 
+export type NoteMode = 'create' | 'edit'
+
 export interface BaseFieldsRequest {
   typeId: number
   viewId: number
@@ -10,6 +12,11 @@ export interface BaseFieldsRequest {
   title: string
   description: string
   draft: boolean
+
+  mode: NoteMode
+
+  // edit mode
+  id?: number
 }
 
 export interface Fields extends BaseFieldsRequest {
@@ -17,18 +24,10 @@ export interface Fields extends BaseFieldsRequest {
   files: Files
   text: string
   checkbox: boolean
+  int: number
 }
 
-export interface BaseFieldsValidation {
-  typeId?: string
-  viewId?: string
-  userId?: string
-  categoryId?: string
-  tagsIds?: string
-  title?: string
-  description?: string
-  draft?: string
-}
+export type BaseFieldsValidation = Partial<Record<keyof BaseFieldsRequest, string>>
 
 export interface IsLoadingNoteParams {
   isLoading?: boolean

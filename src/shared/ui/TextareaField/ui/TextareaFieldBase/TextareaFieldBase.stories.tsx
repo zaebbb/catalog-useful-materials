@@ -51,6 +51,12 @@ export const LoadingField: Story = {
   },
 }
 
+export const RequiredField: Story = {
+  args: {
+    isRequired: true,
+  },
+}
+
 export const ReadonlyField: Story = {
   args: {
     isReadonly: true,

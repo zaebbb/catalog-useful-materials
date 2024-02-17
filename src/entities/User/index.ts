@@ -20,3 +20,4 @@ export {
 export {
   ACCESS_ADMIN,
 } from './lib/const/Access'
+export { UsersList } from './ui/UsersList/UsersList'

@@ -75,7 +75,7 @@ export const Flex: React.FC<FlexProps> = (props: FlexProps) => {
     children,
     justify = 'normal',
     align = 'normal',
-    isWrap = 'nowrap',
+    isWrap = false,
     direction = 'row',
     gap = 32,
     isMax = false,

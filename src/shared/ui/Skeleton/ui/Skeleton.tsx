@@ -7,6 +7,7 @@ interface SkeletonProps {
   width?: string
   height?: string
   radius?: string
+  isMaxWidth?: boolean
 }
 
 export const Skeleton: React.FC<SkeletonProps> = memo((props: SkeletonProps) => {
@@ -15,12 +16,14 @@ export const Skeleton: React.FC<SkeletonProps> = memo((props: SkeletonProps) => 
     radius = '8px',
     height = '40px',
     width = '100%',
+    isMaxWidth = true,
   } = props
 
   const styles: React.CSSProperties = {
     borderRadius: radius,
-    width,
+    width: isMaxWidth ? '100%' : width,
     height,
+    maxWidth: isMaxWidth ? width : 'none',
   }
 
   return (

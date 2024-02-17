@@ -1,9 +1,9 @@
 import { classNames } from '@lib/helpers/classNames'
 import { useFormatDate } from '@lib/hooks/useFormatDate'
+import { getRouteEditNote } from '@lib/router'
 import { AvatarUser } from '@ui-kit/Avatar'
 import { Badge } from '@ui-kit/Badge'
 import { ElementEdit } from '@ui-kit/ElementEdit'
-import { Loader } from '@ui-kit/Loader'
 import { VStack } from '@ui-kit/Stack'
 import { Span, Text } from '@ui-kit/Text'
 import React, { memo } from 'react'
@@ -11,30 +11,25 @@ import { useTranslation } from 'react-i18next'
 import { useSelector } from 'react-redux'
 import {
   getNoteDetailsSelector,
-  getIsLoadingSelector,
   isCanEditNote,
 } from '../../model/selectors/NoteDetailsSelectors'
 import cls from './NoteDetailsSidebar.module.scss'
 
 interface NoteDetailsSidebarProps {
   className?: string
+  code?: string
 }
 
 export const NoteDetailsSidebar: React.FC<NoteDetailsSidebarProps> =
   memo((props: NoteDetailsSidebarProps) => {
-    const { className } = props
+    const {
+      className,
+      code,
+    } = props
     const { t } = useTranslation('note-view-page')
     const note = useSelector(getNoteDetailsSelector)
-    const isLoading = useSelector(getIsLoadingSelector)
     const isEdit = useSelector(isCanEditNote)
     const date = useFormatDate(note?.createdAt)
-
-    if (isLoading) {
-      // TODO: SKELETON вместо loader!!!
-      return (
-        <Loader />
-      )
-    }
 
     return (
       <VStack
@@ -51,7 +46,9 @@ export const NoteDetailsSidebar: React.FC<NoteDetailsSidebarProps> =
         />
 
         {isEdit && (
-          <ElementEdit />
+          <ElementEdit
+            linkEdit={getRouteEditNote(code ?? '')}
+          />
         )}
 
         {note?.draft && (

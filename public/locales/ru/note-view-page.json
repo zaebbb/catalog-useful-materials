@@ -1,5 +1,8 @@
 {
   "page-title": "Заметка",
+  "page-description": "На странице вы можете узнать детальную информацию о заметке",
+  "page-keywords": "заметка,просмотр",
+
   "details-link-view": "Перейти",
   "details-view-badge": "Черновик",
   "details-view-category": "Категория:",

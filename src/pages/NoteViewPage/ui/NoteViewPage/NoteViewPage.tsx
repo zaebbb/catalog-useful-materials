@@ -1,3 +1,4 @@
+import MetaImage from '@assets/image/pages/note-view-page.png'
 import { NotesDetails } from '@entities/Notes'
 import { Page } from '@ui-kit/Page'
 import React, { memo } from 'react'
@@ -17,7 +18,12 @@ const NoteViewPage: React.FC<NoteViewPageProps> = memo((props: NoteViewPageProps
   } = useParams()
 
   return (
-    <Page title={t('page-title')}>
+    <Page
+      title={t('page-title')}
+      description={t('page-description')}
+      keywords={t('page-keywords')}
+      imageLink={MetaImage}
+    >
       <NotesDetails
         id={id}
         className={className}

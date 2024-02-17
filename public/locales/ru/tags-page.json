@@ -1,0 +1,21 @@
+{
+  "page-title": "Теги",
+  "page-description": "Теги",
+  "page-keywords": "теги",
+
+  "title": "Теги",
+  "button-create": "Создать тег",
+  "tags-not-found": "Теги не найдены",
+
+  "input-tag-name-label": "Название тега",
+  "input-tag-name-placeholder": "Введите название тега",
+  "input-tag-draft-label": "Черновик",
+  "input-tag-code-label": "Код тега",
+  "input-tag-code-placeholder": "Код отобразится автоматически",
+  "input-tag-code-description": "Код отобразится при заполнении наименования",
+  "input-tag-button": "Сохранить",
+  "create-tag-title": "Создание тега",
+  "edit-tag-title": "Редактировать тег",
+  "tag-not-found": "Тег не найден",
+  "accept-delete-content": "Вы действительно хотите удалить тег?"
+}

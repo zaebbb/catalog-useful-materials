@@ -5,5 +5,6 @@
   "app-name": "Dev-notes",
   "error-boundary": "Internal App Error",
   "error-page-reload": "Reload Page",
-  "page-not-found": "Page Not Found"
+  "page-not-found": "Page Not Found",
+  "doc-view-error": "doc-view-error"
 }

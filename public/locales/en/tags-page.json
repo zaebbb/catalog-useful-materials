@@ -1,0 +1,22 @@
+{
+  "page-title": "Tags",
+  "page-description": "Tags",
+  "page-keywords": "tags",
+
+  "title": "Tags",
+  "button-create": "Create Tag",
+  "tags-not-found": "Tags Not Found",
+  "tag-edit-link": "Edit",
+
+  "input-tag-name-label": "Tag name",
+  "input-tag-name-placeholder": "Enter tag name",
+  "input-tag-draft-label": "Draft",
+  "input-tag-button": "Save",
+  "create-tag-title": "Created Tag",
+  "input-tag-code-label": "Tag Code",
+  "input-tag-code-placeholder": "The code will be displayed automatically",
+  "input-tag-code-description": "The code will be displayed when filling in the name",
+  "edit-tag-title": "Edit tag",
+  "tag-not-found": "Tags Not Found",
+  "accept-delete-content": "Do you really want to delete the tag?"
+}

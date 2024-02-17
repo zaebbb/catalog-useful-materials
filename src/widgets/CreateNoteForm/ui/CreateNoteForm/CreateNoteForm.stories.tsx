@@ -8,6 +8,7 @@ const baseValues: NoteBaseFieldsSchema['values'] = {
   title: '',
   description: '',
   draft: false,
+  fields: [],
 }
 
 const baseValidation: NoteBaseFieldsSchema['validation'] = {
@@ -20,8 +21,9 @@ const baseValidation: NoteBaseFieldsSchema['validation'] = {
 }
 
 const meta: Meta<typeof CreateNoteForm> = {
-  title: 'CHANGE/CreateNoteForm',
+  title: 'widgets/CreateNoteForm',
   component: CreateNoteForm,
+  tags: ['autodocs'],
 }
 
 export default meta
@@ -60,11 +62,14 @@ export const ArticleIsLoading: Story = {
         isLoading: true,
         values: baseValues,
       },
-      createNotePatternArticle: {
+      notePatternArticle: {
         isLoading: true,
         values: {
           linkNote: '',
           linkVideo: '',
+        },
+        editValues: {
+          image: '',
         },
       },
     }),
@@ -83,7 +88,7 @@ export const ArticleValidation: Story = {
         values: baseValues,
         validation: baseValidation,
       },
-      createNotePatternArticle: {
+      notePatternArticle: {
         validation: {
           image: 'Ошибка изображения',
           linkNote: 'Ошибка ссылки',
@@ -92,6 +97,9 @@ export const ArticleValidation: Story = {
         values: {
           linkNote: '',
           linkVideo: '',
+        },
+        editValues: {
+          image: '',
         },
       },
     }),

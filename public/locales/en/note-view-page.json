@@ -1,5 +1,8 @@
 {
   "page-title": "Note",
+  "page-description": "On the page you can find detailed information about the note",
+  "page-keywords": "note,view",
+
   "details-link-view": "Follow",
   "details-view-badge": "Badge",
   "details-view-category": "Category:",

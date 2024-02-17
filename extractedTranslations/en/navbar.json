@@ -1,5 +1,7 @@
 {
+  "navbar-admin": "navbar-admin",
   "navbar-login": "navbar-login",
+  "navbar-notes": "navbar-notes",
   "navbar-profile": "navbar-profile",
   "navbar-register": "navbar-register",
   "test-navbar": ""

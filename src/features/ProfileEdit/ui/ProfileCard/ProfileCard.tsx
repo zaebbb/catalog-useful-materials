@@ -79,7 +79,7 @@ export const ProfileCard: React.FC<ProfileCardProps> = memo((props: ProfileCardP
             isLoading={isLoading}
             onChange={onChangeAvatar}
             validation={validation.avatar}
-            remoteFiles={user.avatar ? [user.avatar] : []}
+            remoteFiles={user.avatarFilename ? [user.avatarFilename] : []}
           />
 
           <HStack gap={20} isMax className={cls.Fields}>

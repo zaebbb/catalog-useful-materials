@@ -4,6 +4,7 @@ import { VideoComponent } from './VideoComponent'
 const meta: Meta<typeof VideoComponent> = {
   title: 'ui-kit/VideoComponent',
   component: VideoComponent,
+  tags: ['autodocs'],
   args: {
     src: 'https://youtu.be/KyEu5ruJ1sU',
   },

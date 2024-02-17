@@ -1,6 +1,8 @@
 {
+  "notes-not-found": "notes-not-found",
+  "page-description": "page-description",
   "page-header-1": "page-header-1",
   "page-header-2": "page-header-2",
-  "page-title": "",
-  "notes-not-found": "notes-not-found"
+  "page-keywords": "page-keywords",
+  "page-title": ""
 }

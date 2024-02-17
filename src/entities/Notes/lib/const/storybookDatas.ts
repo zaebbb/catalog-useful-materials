@@ -2,9 +2,9 @@ import Profile from '@assets/icons/Profile.png'
 import TestImage from '@assets/image/test-image.jpg'
 import { NotesTypesCodeList } from '@entities/NotesTypes'
 import { NotesViewsCodeList } from '@entities/NotesViews'
+import { type UserNotesListElement } from '@features/UserNotesList/model/types/NotesListSchema'
 import { generateKey } from '@lib/helpers/generateKey'
 import { type BaseFieldsDetails } from '../../model/types/NotesDetailsSchema'
-import { type UserNotesListElement } from '../../model/types/NotesListSchema'
 
 const videoUrl: string = 'https://youtu.be/quSCXTL6trw'
 

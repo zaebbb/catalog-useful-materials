@@ -5,6 +5,9 @@
 .Image {
   cursor: pointer;
   border-radius: var(--border-radius-medium);
+}
+
+.ImageModal {
   transition: transform 0.3s;
 
   &:hover {

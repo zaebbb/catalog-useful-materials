@@ -1,4 +1,5 @@
 {
   "label": "Category",
-  "placeholder": "Select a category for the note"
+  "placeholder": "Select a category for the note",
+  "search-placeholder": "Enter the name of the category"
 }

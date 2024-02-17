@@ -8,10 +8,28 @@ export const RenderRoutes = (routeItem: RouteItem): React.ReactNode => {
   const {
     isMounted,
     isLoading,
+    isAdmin,
   } = useAuth()
   const location = useLocation()
 
   if (routeItem.isAuth && !isMounted && !isLoading) {
+    return (
+      <Route
+        key={routeItem.path}
+        element={
+          <Navigate
+            key={routeItem.path}
+            to={getRouteForbidden()}
+            state={{ from: location }}
+            replace
+          />
+        }
+        path={routeItem.path}
+      />
+    )
+  }
+
+  if (routeItem.isAdmin && !isAdmin && isMounted) {
     return (
       <Route
         key={routeItem.path}

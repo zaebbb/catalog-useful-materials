@@ -15,11 +15,13 @@ export default meta
 type Story = StoryObj<typeof Avatar>
 
 export const Primary: Story = {}
+
 export const PrimarySmall: Story = {
   args: {
     size: 'small',
   },
 }
+
 export const PrimaryLarge: Story = {
   args: {
     size: 'large',

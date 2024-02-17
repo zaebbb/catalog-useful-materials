@@ -1,5 +1,10 @@
 import { useAuth } from '@entities/User'
-import { getRouteLogin, getRouteProfile, getRouteRegister } from '@lib/router'
+import {
+  getRouteAdmin,
+  getRouteLogin,
+  getRouteRegister,
+  getRouteUserViewNotes,
+} from '@lib/router'
 import { HStack } from '@ui-kit/Stack'
 import { NavItem } from '@widgets/Navbar/ui/NavItem/NavItem'
 import React, { memo } from 'react'
@@ -14,6 +19,7 @@ export const NavbarMenu: React.FC<NavbarIMenuProps> = memo((props: NavbarIMenuPr
   const { t } = useTranslation('navbar')
   const {
     isMounted,
+    isAdmin,
   } = useAuth()
 
   return (
@@ -34,8 +40,17 @@ export const NavbarMenu: React.FC<NavbarIMenuProps> = memo((props: NavbarIMenuPr
       {isMounted && (
         <>
           <NavItem
-            label={t('navbar-profile')}
-            link={getRouteProfile()}
+            label={t('navbar-notes')}
+            link={getRouteUserViewNotes()}
+          />
+        </>
+      )}
+
+      {isAdmin && (
+        <>
+          <NavItem
+            label={t('navbar-admin')}
+            link={getRouteAdmin()}
           />
         </>
       )}

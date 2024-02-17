@@ -8,8 +8,8 @@ export const InfoOperatorContainer: React.FC = memo(() => {
 
   return (
     <>
-      <TitleSmall>{t('part-3-title')}</TitleSmall>
-      <Text>{t('part-3-text-1')}</Text>
+      <TitleSmall>{t('part-3-title', { SITE_URL: window.location.origin })}</TitleSmall>
+      <Text>{t('part-3-text-1', { SITE_URL: window.location.origin })}</Text>
     </>
   )
 })

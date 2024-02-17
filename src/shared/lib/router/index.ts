@@ -11,5 +11,18 @@ export {
   getRouteCreateNote,
   getRouteViewNote,
   getRouteUserViewNotes,
+  getRouteSitemap,
+  getRouteAdmin,
+  getRouteTags,
+  getRouteCreateTag,
+  getRouteEditTag,
+  getRouteCategories,
+  getRouteCreateCategory,
+  getRouteEditCategory,
+  getRouteEditNote,
+  getRouteAdminUsers,
+  getRouteAdminEditUser,
+  getRouteAdminCreateNoteType,
+  getRouteAdminNotesTypes,
 } from './helpers/routes'
 export { AppRoutes } from './types/router'

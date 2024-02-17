@@ -1,3 +1,4 @@
+import MetaImage from '@assets/image/pages/privacy-page.png'
 import { Page } from '@ui-kit/Page'
 import { VStack } from '@ui-kit/Stack'
 import React, { memo } from 'react'
@@ -9,7 +10,12 @@ const PrivacyPolicy: React.FC = memo(() => {
   const { t } = useTranslation('privacy-policy')
 
   return (
-    <Page title={t('page-title')}>
+    <Page
+      title={t('page-title')}
+      description={t('page-description')}
+      keywords={t('page-keywords')}
+      imageLink={MetaImage}
+    >
       <VStack gap={40}>
         <Privacy.TitleContainer />
 

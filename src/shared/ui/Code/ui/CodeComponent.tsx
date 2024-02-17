@@ -1,15 +1,9 @@
 import { type Additional, classNames } from '@lib/helpers/classNames'
 import { stringToHTML } from '@lib/helpers/stringToHTML'
-import prism from 'prismjs'
+import hljs from 'highlight.js'
 import React, { memo } from 'react'
 import cls from './Code.module.scss'
-import 'prismjs/themes/prism-tomorrow.min.css'
-import 'prismjs/plugins/line-numbers/prism-line-numbers'
-import 'prismjs/plugins/line-numbers/prism-line-numbers.css'
-import 'prismjs/plugins/autolinker/prism-autolinker'
-import 'prismjs/plugins/autolinker/prism-autolinker.css'
-import 'prismjs/plugins/inline-color/prism-inline-color'
-import 'prismjs/plugins/inline-color/prism-inline-color.css'
+import 'highlight.js/scss/atom-one-dark.scss'
 
 interface CodeProps {
   className?: string
@@ -23,7 +17,7 @@ const CodeComponent: React.FC<CodeProps> = memo((props: CodeProps) => {
   } = props
 
   React.useEffect(() => {
-    prism.highlightAll()
+    hljs.highlightAll()
   }, [])
 
   const additional: Additional = [

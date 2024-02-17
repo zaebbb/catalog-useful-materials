@@ -26,6 +26,7 @@ export const RenderArticleDetails: React.FC<RenderArticleDetailsProps> =
         {pattern.image.value && (
           <AppImage
             src={pattern.image.value}
+            isModal
           />
         )}
 

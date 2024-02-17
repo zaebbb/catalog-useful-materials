@@ -1,3 +1,4 @@
+import MetaImage from '@assets/image/pages/create-note-page.png'
 import { StickyLayout } from '@layout/StickyLayout'
 import { Page } from '@ui-kit/Page'
 import { ProfileSidebar } from '@widgets/ProfileSidebar'
@@ -9,7 +10,12 @@ const CreateNotePage: React.FC = memo(() => {
   const { t } = useTranslation('create-note-page')
 
   return (
-    <Page title={t('page-title')}>
+    <Page
+      title={t('page-title')}
+      description={t('page-description')}
+      keywords={t('page-keywords')}
+      imageLink={MetaImage}
+    >
       <StickyLayout
         ContentLeft={<ProfileSidebar />}
         Content={<CreateNoteContainer />}

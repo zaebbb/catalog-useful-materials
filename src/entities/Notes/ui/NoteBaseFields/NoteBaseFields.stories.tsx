@@ -4,7 +4,7 @@ import { type NoteBaseFieldsSchema } from '../../model/types/NoteBaseFieldsSchem
 import { NoteBaseFields } from './NoteBaseFields'
 
 const meta: Meta<typeof NoteBaseFields> = {
-  title: 'entities/NoteBaseFields',
+  title: 'entities/Notes/NoteBaseFields',
   component: NoteBaseFields,
   tags: ['autodocs'],
 }
@@ -13,6 +13,7 @@ const values: NoteBaseFieldsSchema['values'] = {
   draft: false,
   title: '',
   description: '',
+  fields: [],
 }
 
 export default meta

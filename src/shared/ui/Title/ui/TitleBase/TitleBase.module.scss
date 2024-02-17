@@ -1,9 +1,92 @@
-.extra { font: var(--font-extra-title); }
-.large { font: var(--font-title-1); }
-.medium { font: var(--font-title-2); }
-.regular { font: var(--font-title-3); }
-.small { font: var(--font-title-4); }
-.mini { font: var(--font-title-5); }
+$title-subtraction: 4px;
+
+.extra {
+  @include adaptive-max($breakpoint-laptop-min) {
+    font-size: calc(var(--font-size-large) - $title-subtraction)
+  }
+
+  @include adaptive-max($breakpoint-tablet) {
+    font-size: calc(var(--font-size-large) - ($title-subtraction * 2))
+  }
+
+  @include adaptive-max($breakpoint-smartphone) {
+    font-size: calc(var(--font-size-large) - ($title-subtraction * 3))
+  }
+
+  font: var(--font-extra-title);
+}
+
+.large {
+  @include adaptive-max($breakpoint-laptop-min) {
+    font-size: calc(var(--font-size-title-1) - $title-subtraction)
+  }
+
+  @include adaptive-max($breakpoint-tablet) {
+    font-size: calc(var(--font-size-title-1) - ($title-subtraction * 2))
+  }
+
+  @include adaptive-max($breakpoint-smartphone) {
+    font-size: calc(var(--font-size-title-1) - ($title-subtraction * 3))
+  }
+
+  font: var(--font-title-1);
+}
+
+.medium {
+  @include adaptive-max($breakpoint-laptop-min) {
+    font-size: calc(var(--font-size-title-2) - $title-subtraction)
+  }
+
+  @include adaptive-max($breakpoint-tablet) {
+    font-size: calc(var(--font-size-title-2) - ($title-subtraction * 2))
+  }
+
+  @include adaptive-max($breakpoint-smartphone) {
+    font-size: calc(var(--font-size-title-2) - ($title-subtraction * 3))
+  }
+
+  font: var(--font-title-2);
+}
+
+.regular {
+  @include adaptive-max($breakpoint-laptop-min) {
+    font-size: calc(var(--font-size-title-3) - $title-subtraction)
+  }
+
+  @include adaptive-max($breakpoint-tablet) {
+    font-size: calc(var(--font-size-title-3) - ($title-subtraction * 2))
+  }
+
+  @include adaptive-max($breakpoint-smartphone) {
+    font-size: calc(var(--font-size-title-3) - ($title-subtraction * 3))
+  }
+
+  font: var(--font-title-3);
+}
+
+.small {
+  @include adaptive-max($breakpoint-laptop-min) {
+    font-size: calc(var(--font-size-title-4) - $title-subtraction)
+  }
+
+  @include adaptive-max($breakpoint-tablet) {
+    font-size: calc(var(--font-size-title-4) - ($title-subtraction * 2))
+  }
+
+  font: var(--font-title-4);
+}
+
+.mini {
+  @include adaptive-max($breakpoint-laptop-min) {
+    font-size: calc(var(--font-size-title-5) - $title-subtraction)
+  }
+
+  @include adaptive-max($breakpoint-tablet) {
+    font-size: calc(var(--font-size-title-5) - ($title-subtraction * 2))
+  }
+
+  font: var(--font-title-5);
+}
 
 .align {
   &-left { text-align: left; }

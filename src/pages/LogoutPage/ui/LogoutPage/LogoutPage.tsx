@@ -2,14 +2,14 @@ import { LogoutUser, useAuth, UserActions } from '@entities/User'
 import { useAppDispatch } from '@lib/hooks/useAppDispatch'
 import { getRouteMain } from '@lib/router'
 import React from 'react'
-import { useNavigate } from 'react-router-dom'
+import { Navigate, useLocation } from 'react-router-dom'
 
 const LogoutPage: React.FC = React.memo(() => {
   const {
     isMounted,
   } = useAuth()
   const dispatch = useAppDispatch()
-  const navigate = useNavigate()
+  const location = useLocation()
 
   React.useEffect(() => {
     if (isMounted) {
@@ -18,11 +18,15 @@ const LogoutPage: React.FC = React.memo(() => {
     }
   }, [dispatch, isMounted])
 
-  React.useEffect(() => {
-    if (!isMounted) {
-      navigate(getRouteMain())
-    }
-  }, [isMounted, navigate])
+  if (!isMounted) {
+    return (
+      <Navigate
+        to={getRouteMain()}
+        state={{ from: location }}
+        replace
+      />
+    )
+  }
 
   return (
     <div />

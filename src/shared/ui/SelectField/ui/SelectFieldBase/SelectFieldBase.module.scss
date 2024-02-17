@@ -18,12 +18,31 @@
   text-align: left;
 }
 
+.Required {
+  .SelectLabel {
+    @include input-required;
+  }
+}
+
 .SelectIcon {
   @include input-icon;
 }
 
 .SelectIconError,
 .SelectIconSuccess {
+  @include input-icon;
+
+  right: calc(16px * 2 + 20px);
+}
+
+.SelectIconErrorLeft,
+.SelectIconSuccessLeft {
+  @include input-icon;
+
+  right: calc(16px * 3 + 20px);
+}
+
+.SelectIconClose {
   @include input-icon;
 
   right: calc(16px * 2 + 20px);

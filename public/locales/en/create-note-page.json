@@ -1,5 +1,8 @@
 {
+  "page-title": "Create Note",
+  "page-description": "Create convenient notes that you can always find in the future",
+  "page-keywords": "note,creation,form",
+
   "title-create-note-1": "Create",
-  "title-create-note-2": "Note",
-  "page-title": "Create Note"
+  "title-create-note-2": "Note"
 }

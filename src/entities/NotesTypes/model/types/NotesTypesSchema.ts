@@ -25,6 +25,12 @@ export interface NotesTypes {
   isCustom: boolean
 }
 
+export interface NotesTypesListElement extends NotesTypes {
+  id: number
+  createdAt: string
+  draft: boolean
+}
+
 export interface NotesTypesSchema {
   allNotesTypesPath: string
   currentNoteType?: SelectFieldOption<NotesTypesCodeList>

@@ -2,7 +2,7 @@
  * @type IconSize
  * @description Описывает возможные вариации размера иконки (PX)
  * */
-export type IconSize = '14' | '16' | '18' | '20' | '24' | '40'
+export type IconSize = '14' | '16' | '18' | '20' | '24' | '28' | '32' | '36' | '40'
 
 /**
  * @type IconPadding

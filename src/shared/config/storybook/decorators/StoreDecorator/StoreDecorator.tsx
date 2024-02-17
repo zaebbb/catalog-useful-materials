@@ -6,15 +6,15 @@ import { NoteDetailsReducer } from '@entities/Notes'
 import { NotesTypesReducer } from '@entities/NotesTypes'
 import { NotesViewsReducer } from '@entities/NotesViews'
 import { TagReducer } from '@entities/Tag'
-import { CreateNotePatternArticleReducer } from '@features/CreateNotePatternArticle'
-import { CreateNotePatternBookReducer } from '@features/CreateNotePatternBook'
-import { CreateNotePatternCodeReducer } from '@features/CreateNotePatternCode'
-import { CreateNotePatternCourseReducer } from '@features/CreateNotePatternCourse'
-import { CreateNotePatternIssueReducer } from '@features/CreateNotePatternIssue'
-import { CreateNotePatternLayoutReducer } from '@features/CreateNotePatternLayout'
-import { CreateNotePatternServiceReducer } from '@features/CreateNotePatternService'
-import { CreateNotePatternTechnologyReducer } from '@features/CreateNotePatternTechnology'
-import { CreateNotePatternVideoReducer } from '@features/CreateNotePatternVideo'
+import { NotePatternArticleReducer } from '@features/NotePatternArticle'
+import { NotePatternBookReducer } from '@features/NotePatternBook'
+import { NotePatternCodeReducer } from '@features/NotePatternCode'
+import { NotePatternCourseReducer } from '@features/NotePatternCourse'
+import { NotePatternIssueReducer } from '@features/NotePatternIssue'
+import { NotePatternLayoutReducer } from '@features/NotePatternLayout'
+import { NotePatternServiceReducer } from '@features/NotePatternService'
+import { NotePatternTechnologyReducer } from '@features/NotePatternTechnology'
+import { NotePatternVideoReducer } from '@features/NotePatternVideo'
 import { ProfileEditReducer } from '@features/ProfileEdit'
 import { UserLoginReducer } from '@features/UserLogin/model/slice/UserLoginSlice'
 import { type ReducerList } from '@lib/components/DynamicReducerLoader'
@@ -35,15 +35,15 @@ const defaultAsyncReducers: ReducerList = {
   category: CategoryReducer,
   tag: TagReducer,
   notesViews: NotesViewsReducer,
-  createNotePatternTechnology: CreateNotePatternTechnologyReducer,
-  createNotePatternBook: CreateNotePatternBookReducer,
-  createNotePatternArticle: CreateNotePatternArticleReducer,
-  createNotePatternLayout: CreateNotePatternLayoutReducer,
-  createNotePatternIssue: CreateNotePatternIssueReducer,
-  createNotePatternCode: CreateNotePatternCodeReducer,
-  createNotePatternService: CreateNotePatternServiceReducer,
-  createNotePatternVideo: CreateNotePatternVideoReducer,
-  createNotePatternCourse: CreateNotePatternCourseReducer,
+  notePatternTechnology: NotePatternTechnologyReducer,
+  notePatternBook: NotePatternBookReducer,
+  notePatternArticle: NotePatternArticleReducer,
+  notePatternLayout: NotePatternLayoutReducer,
+  notePatternIssue: NotePatternIssueReducer,
+  notePatternCode: NotePatternCodeReducer,
+  notePatternService: NotePatternServiceReducer,
+  notePatternVideo: NotePatternVideoReducer,
+  notePatternCourse: NotePatternCourseReducer,
   noteDetails: NoteDetailsReducer,
 }
 

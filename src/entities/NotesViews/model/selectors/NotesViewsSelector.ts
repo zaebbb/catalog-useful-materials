@@ -7,3 +7,7 @@ export const getRemotePathSelector =
 export const getCurrentElementSelector = (
   state: StateSchema
 ): NotesViewsSchema['currentNoteView'] => state.notesViews?.currentNoteView
+
+export const getSelectedSelector = (
+  state: StateSchema
+): NotesViewsSchema['selected'] => state.notesViews?.selected

@@ -1,5 +1,6 @@
 export {
   NotesViewsReducer,
+  NotesViewsActions,
 } from './model/slice/NotesViewsSlice'
 export {
   type NotesViewsSchema,

@@ -7,7 +7,7 @@ export const SubTitleContainer: React.FC = memo(() => {
 
   return (
     <TitleMedium>
-      {t('subtitle')}
+      {t('subtitle', { SITE_URL: window.location.origin })}
     </TitleMedium>
   )
 })

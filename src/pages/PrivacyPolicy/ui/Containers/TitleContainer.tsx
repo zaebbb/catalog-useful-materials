@@ -8,9 +8,12 @@ export const TitleContainer: React.FC = memo(() => {
 
   return (
     <TitleLarge align={'center'}>
-      <Span color={'gradient'} content={t('main-title-span-part')} />
+      <Span
+        color={'gradient'}
+        content={t('main-title-span-part', { SITE_URL: window.location.origin })}
+      />
       {' '}
-      {t('main-title-part')}
+      {t('main-title-part', { SITE_URL: window.location.origin })}
     </TitleLarge>
   )
 })

@@ -4,7 +4,6 @@ import { type BuildOptions } from '../../../types/config'
 
 export const scssLoader = (options: BuildOptions): webpack.RuleSetRule => ({
   test: /\.s[ac]ss$/i,
-  exclude: /node_modules/,
   use: [
     options.isDev ? 'style-loader' : MiniCssExtractPlugin.loader,
     {

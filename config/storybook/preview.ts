@@ -1,6 +1,9 @@
 import type { Preview } from '@storybook/react'
 import '../../src/app/styles/index.scss'
 import {
+  HelmetDecorator,
+} from '../../src/shared/config/storybook/decorators/HelmetDecorator/HelmetDecorator'
+import {
   RouterDecorator,
 } from '../../src/shared/config/storybook/decorators/RouterDecorator/RouterDecorator'
 import {
@@ -26,6 +29,7 @@ const preview: Preview = {
     RouterDecorator,
     SuspenseDecorator,
     I18nextDecorator,
+    HelmetDecorator,
   ],
 }
 

@@ -1,0 +1,21 @@
+{
+  "page-title": "Категории",
+  "page-description": "Категории",
+  "page-keywords": "категории",
+
+  "title": "Категории",
+  "button-create": "Создать категорию",
+  "categories-not-found": "Категории не найдены",
+
+  "input-category-name-label": "Название категории",
+  "input-category-name-placeholder": "Введите название категории",
+  "input-category-draft-label": "Черновик",
+  "input-category-code-label": "Код категории",
+  "input-category-code-placeholder": "Код отобразится автоматически",
+  "input-category-code-description": "Код отобразится при заполнении наименования",
+  "input-category-button": "Сохранить",
+  "create-category-title": "Создание категории",
+  "accept-delete-content": "Вы действительно хотите удалить категорию? При удалении категории будут удалены существующие заметки привязанные к категории",
+  "edit-category-title": "Редактирование категории",
+  "category-not-found": "Категория не найдена"
+}

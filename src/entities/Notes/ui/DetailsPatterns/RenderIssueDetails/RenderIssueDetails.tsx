@@ -25,6 +25,7 @@ export const RenderIssueDetails: React.FC<RenderIssueDetailsProps> =
         {pattern.imageIssue.value && (
           <AppImage
             src={pattern.imageIssue.value}
+            isModal
           />
         )}
 

@@ -20,3 +20,4 @@ export const FieldError: Story = { args: { validation: 'Тестирование
 export const FieldSuccess: Story = { args: { success: 'Тестирование успеха' } }
 export const FieldReadonly: Story = { args: { isReadonly: true } }
 export const FieldIsLoading: Story = { args: { isLoading: true } }
+export const FieldIsRequired: Story = { args: { isRequired: true } }

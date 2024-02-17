@@ -63,6 +63,8 @@ export interface SelectFieldBaseProps<T extends string> extends HTMLSelectFieldB
   isMultiple?: boolean
   /** Указания нужно ли включить поиск или нет */
   isSearch?: boolean
+  /** Указание обязательноси заполнения поля */
+  isRequired?: boolean
   /** Placeholder для поискового input */
   searchPlaceholder?: string
   /** Описание, размещаемое под полем */

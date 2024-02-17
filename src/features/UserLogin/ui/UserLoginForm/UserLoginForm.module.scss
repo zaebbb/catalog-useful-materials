@@ -3,6 +3,10 @@
   max-width: 460px;
 }
 
+.RegisterButton {
+  width: 100%;
+}
+
 .AuthorizeSocial {
   @include adaptive-max($breakpoint-smartphone) {
     grid-template-columns: 1fr;

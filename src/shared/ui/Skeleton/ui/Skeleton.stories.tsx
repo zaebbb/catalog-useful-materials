@@ -4,6 +4,7 @@ import { Skeleton } from './Skeleton'
 const meta: Meta<typeof Skeleton> = {
   title: 'ui-kit/Skeleton',
   component: Skeleton,
+  tags: ['autodocs'],
 }
 
 export default meta

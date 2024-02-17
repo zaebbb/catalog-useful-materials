@@ -1,3 +1,5 @@
 export { InputFieldBase as InputField } from './ui/InputFieldBase/InputFieldBase'
 export { InputFieldPassword } from './ui/InputFieldPassword/InputFieldPassword'
 export { InputFieldFile } from './ui/InputFieldFile/InputFieldFile'
+export type { DefaultOnChangeOptions } from './lib/types/InputFieldBaseTypes'
+export type { FileOnChangeOptions } from './lib/types/InputFieldFileTypes'

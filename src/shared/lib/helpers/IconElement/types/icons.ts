@@ -10,8 +10,12 @@ export type IconLibName =
   'IconEyeViewOutline' |
   'IconEyeNotViewOutline' |
   'IconArrowDownNoLine' |
+  'IconArrowLeftNoLine' |
+  'IconArrowRightNoLine' |
   'IconLang' |
   'IconUser' |
+  'IconUsers' |
+  'IconAdmin' |
   'IconLoadLocal' |
   'IconArrowDownLine' |
   'IconExitOutline' |
@@ -26,4 +30,7 @@ export type IconLibName =
   'IconVolumeFill' |
   'IconVolumeDisableFill' |
   'IconDocumentOutline' |
-  'IconLogoVK'
+  'IconLogoVK' |
+  'IconTag' |
+  'IconCategoryOutline' |
+  'IconNoteTypeOutline'

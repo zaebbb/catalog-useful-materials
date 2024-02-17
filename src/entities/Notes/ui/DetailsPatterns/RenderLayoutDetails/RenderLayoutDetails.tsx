@@ -25,6 +25,7 @@ export const RenderLayoutDetails: React.FC<RenderLayoutDetailsProps> =
         {pattern.imageLayout.value && (
           <AppImage
             src={pattern.imageLayout.value}
+            isModal
           />
         )}
 

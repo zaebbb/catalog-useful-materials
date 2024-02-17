@@ -1,4 +1,5 @@
 {
   "label": "Tags",
-  "placeholder": "Select the tags for the note"
+  "placeholder": "Select the tags for the note",
+  "search-placeholder": "Enter the name of the tag"
 }

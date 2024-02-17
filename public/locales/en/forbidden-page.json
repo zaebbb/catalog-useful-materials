@@ -1,5 +1,8 @@
 {
   "page-title": "Access Error",
+  "page-description": "Access denied",
+  "page-keywords": "prohibition",
+
   "title": "Access denied",
   "description": "The page you are trying to navigate to is not allowed to view"
 }

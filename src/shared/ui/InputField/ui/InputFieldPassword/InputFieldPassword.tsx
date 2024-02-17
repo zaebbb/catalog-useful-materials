@@ -1,11 +1,15 @@
 import { type IconLibName } from '@lib/helpers/IconElement'
 import { IconLib } from '@ui-kit/Icon'
 import React, { memo } from 'react'
-import { type InputFieldBaseProps, type InputType } from '../../lib/types/InputFieldBaseTypes'
+import {
+  type DefaultOnChangeOptions,
+  type InputFieldBaseProps,
+  type InputType,
+} from '../../lib/types/InputFieldBaseTypes'
 import { InputFieldBase } from '../InputFieldBase/InputFieldBase'
 
-export const InputFieldPassword: React.FC<InputFieldBaseProps<string>> =
-  memo((props: InputFieldBaseProps<string>) => {
+export const InputFieldPassword: React.FC<InputFieldBaseProps<string, DefaultOnChangeOptions>> =
+  memo((props: InputFieldBaseProps<string, DefaultOnChangeOptions>) => {
     const [type, setType] = React.useState<InputType>('password')
     const [iconType, setIcon] = React.useState<IconLibName>('IconEyeNotViewOutline')
 

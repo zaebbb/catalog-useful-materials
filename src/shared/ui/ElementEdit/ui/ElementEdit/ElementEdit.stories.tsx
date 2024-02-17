@@ -4,6 +4,7 @@ import { ElementEdit } from './ElementEdit'
 const meta: Meta<typeof ElementEdit> = {
   title: 'ui-kit/ElementEdit',
   component: ElementEdit,
+  tags: ['autodocs'],
 }
 
 const fn = () => {}

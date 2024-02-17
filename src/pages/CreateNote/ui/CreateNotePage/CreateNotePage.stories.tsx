@@ -5,6 +5,10 @@ import CreateNotePage from './CreateNotePage'
 const meta: Meta<typeof CreateNotePage> = {
   title: 'pages/CreateNotePage',
   component: CreateNotePage,
+  tags: ['autodocs'],
+  decorators: [
+    StoreDecorator({}),
+  ],
 }
 
 export default meta

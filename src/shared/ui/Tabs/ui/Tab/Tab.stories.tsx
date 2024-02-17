@@ -5,6 +5,7 @@ import { Tab } from './Tab'
 const meta: Meta<typeof Tab> = {
   title: 'ui-kit/Tabs/Tab',
   component: Tab,
+  tags: ['autodocs'],
   args: {
     children: 'Таб',
   },

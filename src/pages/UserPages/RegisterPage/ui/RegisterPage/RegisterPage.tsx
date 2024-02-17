@@ -1,3 +1,4 @@
+import MetaImage from '@assets/image/pages/register-page.png'
 import { UserRegisterForm } from '@features/UserRegister'
 import { Page } from '@ui-kit/Page'
 import React, { memo } from 'react'
@@ -12,7 +13,13 @@ const RegisterPage: React.FC<RegisterPageProps> = memo((props: RegisterPageProps
   const { t } = useTranslation('register-page')
 
   return (
-    <Page className={className} title={t('page-title')}>
+    <Page
+      className={className}
+      title={t('page-title')}
+      description={t('page-description')}
+      keywords={t('page-keywords')}
+      imageLink={MetaImage}
+    >
       <UserRegisterForm />
     </Page>
   )

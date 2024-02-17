@@ -1,0 +1,24 @@
+{
+  "page-title": "Note Templates",
+  "page-description": "Note Templates",
+  "page-keywords": "templates",
+
+  "title": "Note Templates",
+  "button-create": "Create note template",
+  "input-note-type-button": "input-note-type-button",
+  "create-note-type-title": "create-note-type-title",
+  "input-note-type-name-label": "input-note-type-name-label",
+  "input-note-type-name-placeholder": "input-note-type-name-placeholder",
+  "input-note-type-draft-label": "input-note-type-draft-label",
+  "input-note-type-name-field-label": "input-note-type-name-field-label",
+  "input-note-type-name-field-placeholder": "input-note-type-name-field-placeholder",
+  "input-note-type-draft-field-label": "input-note-type-draft-field-label",
+  "input-note-type-required-field-label": "input-note-type-required-field-label",
+  "input-note-type-button-add-field": "input-note-type-button-add-field",
+  "input-note-type-field-type-label": "input-note-type-field-type-label",
+  "input-note-type-field-type-placeholder": "input-note-type-field-type-placeholder",
+  "card-draft": "card-draft",
+  "card-required": "card-required",
+  "accept-delete-content": "accept-delete-content",
+  "notes-types-list-not-found": "notes-types-list-not-found"
+}

@@ -1,7 +1,10 @@
 import { type StateSchema } from '@app/providers/StoreProvider'
-import { type UserProfile } from '@entities/User'
 import { createSelector } from '@reduxjs/toolkit'
-import { type ProfileSchema, type ProfileValidation } from '../types/ProfileSchema'
+import {
+  type ProfileSchema,
+  type ProfileValidation,
+  type UserProfileData,
+} from '../types/ProfileSchema'
 
 export const getProfileSchema =
   (state: StateSchema): ProfileSchema | undefined => state.profileEdit
@@ -19,5 +22,5 @@ export const getProfileEditValidation = createSelector(
 
 export const getProfileEditUserData = createSelector(
   [getProfileSchema],
-  (state): UserProfile => state?.user ?? {}
+  (state): UserProfileData => state?.user ?? {}
 )

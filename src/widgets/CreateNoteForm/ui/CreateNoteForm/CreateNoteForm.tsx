@@ -1,6 +1,6 @@
 import { CategoryReducer } from '@entities/Category'
-import { NoteBaseFieldsReducer } from '@entities/Notes'
-import { NotesTypesReducer, useNotesTypes } from '@entities/NotesTypes'
+import { NoteBaseFields, NoteBaseFieldsReducer } from '@entities/Notes'
+import { NotesTypesReducer, useIsCustomNoteType, useNotesTypes } from '@entities/NotesTypes'
 import { NotesViewsReducer } from '@entities/NotesViews'
 import { TagReducer } from '@entities/Tag'
 import { DynamicReducerLoader, type ReducerList } from '@lib/components/DynamicReducerLoader'
@@ -26,6 +26,7 @@ export const CreateNoteForm: React.FC<CreateNoteFormProps> = memo((props: Create
     SelectNotesTypes,
     currentType,
   } = useNotesTypes()
+  const isPattern = useIsCustomNoteType()
 
   return (
     <DynamicReducerLoader reducers={reducers}>
@@ -33,11 +34,21 @@ export const CreateNoteForm: React.FC<CreateNoteFormProps> = memo((props: Create
         gap={20}
         className={className}
       >
-        <SelectNotesTypes />
+        <VStack
+          gap={24}
+          isMax
+        >
+          <SelectNotesTypes />
 
-        <RenderPatternNote
-          current={currentType}
-        />
+          <NoteBaseFields
+            selectType={currentType}
+            isPattern={isPattern}
+          />
+
+          <RenderPatternNote
+            current={currentType}
+          />
+        </VStack>
       </VStack>
     </DynamicReducerLoader>
   )

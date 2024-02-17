@@ -76,12 +76,6 @@ export const UserRegisterForm: React.FC<UserRegisterFormProps> =
       await dispatch(UserRegisterRequest())
     }, [dispatch])
 
-    const onPasteRepeatPasswordHandler = React.useCallback((
-      e: React.ClipboardEvent<HTMLInputElement>
-    ) => {
-      e.preventDefault()
-    }, [])
-
     React.useEffect(() => {
       if (isMounted) {
         navigate(getRouteProfile())
@@ -114,6 +108,7 @@ export const UserRegisterForm: React.FC<UserRegisterFormProps> =
                 validation={validation?.email}
                 onChange={onChangeEmailHandler}
                 value={emailValue}
+                isRequired
               />
 
               <InputField
@@ -124,6 +119,7 @@ export const UserRegisterForm: React.FC<UserRegisterFormProps> =
                 validation={validation?.username}
                 onChange={onChangeUsernameHandler}
                 value={usernameValue}
+                isRequired
               />
 
               <InputFieldPassword
@@ -134,6 +130,7 @@ export const UserRegisterForm: React.FC<UserRegisterFormProps> =
                 validation={validation?.password}
                 onChange={onChangePasswordHandler}
                 value={passwordValue}
+                isRequired
               />
 
               <InputFieldPassword
@@ -144,10 +141,11 @@ export const UserRegisterForm: React.FC<UserRegisterFormProps> =
                 validation={validation?.repeatPassword}
                 onChange={onChangeRepeatPasswordHandler}
                 value={repeatPasswordValue}
-                onPaste={onPasteRepeatPasswordHandler}
+                isRequired
               />
 
               <CheckboxField
+                isRequired
                 label={(
                   <Text className={cls.UserConsentLabel}>
                     {t('input-label-user-consent-1')}

@@ -29,7 +29,6 @@ export const NoteDetailsSlice = createSlice({
         FetchNoteData.fulfilled,
         (state, { payload }: PayloadAction<NoteDetailsResponse>) => {
           if (payload.success) {
-            console.log(payload)
             state.note = payload.success
           }
 

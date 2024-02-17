@@ -1,15 +1,14 @@
-import { NoteBaseFields } from '@entities/Notes'
 import { NotesTypesCodeList } from '@entities/NotesTypes'
-import { CreateNotePatternArticle } from '@features/CreateNotePatternArticle'
-import { CreateNotePatternBook } from '@features/CreateNotePatternBook'
-import { CreateNotePatternCode } from '@features/CreateNotePatternCode'
-import { CreateNotePatternCourse } from '@features/CreateNotePatternCourse'
-import { CreateNotePatternIssue } from '@features/CreateNotePatternIssue'
-import { CreateNotePatternLayout } from '@features/CreateNotePatternLayout'
-import { CreateNotePatternService } from '@features/CreateNotePatternService'
-import { CreateNotePatternTechnology } from '@features/CreateNotePatternTechnology'
-import { CreateNotePatternVideo } from '@features/CreateNotePatternVideo'
-import { VStack } from '@ui-kit/Stack'
+import { NotePatternArticleForm } from '@features/NotePatternArticle'
+import { NotePatternBookForm } from '@features/NotePatternBook'
+import { NotePatternCodeForm } from '@features/NotePatternCode'
+import { NotePatternCourseForm } from '@features/NotePatternCourse'
+import { NotePatternCustomForm } from '@features/NotePatternCustom'
+import { NotePatternIssueForm } from '@features/NotePatternIssue'
+import { NotePatternLayoutForm } from '@features/NotePatternLayout'
+import { NotePatternServiceForm } from '@features/NotePatternService'
+import { NotePatternTechnologyForm } from '@features/NotePatternTechnology'
+import { NotePatternVideoForm } from '@features/NotePatternVideo'
 import React, { memo } from 'react'
 
 interface RenderPatternNoteProps {
@@ -22,46 +21,30 @@ export const RenderPatternNote: React.FC<RenderPatternNoteProps> =
       current,
     } = props
 
-    React.useEffect(() => {
-      console.log(current)
-    }, [current])
-
-    const renderForm = React.useMemo(() => {
+    if (current) {
       switch (current?.code) {
         case NotesTypesCodeList.ARTICLE:
-          return <CreateNotePatternArticle />
+          return <NotePatternArticleForm mode={'create'} />
         case NotesTypesCodeList.CODE:
-          return <CreateNotePatternCode />
+          return <NotePatternCodeForm mode={'create'} />
         case NotesTypesCodeList.ISSUE:
-          return <CreateNotePatternIssue />
+          return <NotePatternIssueForm mode={'create'} />
         case NotesTypesCodeList.LAYOUT:
-          return <CreateNotePatternLayout />
+          return <NotePatternLayoutForm mode={'create'} />
         case NotesTypesCodeList.SERVICE:
-          return <CreateNotePatternService />
+          return <NotePatternServiceForm mode={'create'} />
         case NotesTypesCodeList.BOOK:
-          return <CreateNotePatternBook />
+          return <NotePatternBookForm mode={'create'} />
         case NotesTypesCodeList.TECHNOLOGY:
-          return <CreateNotePatternTechnology />
+          return <NotePatternTechnologyForm mode={'create'} />
         case NotesTypesCodeList.COURSE:
-          return <CreateNotePatternCourse />
+          return <NotePatternCourseForm mode={'create'} />
         case NotesTypesCodeList.VIDEO:
-          return <CreateNotePatternVideo />
+          return <NotePatternVideoForm mode={'create'} />
         default:
-          return null
+          return <NotePatternCustomForm mode={'create'} />
       }
-    }, [current?.code])
+    }
 
-    return (
-      <VStack
-        gap={24}
-        isMax
-      >
-        {renderForm && (
-          <NoteBaseFields
-            selectTypeCode={current?.code}
-          />
-        )}
-        {renderForm}
-      </VStack>
-    )
+    return null
   })

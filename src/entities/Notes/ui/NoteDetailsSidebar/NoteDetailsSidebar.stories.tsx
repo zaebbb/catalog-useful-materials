@@ -15,7 +15,7 @@ import {
 import { NoteDetailsSidebar } from './NoteDetailsSidebar'
 
 const meta: Meta<typeof NoteDetailsSidebar> = {
-  title: 'entities/NoteDetailsSidebar',
+  title: 'entities/Notes/NoteDetailsSidebar',
   component: NoteDetailsSidebar,
   tags: ['autodocs'],
 }

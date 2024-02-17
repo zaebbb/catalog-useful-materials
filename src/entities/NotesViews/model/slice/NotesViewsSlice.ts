@@ -12,6 +12,13 @@ export const NotesViewsSlice = createSlice(({
     setCurrentView: (state, { payload }: PayloadAction<SelectFieldOption<NotesViewsCodeList>>) => {
       state.currentNoteView = payload
     },
+    clearCurrentView: (state) => {
+      state.currentNoteView = undefined
+      state.selected = undefined
+    },
+    setSelectedView: (state, { payload }: PayloadAction<SelectFieldOption<NotesViewsCodeList>>) => {
+      state.selected = payload
+    },
   },
 }))
 
