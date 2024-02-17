@@ -1,0 +1,20 @@
+{
+  "accept-delete-content": "accept-delete-content",
+  "button-create": "button-create",
+  "create-tag-title": "create-tag-title",
+  "edit-tag-title": "",
+  "input-tag-button": "input-tag-button",
+  "input-tag-code-description": "",
+  "input-tag-code-label": "",
+  "input-tag-code-placeholder": "",
+  "input-tag-draft-label": "input-tag-draft-label",
+  "input-tag-name-label": "input-tag-name-label",
+  "input-tag-name-placeholder": "input-tag-name-placeholder",
+  "page-description": "",
+  "page-keywords": "",
+  "page-title": "",
+  "tag-edit-link": "tag-edit-link",
+  "tag-not-found": "tag-not-found",
+  "tags-not-found": "tags-not-found",
+  "title": "title"
+}
